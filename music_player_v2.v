@@ -204,7 +204,7 @@ module music_player_v2 (
 	    .new_sample_in(note_sample),
 	    .latch_new_sample_in(note_sample_ready),
 	    .generate_next_sample(generate_next_sample),
-	    .new_frame(new_frame),
-	    .valid_sample(sample_out)
+	    .new_frame(new_frame),.valid_sample(sample_out)
 	);
+	    
 endmodule

@@ -182,12 +182,12 @@ module music_player_v2 (
 		.reset(reset | reset_player),
 		.sample_in(echo_sample),
 		.new_sample_ready(note_sample_ready),
-		.echo_enable(echo_switch & play),
+		.echo_enable(/*echo_switch & */play),
 		.sample_to_codec(note_sample)
 	);
 
 
-	assign out_notes = new_sample_generated ? {note_sample_one, note_sample_two, note_sample_three} | 48'b0; 
+	assign out_notes = new_sample_generated ? {note_sample_one, note_sample_two, note_sample_three} : 48'b0; 
 //  
 //  ****************************************************************************
 //      Codec Conditioner
@@ -204,7 +204,7 @@ module music_player_v2 (
 	    .new_sample_in(note_sample),
 	    .latch_new_sample_in(note_sample_ready),
 	    .generate_next_sample(generate_next_sample),
-	    .new_frame(new_frame),
-	    .valid_sample(sample_out)
+	    .new_frame(new_frame),.valid_sample(sample_out)
 	);
+	    
 endmodule

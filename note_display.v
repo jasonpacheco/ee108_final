@@ -38,7 +38,13 @@ module note_display (
 	dffre #(135) store_notes_4 (.clk(clk), .r(reset), .en(note_data != last_data), .d(out3), .q(out4));
 	dffre #(135) store_notes_5 (.clk(clk), .r(reset), .en(note_data != last_data), .d(out4), .q(out5));
 	
-	
+     wire [10:0] song00_dur, song01_dur, song10_dur, song11_dur;
+     assign song00_dur = 11'd2016;
+     assign song01_dur = 11'd336;
+     assign song10_dur = 11'd385;	
+     assign song11_dur = 11'd432;		
+
+
 	reg [53:0] current_song_text;
 	reg [23:0] color_reg;
 	// Text display:

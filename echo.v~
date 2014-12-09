@@ -1,6 +1,6 @@
 `define COUNT_MAX 14'b10010110000000 //14'b10010110000000	// Equivalent to a delay of 200 ms
 `define MAX_SAT 16'hFFFF //16'hFFFF
-`define WEIGHT 1
+`define WEIGHT 2
 module echo (
 	input 			clk,
 	input			reset,
@@ -10,7 +10,7 @@ module echo (
 	output 	[15:0] 	sample_to_codec
 );
 	wire 			read_enable;
-	wire			delayed_sample_ready;
+	wire			delayed_sample_ready,delayed_sample_ready2;
 	wire 	[13:0] 	count_state;
 	
 	dffr #(1) sample_ready_ff (
@@ -18,6 +18,13 @@ module echo (
 		.r(reset),
 		.d(new_sample_ready),
 		.q(delayed_sample_ready)
+	);
+
+     dffr #(1) sample_ready2_ff (
+		.clk(clk),
+		.r(reset),
+		.d(delayed_sample_ready),
+		.q(delayed_sample_ready2)
 	);
 	
 	dffre #(14) counter (
@@ -33,7 +40,7 @@ module echo (
 	dffre #(16) write_address_ff (
 		.clk(clk),
 		.r(reset || write_address_state == `MAX_SAT),
-		.en((new_sample_ready && !delayed_sample_ready)),
+		.en(delayed_sample_ready && !delayed_sample_ready2),
 		.d(write_address_state + 16'b1),
 		.q(write_address_state)
 	);
@@ -42,12 +49,12 @@ module echo (
 	dffre #(16) read_address_ff (
 		.clk(clk),
 		.r(reset || read_address_state == `MAX_SAT),
-		.en(read_enable),
+		.en(read_enable && (new_sample_ready && !delayed_sample_ready)),
 		.d(read_address_state + 16'b1),
 		.q(read_address_state)
 	);
 	
-	assign read_enable = reset ? 0 : ((count_state == `COUNT_MAX && (new_sample_ready && !delayed_sample_ready)) ? 1 : 0);
+	assign read_enable = reset ? 0 : ((count_state == `COUNT_MAX ) ? 1 : 0);
 	
 	// When read_enable goes high, we start reading samples from the RAM
 	// and combining it with the current sample into the note player.
@@ -68,6 +75,7 @@ module echo (
 	
 	assign modified_sample = reset ? 16'b0 : ((read_enable && echo_enable) ? (((sample_in + modified_sample_reg) >= `MAX_SAT) ? `MAX_SAT : sample_in + modified_sample_reg) : sample_in);
 	
+
 	wire [15:0] sample;	
 	assign sample = reset ? sample_in : modified_sample;
 

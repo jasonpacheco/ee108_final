@@ -1,7 +1,7 @@
 Release 14.6 Drc P.68d (lin)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Dec  9 12:38:52 2014
+Tue Dec  9 14:24:55 2014
 
 drc -z final_top.ncd final_top.pcf
 
