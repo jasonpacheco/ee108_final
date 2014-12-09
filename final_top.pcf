@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Mon Dec 08 18:38:07 2014
+// Written by: Map P.68d on Mon Dec 08 22:52:54 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -44,35 +44,35 @@ COMP "right_button" LOCATE = SITE "AK7" LEVEL 1;
 COMP "echo_switch" LOCATE = SITE "U25" LEVEL 1;
 COMP "AC97Clk" LOCATE = SITE "AF18" LEVEL 1;
 PIN
-        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>
+        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<22>
         = BEL
         "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME CLKAL;
 PIN
-        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<33>
+        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<23>
         = BEL
         "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME CLKBL;
 PIN
-        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<110>
+        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<72>
         = BEL
         "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME REGCLKAL;
 PIN
-        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<111>
+        music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<73>
         = BEL
         "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME REGCLKBL;
 PIN
-        music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<30>
+        music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<12>
         = BEL
         "music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000"
-        PINNAME CLKAU;
+        PINNAME CLKAL;
 PIN
-        music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<108>
+        music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<48>
         = BEL
         "music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000"
-        PINNAME REGCLKAU;
+        PINNAME REGCLKAL;
 PIN
         music_player_v2/note_player_three/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>
         = BEL
@@ -139,14 +139,38 @@ PIN music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<12> = BEL
 PIN music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<48> = BEL
         "music_player_v2/song_reader/song_rom/Mrom__varindex0000" PINNAME
         REGCLKAL;
-PIN wd/sample_ram/Mram_RAM_pins<24> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<32> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         CLKAL;
-PIN wd/sample_ram/Mram_RAM_pins<25> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<33> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         CLKBL;
-PIN wd/sample_ram/Mram_RAM_pins<47> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<110> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         REGCLKAL;
-PIN wd/sample_ram/Mram_RAM_pins<48> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<111> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         REGCLKBL;
+PIN wd_note_one/sample_ram/Mram_RAM_pins<30> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME CLKAU;
+PIN wd_note_one/sample_ram/Mram_RAM_pins<31> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME CLKBU;
+PIN wd_note_one/sample_ram/Mram_RAM_pins<108> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME REGCLKAU;
+PIN wd_note_one/sample_ram/Mram_RAM_pins<109> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME REGCLKBU;
+PIN wd_note_three/sample_ram/Mram_RAM_pins<32> = BEL
+        "wd_note_three/sample_ram/Mram_RAM" PINNAME CLKAL;
+PIN wd_note_three/sample_ram/Mram_RAM_pins<33> = BEL
+        "wd_note_three/sample_ram/Mram_RAM" PINNAME CLKBL;
+PIN wd_note_three/sample_ram/Mram_RAM_pins<110> = BEL
+        "wd_note_three/sample_ram/Mram_RAM" PINNAME REGCLKAL;
+PIN wd_note_three/sample_ram/Mram_RAM_pins<111> = BEL
+        "wd_note_three/sample_ram/Mram_RAM" PINNAME REGCLKBL;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<30> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME CLKAU;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<31> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME CLKBU;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<108> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME REGCLKAU;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<109> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME REGCLKBU;
 PIN music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<66> = BEL
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1" PINNAME CLKAL;
 PIN music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<67> = BEL
@@ -533,22 +557,15 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "i2c_controller/scl_counter_7" BEL "i2c_controller/scl_counter_8" BEL
         "i2c_controller/scl_counter_9" BEL "i2c_controller/scl_counter_10" BEL
         "i2c_controller/scl_counter_11" BEL "i2c_controller/scl_counter_12"
-        BEL "i2c_controller/scl_counter_13" BEL "ctrl/gen_sync/y_0" BEL
-        "ctrl/gen_sync/y_1" BEL "ctrl/gen_sync/y_2" BEL "ctrl/gen_sync/y_3"
-        BEL "ctrl/gen_sync/y_4" BEL "ctrl/gen_sync/y_5" BEL
-        "ctrl/gen_sync/y_6" BEL "ctrl/gen_sync/y_7" BEL "ctrl/gen_sync/y_8"
-        BEL "ctrl/gen_sync/y_9" BEL "ctrl/gen_sync/pixel_counter_0" BEL
-        "ctrl/gen_sync/pixel_counter_1" BEL "ctrl/gen_sync/pixel_counter_2"
-        BEL "ctrl/gen_sync/pixel_counter_3" BEL
-        "ctrl/gen_sync/pixel_counter_4" BEL "ctrl/gen_sync/pixel_counter_5"
-        BEL "ctrl/gen_sync/pixel_counter_6" BEL
-        "ctrl/gen_sync/pixel_counter_7" BEL "ctrl/gen_sync/pixel_counter_8"
-        BEL "ctrl/gen_sync/pixel_counter_9" BEL
-        "ctrl/gen_sync/pixel_counter_10" BEL "ctrl/gen_sync/x_0" BEL
+        BEL "i2c_controller/scl_counter_13" BEL "ctrl/gen_sync/x_0" BEL
         "ctrl/gen_sync/x_1" BEL "ctrl/gen_sync/x_2" BEL "ctrl/gen_sync/x_3"
         BEL "ctrl/gen_sync/x_4" BEL "ctrl/gen_sync/x_5" BEL
         "ctrl/gen_sync/x_6" BEL "ctrl/gen_sync/x_7" BEL "ctrl/gen_sync/x_8"
         BEL "ctrl/gen_sync/x_9" BEL "ctrl/gen_sync/x_10" BEL
+        "ctrl/gen_sync/y_0" BEL "ctrl/gen_sync/y_1" BEL "ctrl/gen_sync/y_2"
+        BEL "ctrl/gen_sync/y_3" BEL "ctrl/gen_sync/y_4" BEL
+        "ctrl/gen_sync/y_5" BEL "ctrl/gen_sync/y_6" BEL "ctrl/gen_sync/y_7"
+        BEL "ctrl/gen_sync/y_8" BEL "ctrl/gen_sync/y_9" BEL
         "ctrl/gen_sync/hsync_counter_0" BEL "ctrl/gen_sync/hsync_counter_1"
         BEL "ctrl/gen_sync/hsync_counter_2" BEL
         "ctrl/gen_sync/hsync_counter_3" BEL "ctrl/gen_sync/hsync_counter_4"
@@ -556,10 +573,380 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "ctrl/gen_sync/hsync_counter_6" BEL "ctrl/gen_sync/hsync_counter_7"
         BEL "ctrl/gen_sync/hsync_counter_8" BEL
         "ctrl/gen_sync/hsync_counter_9" BEL "ctrl/gen_sync/hsync_counter_10"
-        BEL "sample_reg/q_16" BEL "sample_reg/q_15" BEL "sample_reg/q_14" BEL
-        "sample_reg/q_13" BEL "sample_reg/q_12" BEL "sample_reg/q_11" BEL
-        "sample_reg/q_10" BEL "sample_reg/q_9" BEL "sample_reg/q_8" BEL
+        BEL "ctrl/gen_sync/pixel_counter_0" BEL
+        "ctrl/gen_sync/pixel_counter_1" BEL "ctrl/gen_sync/pixel_counter_2"
+        BEL "ctrl/gen_sync/pixel_counter_3" BEL
+        "ctrl/gen_sync/pixel_counter_4" BEL "ctrl/gen_sync/pixel_counter_5"
+        BEL "ctrl/gen_sync/pixel_counter_6" BEL
+        "ctrl/gen_sync/pixel_counter_7" BEL "ctrl/gen_sync/pixel_counter_8"
+        BEL "ctrl/gen_sync/pixel_counter_9" BEL
+        "ctrl/gen_sync/pixel_counter_10" BEL "sample_reg_note_three/q_16" BEL
+        "sample_reg_note_three/q_15" BEL "sample_reg_note_three/q_14" BEL
+        "sample_reg_note_three/q_13" BEL "sample_reg_note_three/q_12" BEL
+        "sample_reg_note_three/q_11" BEL "sample_reg_note_three/q_10" BEL
+        "sample_reg_note_three/q_9" BEL "sample_reg_note_three/q_8" BEL
+        "sample_reg_note_two/q_15" BEL "sample_reg_note_two/q_14" BEL
+        "sample_reg_note_two/q_13" BEL "sample_reg_note_two/q_12" BEL
+        "sample_reg_note_two/q_11" BEL "sample_reg_note_two/q_10" BEL
+        "sample_reg_note_two/q_9" BEL "sample_reg_note_two/q_8" BEL
+        "sample_reg_note_one/q_15" BEL "sample_reg_note_one/q_14" BEL
+        "sample_reg_note_one/q_13" BEL "sample_reg_note_one/q_12" BEL
+        "sample_reg_note_one/q_11" BEL "sample_reg_note_one/q_10" BEL
+        "sample_reg_note_one/q_9" BEL "sample_reg_note_one/q_8" BEL
+        "sample_reg/q_15" BEL "sample_reg/q_14" BEL "sample_reg/q_13" BEL
+        "sample_reg/q_12" BEL "sample_reg/q_11" BEL "sample_reg/q_10" BEL
+        "sample_reg/q_9" BEL "sample_reg/q_8" BEL
         "ctrl/make_chip_data/chip_data_enable" BEL
+        "note_display/new_note_data/q_3" BEL "note_display/new_note_data/q_4"
+        BEL "note_display/new_note_data/q_5" BEL
+        "note_display/new_note_data/q_6" BEL "note_display/new_note_data/q_7"
+        BEL "note_display/new_note_data/q_8" BEL
+        "note_display/new_note_data/q_12" BEL
+        "note_display/new_note_data/q_13" BEL
+        "note_display/new_note_data/q_14" BEL
+        "note_display/new_note_data/q_16" BEL
+        "note_display/new_note_data/q_17" BEL
+        "note_display/new_note_data/q_21" BEL
+        "note_display/new_note_data/q_22" BEL
+        "note_display/new_note_data/q_25" BEL
+        "note_display/new_note_data/q_26" BEL
+        "note_display/new_note_data/q_30" BEL
+        "note_display/new_note_data/q_31" BEL
+        "note_display/new_note_data/q_32" BEL
+        "note_display/new_note_data/q_35" BEL
+        "note_display/new_note_data/q_39" BEL
+        "note_display/new_note_data/q_40" BEL
+        "note_display/new_note_data/q_41" BEL
+        "note_display/new_note_data/q_43" BEL
+        "note_display/new_note_data/q_44" BEL
+        "note_display/new_note_data/q_48" BEL
+        "note_display/new_note_data/q_49" BEL
+        "note_display/new_note_data/q_50" BEL
+        "note_display/new_note_data/q_51" BEL
+        "note_display/new_note_data/q_52" BEL
+        "note_display/new_note_data/q_53" BEL
+        "note_display/new_note_data/q_57" BEL
+        "note_display/new_note_data/q_58" BEL
+        "note_display/new_note_data/q_59" BEL
+        "note_display/new_note_data/q_61" BEL
+        "note_display/new_note_data/q_62" BEL
+        "note_display/new_note_data/q_66" BEL
+        "note_display/new_note_data/q_67" BEL
+        "note_display/new_note_data/q_70" BEL
+        "note_display/new_note_data/q_71" BEL
+        "note_display/new_note_data/q_75" BEL
+        "note_display/new_note_data/q_76" BEL
+        "note_display/new_note_data/q_77" BEL
+        "note_display/new_note_data/q_80" BEL
+        "note_display/new_note_data/q_84" BEL
+        "note_display/new_note_data/q_85" BEL
+        "note_display/new_note_data/q_86" BEL
+        "note_display/new_note_data/q_88" BEL
+        "note_display/new_note_data/q_89" BEL
+        "note_display/new_note_data/q_93" BEL
+        "note_display/new_note_data/q_94" BEL
+        "note_display/new_note_data/q_95" BEL
+        "note_display/new_note_data/q_96" BEL
+        "note_display/new_note_data/q_97" BEL
+        "note_display/new_note_data/q_98" BEL
+        "note_display/new_note_data/q_102" BEL
+        "note_display/new_note_data/q_103" BEL
+        "note_display/new_note_data/q_104" BEL
+        "note_display/new_note_data/q_106" BEL
+        "note_display/new_note_data/q_107" BEL
+        "note_display/new_note_data/q_111" BEL
+        "note_display/new_note_data/q_112" BEL
+        "note_display/new_note_data/q_115" BEL
+        "note_display/new_note_data/q_116" BEL
+        "note_display/new_note_data/q_120" BEL
+        "note_display/new_note_data/q_121" BEL
+        "note_display/new_note_data/q_122" BEL
+        "note_display/new_note_data/q_125" BEL
+        "note_display/new_note_data/q_129" BEL
+        "note_display/new_note_data/q_130" BEL
+        "note_display/new_note_data/q_131" BEL
+        "note_display/new_note_data/q_133" BEL
+        "note_display/new_note_data/q_134" BEL
+        "note_display/store_notes_2/q_3" BEL "note_display/store_notes_2/q_4"
+        BEL "note_display/store_notes_2/q_5" BEL
+        "note_display/store_notes_2/q_6" BEL "note_display/store_notes_2/q_7"
+        BEL "note_display/store_notes_2/q_8" BEL
+        "note_display/store_notes_2/q_12" BEL
+        "note_display/store_notes_2/q_13" BEL
+        "note_display/store_notes_2/q_14" BEL
+        "note_display/store_notes_2/q_16" BEL
+        "note_display/store_notes_2/q_17" BEL
+        "note_display/store_notes_2/q_21" BEL
+        "note_display/store_notes_2/q_22" BEL
+        "note_display/store_notes_2/q_25" BEL
+        "note_display/store_notes_2/q_26" BEL
+        "note_display/store_notes_2/q_30" BEL
+        "note_display/store_notes_2/q_31" BEL
+        "note_display/store_notes_2/q_32" BEL
+        "note_display/store_notes_2/q_35" BEL
+        "note_display/store_notes_2/q_39" BEL
+        "note_display/store_notes_2/q_40" BEL
+        "note_display/store_notes_2/q_41" BEL
+        "note_display/store_notes_2/q_43" BEL
+        "note_display/store_notes_2/q_44" BEL
+        "note_display/store_notes_2/q_48" BEL
+        "note_display/store_notes_2/q_49" BEL
+        "note_display/store_notes_2/q_50" BEL
+        "note_display/store_notes_2/q_51" BEL
+        "note_display/store_notes_2/q_52" BEL
+        "note_display/store_notes_2/q_53" BEL
+        "note_display/store_notes_2/q_57" BEL
+        "note_display/store_notes_2/q_58" BEL
+        "note_display/store_notes_2/q_59" BEL
+        "note_display/store_notes_2/q_61" BEL
+        "note_display/store_notes_2/q_62" BEL
+        "note_display/store_notes_2/q_66" BEL
+        "note_display/store_notes_2/q_67" BEL
+        "note_display/store_notes_2/q_70" BEL
+        "note_display/store_notes_2/q_71" BEL
+        "note_display/store_notes_2/q_75" BEL
+        "note_display/store_notes_2/q_76" BEL
+        "note_display/store_notes_2/q_77" BEL
+        "note_display/store_notes_2/q_80" BEL
+        "note_display/store_notes_2/q_84" BEL
+        "note_display/store_notes_2/q_85" BEL
+        "note_display/store_notes_2/q_86" BEL
+        "note_display/store_notes_2/q_88" BEL
+        "note_display/store_notes_2/q_89" BEL
+        "note_display/store_notes_2/q_93" BEL
+        "note_display/store_notes_2/q_94" BEL
+        "note_display/store_notes_2/q_95" BEL
+        "note_display/store_notes_2/q_96" BEL
+        "note_display/store_notes_2/q_97" BEL
+        "note_display/store_notes_2/q_98" BEL
+        "note_display/store_notes_2/q_102" BEL
+        "note_display/store_notes_2/q_103" BEL
+        "note_display/store_notes_2/q_104" BEL
+        "note_display/store_notes_2/q_106" BEL
+        "note_display/store_notes_2/q_107" BEL
+        "note_display/store_notes_2/q_111" BEL
+        "note_display/store_notes_2/q_112" BEL
+        "note_display/store_notes_2/q_115" BEL
+        "note_display/store_notes_2/q_116" BEL
+        "note_display/store_notes_2/q_120" BEL
+        "note_display/store_notes_2/q_121" BEL
+        "note_display/store_notes_2/q_122" BEL
+        "note_display/store_notes_2/q_125" BEL
+        "note_display/store_notes_2/q_129" BEL
+        "note_display/store_notes_2/q_130" BEL
+        "note_display/store_notes_2/q_131" BEL
+        "note_display/store_notes_2/q_133" BEL
+        "note_display/store_notes_2/q_134" BEL
+        "note_display/store_notes_3/q_3" BEL "note_display/store_notes_3/q_4"
+        BEL "note_display/store_notes_3/q_5" BEL
+        "note_display/store_notes_3/q_6" BEL "note_display/store_notes_3/q_7"
+        BEL "note_display/store_notes_3/q_8" BEL
+        "note_display/store_notes_3/q_12" BEL
+        "note_display/store_notes_3/q_13" BEL
+        "note_display/store_notes_3/q_14" BEL
+        "note_display/store_notes_3/q_16" BEL
+        "note_display/store_notes_3/q_17" BEL
+        "note_display/store_notes_3/q_21" BEL
+        "note_display/store_notes_3/q_22" BEL
+        "note_display/store_notes_3/q_25" BEL
+        "note_display/store_notes_3/q_26" BEL
+        "note_display/store_notes_3/q_30" BEL
+        "note_display/store_notes_3/q_31" BEL
+        "note_display/store_notes_3/q_32" BEL
+        "note_display/store_notes_3/q_35" BEL
+        "note_display/store_notes_3/q_39" BEL
+        "note_display/store_notes_3/q_40" BEL
+        "note_display/store_notes_3/q_41" BEL
+        "note_display/store_notes_3/q_43" BEL
+        "note_display/store_notes_3/q_44" BEL
+        "note_display/store_notes_3/q_48" BEL
+        "note_display/store_notes_3/q_49" BEL
+        "note_display/store_notes_3/q_50" BEL
+        "note_display/store_notes_3/q_51" BEL
+        "note_display/store_notes_3/q_52" BEL
+        "note_display/store_notes_3/q_53" BEL
+        "note_display/store_notes_3/q_57" BEL
+        "note_display/store_notes_3/q_58" BEL
+        "note_display/store_notes_3/q_59" BEL
+        "note_display/store_notes_3/q_61" BEL
+        "note_display/store_notes_3/q_62" BEL
+        "note_display/store_notes_3/q_66" BEL
+        "note_display/store_notes_3/q_67" BEL
+        "note_display/store_notes_3/q_70" BEL
+        "note_display/store_notes_3/q_71" BEL
+        "note_display/store_notes_3/q_75" BEL
+        "note_display/store_notes_3/q_76" BEL
+        "note_display/store_notes_3/q_77" BEL
+        "note_display/store_notes_3/q_80" BEL
+        "note_display/store_notes_3/q_84" BEL
+        "note_display/store_notes_3/q_85" BEL
+        "note_display/store_notes_3/q_86" BEL
+        "note_display/store_notes_3/q_88" BEL
+        "note_display/store_notes_3/q_89" BEL
+        "note_display/store_notes_3/q_93" BEL
+        "note_display/store_notes_3/q_94" BEL
+        "note_display/store_notes_3/q_95" BEL
+        "note_display/store_notes_3/q_96" BEL
+        "note_display/store_notes_3/q_97" BEL
+        "note_display/store_notes_3/q_98" BEL
+        "note_display/store_notes_3/q_102" BEL
+        "note_display/store_notes_3/q_103" BEL
+        "note_display/store_notes_3/q_104" BEL
+        "note_display/store_notes_3/q_106" BEL
+        "note_display/store_notes_3/q_107" BEL
+        "note_display/store_notes_3/q_111" BEL
+        "note_display/store_notes_3/q_112" BEL
+        "note_display/store_notes_3/q_115" BEL
+        "note_display/store_notes_3/q_116" BEL
+        "note_display/store_notes_3/q_120" BEL
+        "note_display/store_notes_3/q_121" BEL
+        "note_display/store_notes_3/q_122" BEL
+        "note_display/store_notes_3/q_125" BEL
+        "note_display/store_notes_3/q_129" BEL
+        "note_display/store_notes_3/q_130" BEL
+        "note_display/store_notes_3/q_131" BEL
+        "note_display/store_notes_3/q_133" BEL
+        "note_display/store_notes_3/q_134" BEL
+        "note_display/store_notes_4/q_3" BEL "note_display/store_notes_4/q_4"
+        BEL "note_display/store_notes_4/q_5" BEL
+        "note_display/store_notes_4/q_6" BEL "note_display/store_notes_4/q_7"
+        BEL "note_display/store_notes_4/q_8" BEL
+        "note_display/store_notes_4/q_12" BEL
+        "note_display/store_notes_4/q_13" BEL
+        "note_display/store_notes_4/q_14" BEL
+        "note_display/store_notes_4/q_16" BEL
+        "note_display/store_notes_4/q_17" BEL
+        "note_display/store_notes_4/q_21" BEL
+        "note_display/store_notes_4/q_22" BEL
+        "note_display/store_notes_4/q_25" BEL
+        "note_display/store_notes_4/q_26" BEL
+        "note_display/store_notes_4/q_30" BEL
+        "note_display/store_notes_4/q_31" BEL
+        "note_display/store_notes_4/q_32" BEL
+        "note_display/store_notes_4/q_35" BEL
+        "note_display/store_notes_4/q_39" BEL
+        "note_display/store_notes_4/q_40" BEL
+        "note_display/store_notes_4/q_41" BEL
+        "note_display/store_notes_4/q_43" BEL
+        "note_display/store_notes_4/q_44" BEL
+        "note_display/store_notes_4/q_48" BEL
+        "note_display/store_notes_4/q_49" BEL
+        "note_display/store_notes_4/q_50" BEL
+        "note_display/store_notes_4/q_51" BEL
+        "note_display/store_notes_4/q_52" BEL
+        "note_display/store_notes_4/q_53" BEL
+        "note_display/store_notes_4/q_57" BEL
+        "note_display/store_notes_4/q_58" BEL
+        "note_display/store_notes_4/q_59" BEL
+        "note_display/store_notes_4/q_61" BEL
+        "note_display/store_notes_4/q_62" BEL
+        "note_display/store_notes_4/q_66" BEL
+        "note_display/store_notes_4/q_67" BEL
+        "note_display/store_notes_4/q_70" BEL
+        "note_display/store_notes_4/q_71" BEL
+        "note_display/store_notes_4/q_75" BEL
+        "note_display/store_notes_4/q_76" BEL
+        "note_display/store_notes_4/q_77" BEL
+        "note_display/store_notes_4/q_80" BEL
+        "note_display/store_notes_4/q_84" BEL
+        "note_display/store_notes_4/q_85" BEL
+        "note_display/store_notes_4/q_86" BEL
+        "note_display/store_notes_4/q_88" BEL
+        "note_display/store_notes_4/q_89" BEL
+        "note_display/store_notes_4/q_93" BEL
+        "note_display/store_notes_4/q_94" BEL
+        "note_display/store_notes_4/q_95" BEL
+        "note_display/store_notes_4/q_96" BEL
+        "note_display/store_notes_4/q_97" BEL
+        "note_display/store_notes_4/q_98" BEL
+        "note_display/store_notes_4/q_102" BEL
+        "note_display/store_notes_4/q_103" BEL
+        "note_display/store_notes_4/q_104" BEL
+        "note_display/store_notes_4/q_106" BEL
+        "note_display/store_notes_4/q_107" BEL
+        "note_display/store_notes_4/q_111" BEL
+        "note_display/store_notes_4/q_112" BEL
+        "note_display/store_notes_4/q_115" BEL
+        "note_display/store_notes_4/q_116" BEL
+        "note_display/store_notes_4/q_120" BEL
+        "note_display/store_notes_4/q_121" BEL
+        "note_display/store_notes_4/q_122" BEL
+        "note_display/store_notes_4/q_125" BEL
+        "note_display/store_notes_4/q_129" BEL
+        "note_display/store_notes_4/q_130" BEL
+        "note_display/store_notes_4/q_131" BEL
+        "note_display/store_notes_4/q_133" BEL
+        "note_display/store_notes_4/q_134" BEL
+        "note_display/store_notes_5/q_3" BEL "note_display/store_notes_5/q_4"
+        BEL "note_display/store_notes_5/q_5" BEL
+        "note_display/store_notes_5/q_6" BEL "note_display/store_notes_5/q_7"
+        BEL "note_display/store_notes_5/q_8" BEL
+        "note_display/store_notes_5/q_12" BEL
+        "note_display/store_notes_5/q_13" BEL
+        "note_display/store_notes_5/q_14" BEL
+        "note_display/store_notes_5/q_16" BEL
+        "note_display/store_notes_5/q_17" BEL
+        "note_display/store_notes_5/q_21" BEL
+        "note_display/store_notes_5/q_22" BEL
+        "note_display/store_notes_5/q_25" BEL
+        "note_display/store_notes_5/q_26" BEL
+        "note_display/store_notes_5/q_30" BEL
+        "note_display/store_notes_5/q_31" BEL
+        "note_display/store_notes_5/q_32" BEL
+        "note_display/store_notes_5/q_35" BEL
+        "note_display/store_notes_5/q_39" BEL
+        "note_display/store_notes_5/q_40" BEL
+        "note_display/store_notes_5/q_41" BEL
+        "note_display/store_notes_5/q_43" BEL
+        "note_display/store_notes_5/q_44" BEL
+        "note_display/store_notes_5/q_48" BEL
+        "note_display/store_notes_5/q_49" BEL
+        "note_display/store_notes_5/q_50" BEL
+        "note_display/store_notes_5/q_51" BEL
+        "note_display/store_notes_5/q_52" BEL
+        "note_display/store_notes_5/q_53" BEL
+        "note_display/store_notes_5/q_57" BEL
+        "note_display/store_notes_5/q_58" BEL
+        "note_display/store_notes_5/q_59" BEL
+        "note_display/store_notes_5/q_61" BEL
+        "note_display/store_notes_5/q_62" BEL
+        "note_display/store_notes_5/q_66" BEL
+        "note_display/store_notes_5/q_67" BEL
+        "note_display/store_notes_5/q_70" BEL
+        "note_display/store_notes_5/q_71" BEL
+        "note_display/store_notes_5/q_75" BEL
+        "note_display/store_notes_5/q_76" BEL
+        "note_display/store_notes_5/q_77" BEL
+        "note_display/store_notes_5/q_80" BEL
+        "note_display/store_notes_5/q_84" BEL
+        "note_display/store_notes_5/q_85" BEL
+        "note_display/store_notes_5/q_86" BEL
+        "note_display/store_notes_5/q_88" BEL
+        "note_display/store_notes_5/q_89" BEL
+        "note_display/store_notes_5/q_93" BEL
+        "note_display/store_notes_5/q_94" BEL
+        "note_display/store_notes_5/q_95" BEL
+        "note_display/store_notes_5/q_96" BEL
+        "note_display/store_notes_5/q_97" BEL
+        "note_display/store_notes_5/q_98" BEL
+        "note_display/store_notes_5/q_102" BEL
+        "note_display/store_notes_5/q_103" BEL
+        "note_display/store_notes_5/q_104" BEL
+        "note_display/store_notes_5/q_106" BEL
+        "note_display/store_notes_5/q_107" BEL
+        "note_display/store_notes_5/q_111" BEL
+        "note_display/store_notes_5/q_112" BEL
+        "note_display/store_notes_5/q_115" BEL
+        "note_display/store_notes_5/q_116" BEL
+        "note_display/store_notes_5/q_120" BEL
+        "note_display/store_notes_5/q_121" BEL
+        "note_display/store_notes_5/q_122" BEL
+        "note_display/store_notes_5/q_125" BEL
+        "note_display/store_notes_5/q_129" BEL
+        "note_display/store_notes_5/q_130" BEL
+        "note_display/store_notes_5/q_131" BEL
+        "note_display/store_notes_5/q_133" BEL
+        "note_display/store_notes_5/q_134" BEL
         "play_button_press_unit/debounce/state/q_0" BEL
         "play_button_press_unit/debounce/counter/q_19" BEL
         "play_button_press_unit/debounce/counter/q_18" BEL
@@ -653,7 +1040,37 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "wd/wc_comb/address_counter_ff/q_6" BEL
         "wd/wc_comb/address_counter_ff/q_7" BEL
         "wd/wc_comb/positive_zero_ff/q_0" BEL "wd/wc_comb/read_index_ff/q_0"
-        BEL "wd/wd/address_tracker/q_7" BEL "wd/wd/address_tracker/q_6" BEL
+        BEL "wd_note_one/wc_comb/address_counter_ff/q_0" BEL
+        "wd_note_one/wc_comb/address_counter_ff/q_1" BEL
+        "wd_note_one/wc_comb/address_counter_ff/q_2" BEL
+        "wd_note_one/wc_comb/address_counter_ff/q_3" BEL
+        "wd_note_one/wc_comb/address_counter_ff/q_4" BEL
+        "wd_note_one/wc_comb/address_counter_ff/q_5" BEL
+        "wd_note_one/wc_comb/address_counter_ff/q_6" BEL
+        "wd_note_one/wc_comb/address_counter_ff/q_7" BEL
+        "wd_note_one/wc_comb/positive_zero_ff/q_0" BEL
+        "wd_note_one/wc_comb/read_index_ff/q_0" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_0" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_1" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_2" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_3" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_4" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_5" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_6" BEL
+        "wd_note_two/wc_comb/address_counter_ff/q_7" BEL
+        "wd_note_two/wc_comb/positive_zero_ff/q_0" BEL
+        "wd_note_two/wc_comb/read_index_ff/q_0" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_0" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_1" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_2" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_3" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_4" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_5" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_6" BEL
+        "wd_note_three/wc_comb/address_counter_ff/q_7" BEL
+        "wd_note_three/wc_comb/positive_zero_ff/q_0" BEL
+        "wd_note_three/wc_comb/read_index_ff/q_0" BEL
+        "wd/wd/address_tracker/q_7" BEL "wd/wd/address_tracker/q_6" BEL
         "wd/wd/address_tracker/q_5" BEL "wd/wd/address_tracker/q_4" BEL
         "wd/wd/address_tracker/q_3" BEL "wd/wd/address_tracker/q_2" BEL
         "wd/wd/address_tracker/q_1" BEL "wd/wd/address_tracker/q_0" BEL
@@ -1332,9 +1749,22 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "music_player_v2/echo/sample_ff/q_2" BEL
         "music_player_v2/echo/sample_ff/q_1" BEL
         "music_player_v2/echo/sample_ff/q_0" BEL "stereo_mcu/state_FF/q_0" BEL
-        "stereo_mcu/state_FF/q_1" BEL "wd/wc_comb/state_control_ff/q_0" BEL
+        "stereo_mcu/state_FF/q_1" BEL "ctrl/make_chip_data/pixel_23" BEL
+        "ctrl/make_chip_data/pixel_22" BEL "ctrl/make_chip_data/pixel_20" BEL
+        "ctrl/make_chip_data/pixel_17" BEL "ctrl/make_chip_data/pixel_16" BEL
+        "ctrl/make_chip_data/pixel_11" BEL "ctrl/make_chip_data/pixel_6" BEL
+        "wd/wc_comb/state_control_ff/q_0" BEL
         "wd/wc_comb/state_control_ff/q_1" BEL
         "wd/wc_comb/state_control_ff/q_2" BEL
+        "wd_note_one/wc_comb/state_control_ff/q_0" BEL
+        "wd_note_one/wc_comb/state_control_ff/q_1" BEL
+        "wd_note_one/wc_comb/state_control_ff/q_2" BEL
+        "wd_note_two/wc_comb/state_control_ff/q_0" BEL
+        "wd_note_two/wc_comb/state_control_ff/q_1" BEL
+        "wd_note_two/wc_comb/state_control_ff/q_2" BEL
+        "wd_note_three/wc_comb/state_control_ff/q_0" BEL
+        "wd_note_three/wc_comb/state_control_ff/q_1" BEL
+        "wd_note_three/wc_comb/state_control_ff/q_2" BEL
         "music_player_v2/song_reader/read_stateFF/q_1" BEL
         "music_player_v2/song_reader/read_stateFF/q_0" BEL
         "music_player_v2/song_reader/song_doneFF/q_0" BEL
@@ -1349,6 +1779,30 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "wd/wd/value_tracker/q_5" BEL "wd/wd/value_tracker/q_4" BEL
         "wd/wd/value_tracker/q_3" BEL "wd/wd/value_tracker/q_2" BEL
         "wd/wd/value_tracker/q_1" BEL "wd/wd/value_tracker/q_0" BEL
+        "wd_note_one/wd/value_tracker/q_7" BEL
+        "wd_note_one/wd/value_tracker/q_6" BEL
+        "wd_note_one/wd/value_tracker/q_5" BEL
+        "wd_note_one/wd/value_tracker/q_4" BEL
+        "wd_note_one/wd/value_tracker/q_3" BEL
+        "wd_note_one/wd/value_tracker/q_2" BEL
+        "wd_note_one/wd/value_tracker/q_1" BEL
+        "wd_note_one/wd/value_tracker/q_0" BEL
+        "wd_note_two/wd/value_tracker/q_7" BEL
+        "wd_note_two/wd/value_tracker/q_6" BEL
+        "wd_note_two/wd/value_tracker/q_5" BEL
+        "wd_note_two/wd/value_tracker/q_4" BEL
+        "wd_note_two/wd/value_tracker/q_3" BEL
+        "wd_note_two/wd/value_tracker/q_2" BEL
+        "wd_note_two/wd/value_tracker/q_1" BEL
+        "wd_note_two/wd/value_tracker/q_0" BEL
+        "wd_note_three/wd/value_tracker/q_7" BEL
+        "wd_note_three/wd/value_tracker/q_6" BEL
+        "wd_note_three/wd/value_tracker/q_5" BEL
+        "wd_note_three/wd/value_tracker/q_4" BEL
+        "wd_note_three/wd/value_tracker/q_3" BEL
+        "wd_note_three/wd/value_tracker/q_2" BEL
+        "wd_note_three/wd/value_tracker/q_1" BEL
+        "wd_note_three/wd/value_tracker/q_0" BEL
         "music_player_v2/note_player_one/sine_reader_1/countFF/q_9" BEL
         "music_player_v2/note_player_one/sine_reader_1/countFF/q_8" BEL
         "music_player_v2/note_player_one/sine_reader_1/countFF/q_7" BEL
@@ -1439,8 +1893,11 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "music_player_v2/note_player_three/sine_reader_3/countFF/q_2" BEL
         "music_player_v2/note_player_three/sine_reader_3/countFF/q_1" BEL
         "music_player_v2/note_player_three/sine_reader_3/countFF/q_0" BEL
-        "ctrl/make_chip_data/pixel_23" BEL "clk_IBUF_BUFG" BEL
-        "fast_forward_button_press_unit/sync/ff3/Mshreg_q_0" BEL
+        "ctrl/make_chip_data/pixel_13" BEL
+        "next_button_press_unit/debounce/state/q_0_1" BEL
+        "next_button_press_unit/debounce/state/q_0_2" BEL
+        "music_player_v2/song_reader/song_doneFF/q_0_1" BEL "clk_IBUF_BUFG"
+        BEL "fast_forward_button_press_unit/sync/ff3/Mshreg_q_0" BEL
         "fast_forward_button_press_unit/sync/ff3/q_0" BEL
         "stereo_button_press_unit/sync/ff3/Mshreg_q_0" BEL
         "stereo_button_press_unit/sync/ff3/q_0" BEL
@@ -1455,27 +1912,31 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "codec/reset_counter_3" BEL "codec/reset_counter_4" BEL
         "codec/reset_counter_5" BEL "codec/reset_counter_6" BEL
         "codec/reset_counter_7" BEL "codec/reset_counter_8" BEL
-        "codec/reset_counter_9" BEL "codec/reset_counter_10" BEL "xclk" BEL
+        "codec/reset_counter_9" BEL "codec/reset_counter_10" BEL
+        "chip_data<0>" BEL "chip_data<10>" BEL "chip_data<11>" BEL
+        "chip_data<1>" BEL "chip_data<2>" BEL "chip_data<3>" BEL
+        "chip_data<4>" BEL "chip_data<5>" BEL "chip_data<6>" BEL
+        "chip_data<7>" BEL "chip_data<8>" BEL "chip_data<9>" BEL "xclk" BEL
         "xclk_n" PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<22>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<33>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<23>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<110>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<72>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<111>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<73>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<22>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<33>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<23>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<110>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<72>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<111>"
+        "music_player_v2/note_player_one/sine_reader_1/sine_rom/Mrom__varindex00001_pins<73>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<30>"
+        "music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<12>"
         PIN
-        "music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<108>"
+        "music_player_v2/note_player_one/sine_reader_3/sine_rom/Mrom__varindex0000_pins<48>"
         PIN
         "music_player_v2/note_player_three/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>"
         PIN
@@ -1518,14 +1979,38 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<108>"
         PIN "music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<12>"
         PIN "music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<48>"
-        PIN "wd/sample_ram/Mram_RAM_pins<24>" PIN
-        "wd/sample_ram/Mram_RAM_pins<25>" PIN
-        "wd/sample_ram/Mram_RAM_pins<47>" PIN
-        "wd/sample_ram/Mram_RAM_pins<48>" PIN
-        "wd/sample_ram/Mram_RAM_pins<24>" PIN
-        "wd/sample_ram/Mram_RAM_pins<25>" PIN
-        "wd/sample_ram/Mram_RAM_pins<47>" PIN
-        "wd/sample_ram/Mram_RAM_pins<48>" PIN
+        PIN "wd/sample_ram/Mram_RAM_pins<32>" PIN
+        "wd/sample_ram/Mram_RAM_pins<33>" PIN
+        "wd/sample_ram/Mram_RAM_pins<110>" PIN
+        "wd/sample_ram/Mram_RAM_pins<111>" PIN
+        "wd/sample_ram/Mram_RAM_pins<32>" PIN
+        "wd/sample_ram/Mram_RAM_pins<33>" PIN
+        "wd/sample_ram/Mram_RAM_pins<110>" PIN
+        "wd/sample_ram/Mram_RAM_pins<111>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<30>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<31>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<108>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<109>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<30>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<31>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<108>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<109>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<32>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<33>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<110>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<111>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<32>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<33>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<110>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<111>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<30>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<31>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<108>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<109>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<30>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<31>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<108>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<109>" PIN
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<66>" PIN
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<67>" PIN
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<68>" PIN

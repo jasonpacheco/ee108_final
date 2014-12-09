@@ -10,37 +10,38 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Mon Dec  8 18:36:49 2014
+Mapped Date    : Mon Dec  8 22:50:36 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  128
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,112 out of  69,120    1%
-    Number used as Flip Flops:               1,112
-  Number of Slice LUTs:                      2,829 out of  69,120    4%
-    Number used as logic:                    2,790 out of  69,120    4%
-      Number using O6 output only:           1,790
-      Number using O5 output only:             250
-      Number using O5 and O6:                  750
+  Number of Slice Registers:                 1,569 out of  69,120    2%
+    Number used as Flip Flops:               1,569
+  Number of Slice LUTs:                      3,560 out of  69,120    5%
+    Number used as logic:                    3,517 out of  69,120    5%
+      Number using O6 output only:           2,478
+      Number using O5 output only:             248
+      Number using O5 and O6:                  791
     Number used as Memory:                       5 out of  17,920    1%
       Number used as Shift Register:             5
         Number using O6 output only:             5
-    Number used as exclusive route-thru:        34
-  Number of route-thrus:                       281
-    Number using O6 output only:               280
-    Number using O5 and O6:                      1
+    Number used as exclusive route-thru:        38
+  Number of route-thrus:                       288
+    Number using O6 output only:               282
+    Number using O5 output only:                 3
+    Number using O5 and O6:                      3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   879 out of  17,280    5%
-  Number of LUT Flip Flop pairs used:        2,901
-    Number with an unused Flip Flop:         1,789 out of   2,901   61%
-    Number with an unused LUT:                  72 out of   2,901    2%
-    Number of fully used LUT-FF pairs:       1,040 out of   2,901   35%
-    Number of unique control sets:              49
+  Number of occupied Slices:                 1,223 out of  17,280    7%
+  Number of LUT Flip Flop pairs used:        3,784
+    Number with an unused Flip Flop:         2,215 out of   3,784   58%
+    Number with an unused LUT:                 224 out of   3,784    5%
+    Number of fully used LUT-FF pairs:       1,345 out of   3,784   35%
+    Number of unique control sets:              54
     Number of slice register sites lost
-      to control set restrictions:              79 out of  69,120    1%
+      to control set restrictions:              94 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -55,21 +56,21 @@ IO Utilization:
     Number of LOCed IOBs:                       40 out of      40  100%
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      37 out of     148   25%
-    Number using BlockRAM only:                 37
+  Number of BlockRAM/FIFO:                      39 out of     148   26%
+    Number using BlockRAM only:                 39
     Total primitives used:
       Number of 36k BlockRAM used:              32
-      Number of 18k BlockRAM used:               8
-    Total Memory used (KB):                  1,296 out of   5,328   24%
+      Number of 18k BlockRAM used:              11
+    Total Memory used (KB):                  1,350 out of   5,328   25%
   Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
     Number used as BUFGs:                        2
   Number of DSP48Es:                             6 out of      64    9%
 
-Average Fanout of Non-Clock Nets:                3.92
+Average Fanout of Non-Clock Nets:                4.05
 
-Peak Memory Usage:  460 MB
-Total REAL time to MAP completion:  1 mins 20 secs 
-Total CPU time to MAP completion:   1 mins 18 secs 
+Peak Memory Usage:  471 MB
+Total REAL time to MAP completion:  2 mins 22 secs 
+Total CPU time to MAP completion:   1 mins 53 secs 
 
 Table of Contents
 -----------------

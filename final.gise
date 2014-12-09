@@ -67,6 +67,9 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="final_top_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="final_top_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="final_top_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="note_address_tb.fdo"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="note_display_tb.fdo"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="past_notes_flop_tb.fdo"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -75,6 +78,147 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1418104578" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1418104578">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1418106777" xil_pn:in_ck="2581529992396738037" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1418106777">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ac97_if.v"/>
+      <outfile xil_pn:name="aural_tb.v"/>
+      <outfile xil_pn:name="beat_gen_ff_enabled.v"/>
+      <outfile xil_pn:name="beat_generator.v"/>
+      <outfile xil_pn:name="brute_force_synchronizer.v"/>
+      <outfile xil_pn:name="button_press_unit.v"/>
+      <outfile xil_pn:name="chip_data_parser.v"/>
+      <outfile xil_pn:name="codec_conditioner.v"/>
+      <outfile xil_pn:name="debouncer.v"/>
+      <outfile xil_pn:name="dvi_controller_top.v"/>
+      <outfile xil_pn:name="dvi_defines.v"/>
+      <outfile xil_pn:name="dynamics.v"/>
+      <outfile xil_pn:name="dynamics_tb.v"/>
+      <outfile xil_pn:name="echo.v"/>
+      <outfile xil_pn:name="echo_tb.v"/>
+      <outfile xil_pn:name="fast_forward_beat_gen_tb.v"/>
+      <outfile xil_pn:name="ff_lib.v"/>
+      <outfile xil_pn:name="final_top.v"/>
+      <outfile xil_pn:name="find_multiplier.v"/>
+      <outfile xil_pn:name="frequency_rom.v"/>
+      <outfile xil_pn:name="i2c_emulator.v"/>
+      <outfile xil_pn:name="mcu.v"/>
+      <outfile xil_pn:name="music_player_tb.v"/>
+      <outfile xil_pn:name="music_player_tb_nosound.v"/>
+      <outfile xil_pn:name="music_player_v2.v"/>
+      <outfile xil_pn:name="note_address.v"/>
+      <outfile xil_pn:name="note_address_tb.v"/>
+      <outfile xil_pn:name="note_display.v"/>
+      <outfile xil_pn:name="note_display_tb.v"/>
+      <outfile xil_pn:name="note_player.v"/>
+      <outfile xil_pn:name="one_pulse.v"/>
+      <outfile xil_pn:name="past_notes_flop_tb.v"/>
+      <outfile xil_pn:name="play_state_mcu.v"/>
+      <outfile xil_pn:name="play_state_tb.v"/>
+      <outfile xil_pn:name="ram_1w2r.v"/>
+      <outfile xil_pn:name="sample_ram_tb.v"/>
+      <outfile xil_pn:name="sine_reader.v"/>
+      <outfile xil_pn:name="sine_rom.v"/>
+      <outfile xil_pn:name="song_reader_v2.v"/>
+      <outfile xil_pn:name="song_rom.v"/>
+      <outfile xil_pn:name="stereo_mcu.v"/>
+      <outfile xil_pn:name="sync_generators.v"/>
+      <outfile xil_pn:name="tcgrom.v"/>
+      <outfile xil_pn:name="wave_capture.v"/>
+      <outfile xil_pn:name="wave_capture_tb.v"/>
+      <outfile xil_pn:name="wave_display.v"/>
+      <outfile xil_pn:name="wave_display_2.v"/>
+      <outfile xil_pn:name="wave_display_2_tb.v"/>
+      <outfile xil_pn:name="wave_display_top.v"/>
+      <outfile xil_pn:name="wave_display_top_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1418106466" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5200786721153690729" xil_pn:start_ts="1418106466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1418106466" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6394190138332570501" xil_pn:start_ts="1418106466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1418096068" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7895414652943673896" xil_pn:start_ts="1418096068">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1418106777" xil_pn:in_ck="2581529992396738037" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1418106777">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ac97_if.v"/>
+      <outfile xil_pn:name="aural_tb.v"/>
+      <outfile xil_pn:name="beat_gen_ff_enabled.v"/>
+      <outfile xil_pn:name="beat_generator.v"/>
+      <outfile xil_pn:name="brute_force_synchronizer.v"/>
+      <outfile xil_pn:name="button_press_unit.v"/>
+      <outfile xil_pn:name="chip_data_parser.v"/>
+      <outfile xil_pn:name="codec_conditioner.v"/>
+      <outfile xil_pn:name="debouncer.v"/>
+      <outfile xil_pn:name="dvi_controller_top.v"/>
+      <outfile xil_pn:name="dvi_defines.v"/>
+      <outfile xil_pn:name="dynamics.v"/>
+      <outfile xil_pn:name="dynamics_tb.v"/>
+      <outfile xil_pn:name="echo.v"/>
+      <outfile xil_pn:name="echo_tb.v"/>
+      <outfile xil_pn:name="fast_forward_beat_gen_tb.v"/>
+      <outfile xil_pn:name="ff_lib.v"/>
+      <outfile xil_pn:name="final_top.v"/>
+      <outfile xil_pn:name="find_multiplier.v"/>
+      <outfile xil_pn:name="frequency_rom.v"/>
+      <outfile xil_pn:name="i2c_emulator.v"/>
+      <outfile xil_pn:name="mcu.v"/>
+      <outfile xil_pn:name="music_player_tb.v"/>
+      <outfile xil_pn:name="music_player_tb_nosound.v"/>
+      <outfile xil_pn:name="music_player_v2.v"/>
+      <outfile xil_pn:name="note_address.v"/>
+      <outfile xil_pn:name="note_address_tb.v"/>
+      <outfile xil_pn:name="note_display.v"/>
+      <outfile xil_pn:name="note_display_tb.v"/>
+      <outfile xil_pn:name="note_player.v"/>
+      <outfile xil_pn:name="one_pulse.v"/>
+      <outfile xil_pn:name="past_notes_flop_tb.v"/>
+      <outfile xil_pn:name="play_state_mcu.v"/>
+      <outfile xil_pn:name="play_state_tb.v"/>
+      <outfile xil_pn:name="ram_1w2r.v"/>
+      <outfile xil_pn:name="sample_ram_tb.v"/>
+      <outfile xil_pn:name="sine_reader.v"/>
+      <outfile xil_pn:name="sine_rom.v"/>
+      <outfile xil_pn:name="song_reader_v2.v"/>
+      <outfile xil_pn:name="song_rom.v"/>
+      <outfile xil_pn:name="stereo_mcu.v"/>
+      <outfile xil_pn:name="sync_generators.v"/>
+      <outfile xil_pn:name="tcgrom.v"/>
+      <outfile xil_pn:name="wave_capture.v"/>
+      <outfile xil_pn:name="wave_capture_tb.v"/>
+      <outfile xil_pn:name="wave_display.v"/>
+      <outfile xil_pn:name="wave_display_2.v"/>
+      <outfile xil_pn:name="wave_display_2_tb.v"/>
+      <outfile xil_pn:name="wave_display_top.v"/>
+      <outfile xil_pn:name="wave_display_top_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1418106778" xil_pn:in_ck="2581529992396738037" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="8965335000215845494" xil_pn:start_ts="1418106777">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="note_display_tb.fdo"/>
+    </transform>
     <transform xil_pn:end_ts="1418091821" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3564362682864646847" xil_pn:start_ts="1418091821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -99,7 +243,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1418092594" xil_pn:in_ck="7532874278913126900" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="7297503441353206918" xil_pn:start_ts="1418092522">
+    <transform xil_pn:end_ts="1418107815" xil_pn:in_ck="7182848012581499335" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="7297503441353206918" xil_pn:start_ts="1418107709">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -121,7 +265,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1418092606" xil_pn:in_ck="8628666371677597202" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8218012502513276945" xil_pn:start_ts="1418092594">
+    <transform xil_pn:end_ts="1418107831" xil_pn:in_ck="8628666371677597202" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8218012502513276945" xil_pn:start_ts="1418107815">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -130,7 +274,7 @@
       <outfile xil_pn:name="final_top.ngd"/>
       <outfile xil_pn:name="final_top_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1418092691" xil_pn:in_ck="7547205054771275435" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1418092606">
+    <transform xil_pn:end_ts="1418107979" xil_pn:in_ck="7547205054771275435" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1418107831">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -144,7 +288,7 @@
       <outfile xil_pn:name="final_top_summary.xml"/>
       <outfile xil_pn:name="final_top_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1418092760" xil_pn:in_ck="243532795004619620" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1418092691">
+    <transform xil_pn:end_ts="1418108093" xil_pn:in_ck="243532795004619620" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1418107979">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -158,7 +302,7 @@
       <outfile xil_pn:name="final_top_pad.txt"/>
       <outfile xil_pn:name="final_top_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1418092821" xil_pn:in_ck="-8862657330411890241" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="1555517831305455702" xil_pn:start_ts="1418092760">
+    <transform xil_pn:end_ts="1418108197" xil_pn:in_ck="-8862657330411890241" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="1555517831305455702" xil_pn:start_ts="1418108093">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -170,11 +314,13 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1418092853" xil_pn:in_ck="-8862657330411903095" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1418092852">
+    <transform xil_pn:end_ts="1418107194" xil_pn:in_ck="-8862657330411903095" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1418107190">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1418092760" xil_pn:in_ck="-8209101112577429593" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1418092741">
+    <transform xil_pn:end_ts="1418108093" xil_pn:in_ck="-8209101112577429593" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1418108064">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

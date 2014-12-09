@@ -43,8 +43,7 @@ module final_top (
     wire 	[10:0] 	x;  // [0..1279]
     wire 	[9:0]  	y;  // [0..1023]     
     // Color to display at the given x,y
-    wire 	[7:0]	r_wave, g_wave, b_wave, r_text, g_text, b_text, r, g, b;
-    reg 	[7:0]	r_reg, g_reg, b_reg;
+    
  
 //   
 //  ****************************************************************************
@@ -89,25 +88,28 @@ module final_top (
 //      The music player
 //  ****************************************************************************
 //         
-    wire new_frame;
+
     wire [15:0] codec_sample, flopped_sample;
-    wire new_sample, flopped_new_sample;
     wire [47:0] out_notes;
-    wire note_display_enable;
-    wire [1:0] song;
+    wire [1:0] 	song;
+    wire 		new_sample, flopped_new_sample, new_frame, note_display_enable, reset_player;
+    wire [17:0]	notes;
     music_player_v2 #(.BEAT_COUNT(BEAT_COUNT)) music_player_v2 (
         .clk(clk),
         .reset(reset),
         .play_button(play),
         .next_button(next),
         .fast_forward_button(fast_forward),
+        .echo_switch(echo_switch),
         .new_frame(new_frame),
+        
         .new_sample_generated(new_sample), 
         .sample_out(codec_sample),
         .out_notes(out_notes),
-        .echo_switch(echo_switch),
         .note_display_play(note_display_enable),
-        .song_out(song)
+        .song_out(song),
+        .reset_player_out(reset_player),
+        .note_data_out(notes)
     );
     
     dff #(.WIDTH(17)) sample_reg (
@@ -115,12 +117,38 @@ module final_top (
         .d({new_sample, codec_sample}),
         .q({flopped_new_sample, flopped_sample})
     );
+    
+    wire flopped_new_sample_note_one;
+    wire [15:0] flopped_sample_note_one;
+    dff #(.WIDTH(17)) sample_reg_note_one (
+        .clk(clk),
+        .d({new_sample, out_notes[47:32]}),
+        .q({flopped_new_sample_note_one, flopped_sample_note_one})
+    );
+    
+    wire flopped_new_sample_note_two;
+    wire [15:0] flopped_sample_note_two;
+    dff #(.WIDTH(17)) sample_reg_note_two (
+        .clk(clk),
+        .d({new_sample, out_notes[31:16]}),
+        .q({flopped_new_sample_note_two, flopped_sample_note_two})
+    );
+    
+    wire flopped_new_sample_note_three;
+    wire [15:0] flopped_sample_note_three;
+    dff #(.WIDTH(17)) sample_reg_note_three (
+        .clk(clk),
+        .d({new_sample, out_notes[15:0]}),
+        .q({flopped_new_sample_note_three, flopped_sample_note_three})
+    );
 
 //   
 //  ****************************************************************************
 //      Wave display
 //  ****************************************************************************
 //  
+	wire 	[7:0]	r_wave, g_wave, b_wave, r_text, g_text, b_text, r, g, b;
+    //reg 	[7:0]	r_reg, g_reg, b_reg;
 	wave_display_top wd (
 		.clk(clk),
 		.reset(reset),
@@ -128,32 +156,71 @@ module final_top (
 		.y(y),
 		.valid(chip_hsync && chip_vsync),
 		.vsync(chip_vsync),
+		.color(2'b00),
 		.r(r_wave), .g(g_wave), .b(b_wave),
 		.sample(flopped_sample),
-		.new_sample(flopped_new_sample)/**,
-		.individual_note_samples(out_notes)**/
+		.new_sample(flopped_new_sample)
 	);
+	
+	wire [7:0] r_n1, g_n1, b_n1, r_n2, g_n2, b_n2, r_n3, g_n3, b_n3;
+	wave_display_top wd_note_one (
+		.clk(clk),
+		.reset(reset),
+		.x(x),
+		.y(y),
+		.valid(chip_hsync && chip_vsync),
+		.vsync(chip_vsync),
+		.color(2'b01),
+		.r(r_n1), .g(g_n1), .b(b_n1),
+		.sample(flopped_sample_note_one),
+		.new_sample(flopped_new_sample_note_one)
+	);
+	
+	wave_display_top wd_note_two (
+		.clk(clk),
+		.reset(reset),
+		.x(x),
+		.y(y),
+		.valid(chip_hsync && chip_vsync),
+		.vsync(chip_vsync),
+		.color(2'b10),
+		.r(r_n2), .g(g_n2), .b(b_n2),
+		.sample(flopped_sample_note_two),
+		.new_sample(flopped_new_sample_note_two)
+	);
+	
+	wave_display_top wd_note_three (
+		.clk(clk),
+		.reset(reset),
+		.x(x),
+		.y(y),
+		.valid(chip_hsync && chip_vsync),
+		.vsync(chip_vsync),
+		.color(2'b11),
+		.r(r_n3), .g(g_n3), .b(b_n3),
+		.sample(flopped_sample_note_three),
+		.new_sample(flopped_new_sample_note_three)
+	);
+	
     
     note_display note_display (
 		.clk(clk),
 		.reset(reset | reset_player),
-		.new_notes(new_sample),
 		.x(x),
 		.y(y),
-		.valid(chip_hsync && chip_vsync),
-		.play_enable(note_display_enable),
-		.song(song),/**
-		.note_one(notes_to_load[5:0]),
-		.note_two(notes_to_load[11:6]),
-		.note_three(notes_to_load[17:12]),**/
+		.select({(chip_hsync && chip_vsync), note_display_enable, new_sample}),
+		.song(song),
+		.note_one(notes[5:0]),
+		.note_two(notes[11:6]),
+		.note_three(notes[17:12]),
 		.r_text(r_text),
 		.g_text(g_text),
 		.b_text(b_text)
 	);
    	
-	assign r = |r_text ? r_text : r_wave;
-	assign g = |g_text ? g_text : g_wave;
-	assign b = |b_text ? b_text : b_wave;
+	assign r = r_text | r_wave | r_n1 | r_n2 | r_n3;
+	assign g = g_text | g_wave | g_n1 | g_n2 | g_n3;
+	assign b = b_text | b_wave | b_n1 | b_n2 | b_n3;
 	
 //   
 //  ****************************************************************************
@@ -177,9 +244,10 @@ module final_top (
 //  
     // Output the sample onto the LEDs for the fun of it.
     //assign leds_l = codec_sample[15:12];
-    assign leds_r = codec_sample[15:12];
-	wire [15:0] aural_left = {16{aural_state[0]}};
+    assign leds_r 			= codec_sample[15:12];
+	wire [15:0] aural_left 	= {16{aural_state[0]}};
 	wire [15:0] aural_right = {16{aural_state[1]}};
+	
     ac97_if codec (
         .ClkIn(clk),
         .Reset(1'b0), // The codec's internal reset MUST be tied to 0
@@ -217,7 +285,6 @@ module final_top (
         .r      (r),
         .g      (g),
         .b      (b),
-
         .chip_data_enable (chip_data_enable),
         .chip_hsync       (chip_hsync),
         .chip_vsync       (chip_vsync),

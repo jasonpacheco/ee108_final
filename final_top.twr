@@ -29,19 +29,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1997516 paths analyzed, 8403 endpoints analyzed, 0 failing endpoints
+ 7102955 paths analyzed, 10161 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   9.951ns.
+ Minimum period is   9.969ns.
 --------------------------------------------------------------------------------
 
-Paths for end point music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001 (DSP48_X0Y24.A21), 6269 paths
+Paths for end point music_player_v2/echo/sample_ff/q_9 (SLICE_X26Y61.B1), 3747 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.049ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_two/sine_reader_2/pipe/q_1 (FF)
-  Destination:          music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001 (DSP)
+Slack (setup path):     0.031ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               next_button_press_unit/one_pulse/last_value_storage/q_0 (FF)
+  Destination:          music_player_v2/echo/sample_ff/q_9 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      9.630ns (Levels of Logic = 9)
-  Clock Path Skew:      -0.286ns (1.303 - 1.589)
+  Data Path Delay:      9.756ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.178ns (1.321 - 1.499)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -52,55 +52,43 @@ Slack (setup path):     0.049ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_two/sine_reader_2/pipe/q_1 to music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
+  Maximum Data Path: next_button_press_unit/one_pulse/last_value_storage/q_0 to music_player_v2/echo/sample_ff/q_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X21Y38.BQ      Tcko                  0.450   music_player_v2/note_player_two/sine_reader_2/pipe/q<3>
-                                                       music_player_v2/note_player_two/sine_reader_2/pipe/q_1
-    SLICE_X20Y42.B3      net (fanout=2)        0.801   music_player_v2/note_player_two/sine_reader_2/pipe/q<1>
-    SLICE_X20Y42.COUT    Topcyb                0.483   music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-                                                       music_player_v2/note_player_two/weighted_sample_2_help1_reg_not0000<1>1_INV_0
-                                                       music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-    SLICE_X20Y43.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-    SLICE_X20Y43.AMUX    Tcina                 0.274   music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<7>
-                                                       music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<7>
-    SLICE_X24Y44.A1      net (fanout=1)        1.044   music_player_v2/note_player_two/_old_weighted_sample_2_help1_reg_5<4>
-    SLICE_X24Y44.AMUX    Topaa                 0.374   music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_two/weighted_sample_2_reg_not0000<4>1_INV_0
-                                                       music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<7>
-    SLICE_X27Y43.A1      net (fanout=1)        0.846   music_player_v2/note_player_two/weighted_sample_2_reg_addsub0000<4>
-    SLICE_X27Y43.A       Tilo                  0.094   music_player_v2/note_player_two/weighted_sample_2_reg<3>
-                                                       music_player_v2/note_player_two/weighted_sample_2_reg<4>1
-    SLICE_X27Y41.C1      net (fanout=3)        0.849   music_player_v2/note_player_two/weighted_sample_2_reg<4>
-    SLICE_X27Y41.C       Tilo                  0.094   music_player_v2/note_player_two/weighted_sample_3_reg<4>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001C31
-    SLICE_X22Y46.BX      net (fanout=1)        0.804   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001C3
-    SLICE_X22Y46.COUT    Tbxcy                 0.346   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-    SLICE_X22Y47.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-    SLICE_X22Y47.COUT    Tbyp                  0.104   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-    SLICE_X22Y48.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-    SLICE_X22Y48.CMUX    Tcinc                 0.334   music_player_v2/note_player_two/sample_in_next_addsub0001<15>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_xor<15>
-    SLICE_X26Y59.C1      net (fanout=1)        1.456   music_player_v2/note_player_two/sample_in_next_addsub0001<14>
-    SLICE_X26Y59.C       Tilo                  0.094   music_player_v2/note_player_two/pipe2/q<15>
-                                                       music_player_v2/note_player_two/sample_in_next<14>1
-    DSP48_X0Y24.A21      net (fanout=1)        0.927   music_player_v2/note_player_two/sample_in_next<14>
-    DSP48_X0Y24.CLK      Tdspdck_AA            0.256   music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
-                                                       music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
+    SLICE_X44Y8.BQ       Tcko                  0.471   next_button_press_unit/one_pulse/last_value_storage/q<0>
+                                                       next_button_press_unit/one_pulse/last_value_storage/q_0
+    SLICE_X33Y37.A6      net (fanout=93)       3.178   next_button_press_unit/one_pulse/last_value_storage/q<0>
+    SLICE_X33Y37.A       Tilo                  0.094   music_player_v2/note_sample_two<3>
+                                                       music_player_v2/note_player_two/sample_out<3>1
+    SLICE_X29Y54.C1      net (fanout=3)        1.759   music_player_v2/note_sample_two<3>
+    SLICE_X29Y54.C       Tilo                  0.094   music_player_v2/Madd_echo_sampleC2
+                                                       music_player_v2/Madd_echo_sampleC21
+    SLICE_X28Y56.AX      net (fanout=1)        0.461   music_player_v2/Madd_echo_sampleC2
+    SLICE_X28Y56.CMUX    Taxd                  0.643   music_player_v2/Madd_echo_sample_Madd_cy<7>
+                                                       music_player_v2/Madd_echo_sample_Madd_cy<7>
+    SLICE_X27Y63.C2      net (fanout=4)        1.247   music_player_v2/echo_sample<6>
+    SLICE_X27Y63.COUT    Topcyc                0.423   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_lut<6>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+    SLICE_X27Y64.CIN     net (fanout=1)        0.000   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+    SLICE_X27Y64.BMUX    Tcinb                 0.335   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<11>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_cy<11>
+    SLICE_X26Y61.B1      net (fanout=2)        1.024   music_player_v2/echo/modified_sample_addsub0000<9>
+    SLICE_X26Y61.CLK     Tas                   0.027   music_player_v2/echo/sample_ff/q<11>
+                                                       music_player_v2/echo/sample<9>1
+                                                       music_player_v2/echo/sample_ff/q_9
     -------------------------------------------------  ---------------------------
-    Total                                      9.630ns (2.903ns logic, 6.727ns route)
-                                                       (30.1% logic, 69.9% route)
+    Total                                      9.756ns (2.087ns logic, 7.669ns route)
+                                                       (21.4% logic, 78.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.122ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_two/sine_reader_2/pipe/q_0 (FF)
-  Destination:          music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001 (DSP)
+Slack (setup path):     0.142ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               next_button_press_unit/debounce/state/q_0 (FF)
+  Destination:          music_player_v2/echo/sample_ff/q_9 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      9.557ns (Levels of Logic = 9)
-  Clock Path Skew:      -0.286ns (1.303 - 1.589)
+  Data Path Delay:      9.602ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.221ns (1.321 - 1.542)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -111,55 +99,44 @@ Slack (setup path):     0.122ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_two/sine_reader_2/pipe/q_0 to music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
+  Maximum Data Path: next_button_press_unit/debounce/state/q_0 to music_player_v2/echo/sample_ff/q_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X21Y38.AQ      Tcko                  0.450   music_player_v2/note_player_two/sine_reader_2/pipe/q<3>
-                                                       music_player_v2/note_player_two/sine_reader_2/pipe/q_0
-    SLICE_X20Y42.A4      net (fanout=3)        0.712   music_player_v2/note_player_two/sine_reader_2/pipe/q<0>
-    SLICE_X20Y42.AMUX    Topaa                 0.374   music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-                                                       music_player_v2/note_player_two/sine_reader_2/pipe/q<0>_rt
-                                                       music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-    SLICE_X24Y43.A1      net (fanout=1)        1.044   music_player_v2/note_player_two/_old_weighted_sample_2_help1_reg_5<0>
-    SLICE_X24Y43.COUT    Topcya                0.499   music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<3>
-                                                       music_player_v2/note_player_two/_old_weighted_sample_2_help1_reg_5<0>_rt
-                                                       music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<3>
-    SLICE_X24Y44.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<3>
-    SLICE_X24Y44.AMUX    Tcina                 0.274   music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<7>
-    SLICE_X27Y43.A1      net (fanout=1)        0.846   music_player_v2/note_player_two/weighted_sample_2_reg_addsub0000<4>
-    SLICE_X27Y43.A       Tilo                  0.094   music_player_v2/note_player_two/weighted_sample_2_reg<3>
-                                                       music_player_v2/note_player_two/weighted_sample_2_reg<4>1
-    SLICE_X27Y41.C1      net (fanout=3)        0.849   music_player_v2/note_player_two/weighted_sample_2_reg<4>
-    SLICE_X27Y41.C       Tilo                  0.094   music_player_v2/note_player_two/weighted_sample_3_reg<4>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001C31
-    SLICE_X22Y46.BX      net (fanout=1)        0.804   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001C3
-    SLICE_X22Y46.COUT    Tbxcy                 0.346   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-    SLICE_X22Y47.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-    SLICE_X22Y47.COUT    Tbyp                  0.104   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-    SLICE_X22Y48.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-    SLICE_X22Y48.CMUX    Tcinc                 0.334   music_player_v2/note_player_two/sample_in_next_addsub0001<15>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_xor<15>
-    SLICE_X26Y59.C1      net (fanout=1)        1.456   music_player_v2/note_player_two/sample_in_next_addsub0001<14>
-    SLICE_X26Y59.C       Tilo                  0.094   music_player_v2/note_player_two/pipe2/q<15>
-                                                       music_player_v2/note_player_two/sample_in_next<14>1
-    DSP48_X0Y24.A21      net (fanout=1)        0.927   music_player_v2/note_player_two/sample_in_next<14>
-    DSP48_X0Y24.CLK      Tdspdck_AA            0.256   music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
-                                                       music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
+    SLICE_X46Y15.CQ      Tcko                  0.450   next_button_press_unit/debounce/state/q<0>
+                                                       next_button_press_unit/debounce/state/q_0
+    SLICE_X36Y49.A1      net (fanout=74)       3.882   next_button_press_unit/debounce/state/q<0>
+    SLICE_X36Y49.A       Tilo                  0.094   music_player_v2/note_sample_three<2>
+                                                       music_player_v2/note_player_three/sample_out<2>1
+    SLICE_X28Y55.C1      net (fanout=3)        1.374   music_player_v2/note_sample_three<2>
+    SLICE_X28Y55.COUT    Topcyc                0.409   music_player_v2/Madd_echo_sample_Madd_cy<3>
+                                                       music_player_v2/Madd_echo_sample_Madd_lut<2>
+                                                       music_player_v2/Madd_echo_sample_Madd_cy<3>
+    SLICE_X28Y56.CIN     net (fanout=1)        0.000   music_player_v2/Madd_echo_sample_Madd_cy<3>
+    SLICE_X28Y56.CMUX    Tcinc                 0.337   music_player_v2/Madd_echo_sample_Madd_cy<7>
+                                                       music_player_v2/Madd_echo_sample_Madd_cy<7>
+    SLICE_X27Y63.C2      net (fanout=4)        1.247   music_player_v2/echo_sample<6>
+    SLICE_X27Y63.COUT    Topcyc                0.423   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_lut<6>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+    SLICE_X27Y64.CIN     net (fanout=1)        0.000   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+    SLICE_X27Y64.BMUX    Tcinb                 0.335   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<11>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_cy<11>
+    SLICE_X26Y61.B1      net (fanout=2)        1.024   music_player_v2/echo/modified_sample_addsub0000<9>
+    SLICE_X26Y61.CLK     Tas                   0.027   music_player_v2/echo/sample_ff/q<11>
+                                                       music_player_v2/echo/sample<9>1
+                                                       music_player_v2/echo/sample_ff/q_9
     -------------------------------------------------  ---------------------------
-    Total                                      9.557ns (2.919ns logic, 6.638ns route)
-                                                       (30.5% logic, 69.5% route)
+    Total                                      9.602ns (2.075ns logic, 7.527ns route)
+                                                       (21.6% logic, 78.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.122ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_two/sine_reader_2/pipe/q_0 (FF)
-  Destination:          music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001 (DSP)
+Slack (setup path):     0.166ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               next_button_press_unit/debounce/state/q_0 (FF)
+  Destination:          music_player_v2/echo/sample_ff/q_9 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      9.557ns (Levels of Logic = 9)
-  Clock Path Skew:      -0.286ns (1.303 - 1.589)
+  Data Path Delay:      9.578ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.221ns (1.321 - 1.542)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -170,58 +147,46 @@ Slack (setup path):     0.122ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_two/sine_reader_2/pipe/q_0 to music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
+  Maximum Data Path: next_button_press_unit/debounce/state/q_0 to music_player_v2/echo/sample_ff/q_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X21Y38.AQ      Tcko                  0.450   music_player_v2/note_player_two/sine_reader_2/pipe/q<3>
-                                                       music_player_v2/note_player_two/sine_reader_2/pipe/q_0
-    SLICE_X20Y42.A4      net (fanout=3)        0.712   music_player_v2/note_player_two/sine_reader_2/pipe/q<0>
-    SLICE_X20Y42.COUT    Topcya                0.499   music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-                                                       music_player_v2/note_player_two/sine_reader_2/pipe/q<0>_rt
-                                                       music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-    SLICE_X20Y43.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<3>
-    SLICE_X20Y43.AMUX    Tcina                 0.274   music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<7>
-                                                       music_player_v2/note_player_two/Madd__old_weighted_sample_2_help1_reg_5_cy<7>
-    SLICE_X24Y44.A1      net (fanout=1)        1.044   music_player_v2/note_player_two/_old_weighted_sample_2_help1_reg_5<4>
-    SLICE_X24Y44.AMUX    Topaa                 0.374   music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_two/weighted_sample_2_reg_not0000<4>1_INV_0
-                                                       music_player_v2/note_player_two/Madd_weighted_sample_2_reg_addsub0000_cy<7>
-    SLICE_X27Y43.A1      net (fanout=1)        0.846   music_player_v2/note_player_two/weighted_sample_2_reg_addsub0000<4>
-    SLICE_X27Y43.A       Tilo                  0.094   music_player_v2/note_player_two/weighted_sample_2_reg<3>
-                                                       music_player_v2/note_player_two/weighted_sample_2_reg<4>1
-    SLICE_X27Y41.C1      net (fanout=3)        0.849   music_player_v2/note_player_two/weighted_sample_2_reg<4>
-    SLICE_X27Y41.C       Tilo                  0.094   music_player_v2/note_player_two/weighted_sample_3_reg<4>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001C31
-    SLICE_X22Y46.BX      net (fanout=1)        0.804   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001C3
-    SLICE_X22Y46.COUT    Tbxcy                 0.346   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-    SLICE_X22Y47.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<7>
-    SLICE_X22Y47.COUT    Tbyp                  0.104   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-    SLICE_X22Y48.CIN     net (fanout=1)        0.000   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_cy<11>
-    SLICE_X22Y48.CMUX    Tcinc                 0.334   music_player_v2/note_player_two/sample_in_next_addsub0001<15>
-                                                       music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_xor<15>
-    SLICE_X26Y59.C1      net (fanout=1)        1.456   music_player_v2/note_player_two/sample_in_next_addsub0001<14>
-    SLICE_X26Y59.C       Tilo                  0.094   music_player_v2/note_player_two/pipe2/q<15>
-                                                       music_player_v2/note_player_two/sample_in_next<14>1
-    DSP48_X0Y24.A21      net (fanout=1)        0.927   music_player_v2/note_player_two/sample_in_next<14>
-    DSP48_X0Y24.CLK      Tdspdck_AA            0.256   music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
-                                                       music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001
+    SLICE_X46Y15.CQ      Tcko                  0.450   next_button_press_unit/debounce/state/q<0>
+                                                       next_button_press_unit/debounce/state/q_0
+    SLICE_X36Y49.A1      net (fanout=74)       3.882   next_button_press_unit/debounce/state/q<0>
+    SLICE_X36Y49.A       Tilo                  0.094   music_player_v2/note_sample_three<2>
+                                                       music_player_v2/note_player_three/sample_out<2>1
+    SLICE_X28Y55.C1      net (fanout=3)        1.374   music_player_v2/note_sample_three<2>
+    SLICE_X28Y55.COUT    Topcyc                0.409   music_player_v2/Madd_echo_sample_Madd_cy<3>
+                                                       music_player_v2/Madd_echo_sample_Madd_lut<2>
+                                                       music_player_v2/Madd_echo_sample_Madd_cy<3>
+    SLICE_X28Y56.CIN     net (fanout=1)        0.000   music_player_v2/Madd_echo_sample_Madd_cy<3>
+    SLICE_X28Y56.AMUX    Tcina                 0.274   music_player_v2/Madd_echo_sample_Madd_cy<7>
+                                                       music_player_v2/Madd_echo_sample_Madd_cy<7>
+    SLICE_X27Y63.AX      net (fanout=4)        1.270   music_player_v2/echo_sample<4>
+    SLICE_X27Y63.COUT    Taxcy                 0.439   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+    SLICE_X27Y64.CIN     net (fanout=1)        0.000   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<7>
+    SLICE_X27Y64.BMUX    Tcinb                 0.335   music_player_v2/echo/Madd_modified_sample_addsub0000_cy<11>
+                                                       music_player_v2/echo/Madd_modified_sample_addsub0000_cy<11>
+    SLICE_X26Y61.B1      net (fanout=2)        1.024   music_player_v2/echo/modified_sample_addsub0000<9>
+    SLICE_X26Y61.CLK     Tas                   0.027   music_player_v2/echo/sample_ff/q<11>
+                                                       music_player_v2/echo/sample<9>1
+                                                       music_player_v2/echo/sample_ff/q_9
     -------------------------------------------------  ---------------------------
-    Total                                      9.557ns (2.919ns logic, 6.638ns route)
-                                                       (30.5% logic, 69.5% route)
+    Total                                      9.578ns (2.028ns logic, 7.550ns route)
+                                                       (21.2% logic, 78.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point music_player_v2/note_player_three/pipe/q_11 (SLICE_X18Y57.A6), 3836 paths
+Paths for end point music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000 (RAMB36_X2Y9.ADDRAU14), 18218 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.089ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_three/pipe7/q_0 (FF)
-  Destination:          music_player_v2/note_player_three/pipe/q_11 (FF)
+Slack (setup path):     0.035ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               music_player_v2/note_player_three/frequency_rom/dout_1 (FF)
+  Destination:          music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000 (RAM)
   Requirement:          10.000ns
-  Data Path Delay:      9.850ns (Levels of Logic = 13)
-  Clock Path Skew:      -0.026ns (0.654 - 0.680)
+  Data Path Delay:      9.823ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.107ns (1.384 - 1.491)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -232,65 +197,53 @@ Slack (setup path):     0.089ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_three/pipe7/q_0 to music_player_v2/note_player_three/pipe/q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y54.DQ      Tcko                  0.450   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q_0
-    SLICE_X13Y54.A5      net (fanout=2)        0.528   music_player_v2/note_player_three/pipe7/q<0>
-    SLICE_X13Y54.COUT    Topcya                0.509   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q<0>_rt
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.BMUX    Tcinb                 0.335   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_xor<15>
-    DSP48_X0Y21.A20      net (fanout=1)        1.187   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<13>
-    DSP48_X0Y21.P2       Tdspdo_AP_M           3.646   music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-                                                       music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-    SLICE_X19Y50.C4      net (fanout=1)        1.170   music_player_v2/note_player_three/dynamics/sample_help_reg2_mult0001<2>
-    SLICE_X19Y50.COUT    Topcyc                0.423   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_not0000<2>1_INV_0
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X18Y57.A6      net (fanout=1)        0.446   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<27>
-    SLICE_X18Y57.CLK     Tas                   0.026   music_player_v2/note_player_three/pipe/q<14>
-                                                       music_player_v2/note_player_three/dynamics/sample_out<11>1
-                                                       music_player_v2/note_player_three/pipe/q_11
-    -------------------------------------------------  ---------------------------
-    Total                                      9.850ns (6.519ns logic, 3.331ns route)
-                                                       (66.2% logic, 33.8% route)
+  Maximum Data Path: music_player_v2/note_player_three/frequency_rom/dout_1 to music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X45Y9.CQ         Tcko                  0.450   music_player_v2/note_player_three/frequency_rom/dout<2>
+                                                         music_player_v2/note_player_three/frequency_rom/dout_1
+    SLICE_X61Y35.A3        net (fanout=7)        2.300   music_player_v2/note_player_three/frequency_rom/dout<1>
+    SLICE_X61Y35.COUT      Topcya                0.509   music_player_v2/note_player_three/Madd__add0000_cy<4>
+                                                         music_player_v2/note_player_three/Madd__add0000_lut<1>
+                                                         music_player_v2/note_player_three/Madd__add0000_cy<4>
+    SLICE_X61Y36.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/Madd__add0000_cy<4>
+    SLICE_X61Y36.DMUX      Tcind                 0.402   music_player_v2/note_player_three/Madd__add0000_cy<8>
+                                                         music_player_v2/note_player_three/Madd__add0000_cy<8>
+    SLICE_X60Y39.A2        net (fanout=2)        0.981   music_player_v2/note_player_three/_add0000<8>
+    SLICE_X60Y39.COUT      Topcya                0.499   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_lut<8>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+    SLICE_X60Y40.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+    SLICE_X60Y40.AMUX      Tcina                 0.274   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<15>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<15>
+    SLICE_X64Y42.A1        net (fanout=1)        1.060   music_player_v2/note_player_three/sine_reader_3/quad_addr_reg_addsub0001<12>
+    SLICE_X64Y42.COUT      Topcya                0.499   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_lut<12>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+    SLICE_X64Y43.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+    SLICE_X64Y43.DMUX      Tcind                 0.405   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<19>
+    SLICE_X65Y48.C3        net (fanout=1)        0.772   music_player_v2/note_player_three/sine_reader_3/quad_addr_reg_addsub0000<19>
+    SLICE_X65Y48.C         Tilo                  0.094   music_player_v2/note_player_three/sine_reader_3/countFF/q<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/next_state_count<19>1
+    SLICE_X65Y48.D4        net (fanout=1)        0.506   music_player_v2/note_player_three/sine_reader_3/next_state_count<19>
+    SLICE_X65Y48.D         Tilo                  0.094   music_player_v2/note_player_three/sine_reader_3/countFF/q<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/addr<9>1
+    RAMB36_X2Y9.ADDRAU14   net (fanout=1)        0.631   music_player_v2/note_player_three/sine_reader_3/addr<9>
+    RAMB36_X2Y9.CLKARDCLKU Trcck_ADDRA           0.347   music_player_v2/note_player_three/sine_reader_1/sine_rom/Mrom__varindex00001
+                                                         music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000
+    ---------------------------------------------------  ---------------------------
+    Total                                        9.823ns (3.573ns logic, 6.250ns route)
+                                                         (36.4% logic, 63.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.113ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_three/pipe7/q_0 (FF)
-  Destination:          music_player_v2/note_player_three/pipe/q_11 (FF)
+Slack (setup path):     0.038ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               music_player_v2/note_player_three/frequency_rom/dout_8 (FF)
+  Destination:          music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000 (RAM)
   Requirement:          10.000ns
-  Data Path Delay:      9.826ns (Levels of Logic = 13)
-  Clock Path Skew:      -0.026ns (0.654 - 0.680)
+  Data Path Delay:      9.820ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.107ns (1.384 - 1.491)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -301,65 +254,53 @@ Slack (setup path):     0.113ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_three/pipe7/q_0 to music_player_v2/note_player_three/pipe/q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y54.DQ      Tcko                  0.450   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q_0
-    SLICE_X13Y54.A5      net (fanout=2)        0.528   music_player_v2/note_player_three/pipe7/q<0>
-    SLICE_X13Y54.COUT    Topcya                0.509   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q<0>_rt
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.AMUX    Tcina                 0.271   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_xor<15>
-    DSP48_X0Y21.A19      net (fanout=1)        1.227   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<12>
-    DSP48_X0Y21.P2       Tdspdo_AP_M           3.646   music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-                                                       music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-    SLICE_X19Y50.C4      net (fanout=1)        1.170   music_player_v2/note_player_three/dynamics/sample_help_reg2_mult0001<2>
-    SLICE_X19Y50.COUT    Topcyc                0.423   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_not0000<2>1_INV_0
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X18Y57.A6      net (fanout=1)        0.446   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<27>
-    SLICE_X18Y57.CLK     Tas                   0.026   music_player_v2/note_player_three/pipe/q<14>
-                                                       music_player_v2/note_player_three/dynamics/sample_out<11>1
-                                                       music_player_v2/note_player_three/pipe/q_11
-    -------------------------------------------------  ---------------------------
-    Total                                      9.826ns (6.455ns logic, 3.371ns route)
-                                                       (65.7% logic, 34.3% route)
+  Maximum Data Path: music_player_v2/note_player_three/frequency_rom/dout_8 to music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X44Y9.DQ         Tcko                  0.471   music_player_v2/note_player_three/frequency_rom/dout<8>
+                                                         music_player_v2/note_player_three/frequency_rom/dout_8
+    SLICE_X61Y36.D2        net (fanout=7)        2.502   music_player_v2/note_player_three/frequency_rom/dout<8>
+    SLICE_X61Y36.COUT      Topcyd                0.392   music_player_v2/note_player_three/Madd__add0000_cy<8>
+                                                         music_player_v2/note_player_three/Madd__add0000_lut<8>
+                                                         music_player_v2/note_player_three/Madd__add0000_cy<8>
+    SLICE_X61Y37.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/Madd__add0000_cy<8>
+    SLICE_X61Y37.CMUX      Tcinc                 0.334   music_player_v2/note_player_three/Madd__add0000_cy<12>
+                                                         music_player_v2/note_player_three/Madd__add0000_cy<12>
+    SLICE_X60Y39.D1        net (fanout=2)        1.055   music_player_v2/note_player_three/_add0000<11>
+    SLICE_X60Y39.COUT      Topcyd                0.384   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_lut<11>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+    SLICE_X60Y40.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+    SLICE_X60Y40.AMUX      Tcina                 0.274   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<15>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<15>
+    SLICE_X64Y42.A1        net (fanout=1)        1.060   music_player_v2/note_player_three/sine_reader_3/quad_addr_reg_addsub0001<12>
+    SLICE_X64Y42.COUT      Topcya                0.499   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_lut<12>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+    SLICE_X64Y43.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+    SLICE_X64Y43.DMUX      Tcind                 0.405   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<19>
+    SLICE_X65Y48.C3        net (fanout=1)        0.772   music_player_v2/note_player_three/sine_reader_3/quad_addr_reg_addsub0000<19>
+    SLICE_X65Y48.C         Tilo                  0.094   music_player_v2/note_player_three/sine_reader_3/countFF/q<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/next_state_count<19>1
+    SLICE_X65Y48.D4        net (fanout=1)        0.506   music_player_v2/note_player_three/sine_reader_3/next_state_count<19>
+    SLICE_X65Y48.D         Tilo                  0.094   music_player_v2/note_player_three/sine_reader_3/countFF/q<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/addr<9>1
+    RAMB36_X2Y9.ADDRAU14   net (fanout=1)        0.631   music_player_v2/note_player_three/sine_reader_3/addr<9>
+    RAMB36_X2Y9.CLKARDCLKU Trcck_ADDRA           0.347   music_player_v2/note_player_three/sine_reader_1/sine_rom/Mrom__varindex00001
+                                                         music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000
+    ---------------------------------------------------  ---------------------------
+    Total                                        9.820ns (3.294ns logic, 6.526ns route)
+                                                         (33.5% logic, 66.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.132ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_three/pipe7/q_0 (FF)
-  Destination:          music_player_v2/note_player_three/pipe/q_11 (FF)
+Slack (setup path):     0.040ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               music_player_v2/note_player_three/frequency_rom/dout_1 (FF)
+  Destination:          music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000 (RAM)
   Requirement:          10.000ns
-  Data Path Delay:      9.807ns (Levels of Logic = 12)
-  Clock Path Skew:      -0.026ns (0.654 - 0.680)
+  Data Path Delay:      9.818ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.107ns (1.384 - 1.491)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -370,65 +311,59 @@ Slack (setup path):     0.132ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_three/pipe7/q_0 to music_player_v2/note_player_three/pipe/q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y54.DQ      Tcko                  0.450   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q_0
-    SLICE_X13Y54.A5      net (fanout=2)        0.528   music_player_v2/note_player_three/pipe7/q<0>
-    SLICE_X13Y54.COUT    Topcya                0.509   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q<0>_rt
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    DSP48_X0Y21.A18      net (fanout=1)        1.181   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<11>
-    DSP48_X0Y21.P2       Tdspdo_AP_M           3.646   music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-                                                       music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-    SLICE_X19Y50.C4      net (fanout=1)        1.170   music_player_v2/note_player_three/dynamics/sample_help_reg2_mult0001<2>
-    SLICE_X19Y50.COUT    Topcyc                0.423   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_not0000<2>1_INV_0
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X18Y57.A6      net (fanout=1)        0.446   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<27>
-    SLICE_X18Y57.CLK     Tas                   0.026   music_player_v2/note_player_three/pipe/q<14>
-                                                       music_player_v2/note_player_three/dynamics/sample_out<11>1
-                                                       music_player_v2/note_player_three/pipe/q_11
-    -------------------------------------------------  ---------------------------
-    Total                                      9.807ns (6.482ns logic, 3.325ns route)
-                                                       (66.1% logic, 33.9% route)
+  Maximum Data Path: music_player_v2/note_player_three/frequency_rom/dout_1 to music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X45Y9.CQ         Tcko                  0.450   music_player_v2/note_player_three/frequency_rom/dout<2>
+                                                         music_player_v2/note_player_three/frequency_rom/dout_1
+    SLICE_X61Y35.A3        net (fanout=7)        2.300   music_player_v2/note_player_three/frequency_rom/dout<1>
+    SLICE_X61Y35.COUT      Topcya                0.509   music_player_v2/note_player_three/Madd__add0000_cy<4>
+                                                         music_player_v2/note_player_three/Madd__add0000_lut<1>
+                                                         music_player_v2/note_player_three/Madd__add0000_cy<4>
+    SLICE_X61Y36.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/Madd__add0000_cy<4>
+    SLICE_X61Y36.COUT      Tbyp                  0.104   music_player_v2/note_player_three/Madd__add0000_cy<8>
+                                                         music_player_v2/note_player_three/Madd__add0000_cy<8>
+    SLICE_X61Y37.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/Madd__add0000_cy<8>
+    SLICE_X61Y37.CMUX      Tcinc                 0.334   music_player_v2/note_player_three/Madd__add0000_cy<12>
+                                                         music_player_v2/note_player_three/Madd__add0000_cy<12>
+    SLICE_X60Y39.D1        net (fanout=2)        1.055   music_player_v2/note_player_three/_add0000<11>
+    SLICE_X60Y39.COUT      Topcyd                0.384   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_lut<11>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+    SLICE_X60Y40.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<11>
+    SLICE_X60Y40.AMUX      Tcina                 0.274   music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<15>
+                                                         music_player_v2/note_player_three/sine_reader_3/Madd_quad_addr_reg_addsub0001_cy<15>
+    SLICE_X64Y42.A1        net (fanout=1)        1.060   music_player_v2/note_player_three/sine_reader_3/quad_addr_reg_addsub0001<12>
+    SLICE_X64Y42.COUT      Topcya                0.499   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_lut<12>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+    SLICE_X64Y43.CIN       net (fanout=1)        0.000   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<15>
+    SLICE_X64Y43.DMUX      Tcind                 0.405   music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/Maddsub_quad_addr_reg_addsub0000_cy<19>
+    SLICE_X65Y48.C3        net (fanout=1)        0.772   music_player_v2/note_player_three/sine_reader_3/quad_addr_reg_addsub0000<19>
+    SLICE_X65Y48.C         Tilo                  0.094   music_player_v2/note_player_three/sine_reader_3/countFF/q<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/next_state_count<19>1
+    SLICE_X65Y48.D4        net (fanout=1)        0.506   music_player_v2/note_player_three/sine_reader_3/next_state_count<19>
+    SLICE_X65Y48.D         Tilo                  0.094   music_player_v2/note_player_three/sine_reader_3/countFF/q<19>
+                                                         music_player_v2/note_player_three/sine_reader_3/addr<9>1
+    RAMB36_X2Y9.ADDRAU14   net (fanout=1)        0.631   music_player_v2/note_player_three/sine_reader_3/addr<9>
+    RAMB36_X2Y9.CLKARDCLKU Trcck_ADDRA           0.347   music_player_v2/note_player_three/sine_reader_1/sine_rom/Mrom__varindex00001
+                                                         music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000
+    ---------------------------------------------------  ---------------------------
+    Total                                        9.818ns (3.494ns logic, 6.324ns route)
+                                                         (35.6% logic, 64.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point music_player_v2/note_player_three/pipe/q_15 (SLICE_X18Y58.C6), 4384 paths
+Paths for end point ctrl/make_chip_data/pixel_22 (SLICE_X49Y16.A6), 568982 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.129ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_three/pipe7/q_0 (FF)
-  Destination:          music_player_v2/note_player_three/pipe/q_15 (FF)
+Slack (setup path):     0.039ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               music_player_v2/song_reader/song_doneFF/q_0_1 (FF)
+  Destination:          ctrl/make_chip_data/pixel_22 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      9.812ns (Levels of Logic = 14)
-  Clock Path Skew:      -0.024ns (0.656 - 0.680)
+  Data Path Delay:      9.734ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.192ns (1.328 - 1.520)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -439,68 +374,54 @@ Slack (setup path):     0.129ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_three/pipe7/q_0 to music_player_v2/note_player_three/pipe/q_15
+  Maximum Data Path: music_player_v2/song_reader/song_doneFF/q_0_1 to ctrl/make_chip_data/pixel_22
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y54.DQ      Tcko                  0.450   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q_0
-    SLICE_X13Y54.A5      net (fanout=2)        0.528   music_player_v2/note_player_three/pipe7/q<0>
-    SLICE_X13Y54.COUT    Topcya                0.509   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q<0>_rt
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.BMUX    Tcinb                 0.335   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_xor<15>
-    DSP48_X0Y21.A20      net (fanout=1)        1.187   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<13>
-    DSP48_X0Y21.P2       Tdspdo_AP_M           3.646   music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-                                                       music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-    SLICE_X19Y50.C4      net (fanout=1)        1.170   music_player_v2/note_player_three/dynamics/sample_help_reg2_mult0001<2>
-    SLICE_X19Y50.COUT    Topcyc                0.423   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_not0000<2>1_INV_0
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X19Y57.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X19Y57.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<31>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_xor<31>
-    SLICE_X18Y58.C6      net (fanout=1)        0.301   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<31>
-    SLICE_X18Y58.CLK     Tas                   0.029   music_player_v2/note_player_three/pipe/q<15>
-                                                       music_player_v2/note_player_three/dynamics/sample_out<15>1
-                                                       music_player_v2/note_player_three/pipe/q_15
+    SLICE_X44Y4.AQ       Tcko                  0.471   music_player_v2/song_reader/song_doneFF/q_0_1
+                                                       music_player_v2/song_reader/song_doneFF/q_0_1
+    SLICE_X44Y9.B5       net (fanout=20)       0.665   music_player_v2/song_reader/song_doneFF/q_0_1
+    SLICE_X44Y9.B        Tilo                  0.094   music_player_v2/note_player_three/frequency_rom/dout<8>
+                                                       music_player_v2/song_reader/notes_to_load<15>1
+    SLICE_X47Y7.C1       net (fanout=35)       1.222   notes<15>
+    SLICE_X47Y7.C        Tilo                  0.094   note_display/new_note_data/q<44>
+                                                       note_display_note_address_three/Mrom_note_addr431
+    SLICE_X49Y5.C3       net (fanout=2)        1.963   note_display/note_three_addr<43>
+    SLICE_X49Y5.C        Tilo                  0.094   N446
+                                                       note_display/rom_base_addr<7>244
+    SLICE_X49Y6.D4       net (fanout=1)        0.496   note_display/rom_base_addr<7>244
+    SLICE_X49Y6.D        Tilo                  0.094   note_display/rom_base_addr<7>279
+                                                       note_display/rom_base_addr<7>279
+    SLICE_X46Y13.D6      net (fanout=1)        0.913   note_display/rom_base_addr<7>279
+    SLICE_X46Y13.DMUX    Topdd                 0.391   note_display/Madd_rom_addr_cy<7>
+                                                       note_display/rom_base_addr<7>840
+                                                       note_display/Madd_rom_addr_cy<7>
+    SLICE_X46Y14.B5      net (fanout=9)        0.424   note_display/rom_addr<7>
+    SLICE_X46Y14.B       Tilo                  0.094   note_display_char_rom/Mrom_data_f7
+                                                       note_display_char_rom/Mrom_data_f7
+    SLICE_X46Y16.D4      net (fanout=1)        0.663   note_display_char_rom/Mrom_data_f7
+    SLICE_X46Y16.D       Tilo                  0.094   note_display/rom_data<0>
+                                                       note_display_char_rom/Mrom_data211
+    SLICE_X46Y16.A3      net (fanout=1)        0.742   note_display/rom_data<0>
+    SLICE_X46Y16.BMUX    Topab                 0.438   note_display/rom_data<0>
+                                                       note_display/AUX_25_and00001
+                                                       note_display/AUX_25_and0000_f7
+                                                       note_display/AUX_25_and0000_f8
+    SLICE_X49Y16.A6      net (fanout=8)        0.756   note_display/AUX_25_and0000
+    SLICE_X49Y16.CLK     Tas                   0.026   ctrl/make_chip_data/pixel<23>
+                                                       r<6>11
+                                                       ctrl/make_chip_data/pixel_22
     -------------------------------------------------  ---------------------------
-    Total                                      9.812ns (6.626ns logic, 3.186ns route)
-                                                       (67.5% logic, 32.5% route)
+    Total                                      9.734ns (1.890ns logic, 7.844ns route)
+                                                       (19.4% logic, 80.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.153ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_three/pipe7/q_0 (FF)
-  Destination:          music_player_v2/note_player_three/pipe/q_15 (FF)
+Slack (setup path):     0.068ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               music_player_v2/song_reader/notes_to_loadFF/q_14 (FF)
+  Destination:          ctrl/make_chip_data/pixel_22 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      9.788ns (Levels of Logic = 14)
-  Clock Path Skew:      -0.024ns (0.656 - 0.680)
+  Data Path Delay:      9.726ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.171ns (1.328 - 1.499)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -511,68 +432,54 @@ Slack (setup path):     0.153ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_three/pipe7/q_0 to music_player_v2/note_player_three/pipe/q_15
+  Maximum Data Path: music_player_v2/song_reader/notes_to_loadFF/q_14 to ctrl/make_chip_data/pixel_22
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y54.DQ      Tcko                  0.450   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q_0
-    SLICE_X13Y54.A5      net (fanout=2)        0.528   music_player_v2/note_player_three/pipe7/q<0>
-    SLICE_X13Y54.COUT    Topcya                0.509   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q<0>_rt
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    SLICE_X13Y57.AMUX    Tcina                 0.271   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_xor<15>
-    DSP48_X0Y21.A19      net (fanout=1)        1.227   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<12>
-    DSP48_X0Y21.P2       Tdspdo_AP_M           3.646   music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-                                                       music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-    SLICE_X19Y50.C4      net (fanout=1)        1.170   music_player_v2/note_player_three/dynamics/sample_help_reg2_mult0001<2>
-    SLICE_X19Y50.COUT    Topcyc                0.423   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_not0000<2>1_INV_0
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X19Y57.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X19Y57.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<31>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_xor<31>
-    SLICE_X18Y58.C6      net (fanout=1)        0.301   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<31>
-    SLICE_X18Y58.CLK     Tas                   0.029   music_player_v2/note_player_three/pipe/q<15>
-                                                       music_player_v2/note_player_three/dynamics/sample_out<15>1
-                                                       music_player_v2/note_player_three/pipe/q_15
+    SLICE_X45Y8.AQ       Tcko                  0.450   music_player_v2/song_reader/notes_to_loadFF/q<16>
+                                                       music_player_v2/song_reader/notes_to_loadFF/q_14
+    SLICE_X45Y9.B3       net (fanout=2)        0.904   music_player_v2/song_reader/notes_to_loadFF/q<14>
+    SLICE_X45Y9.B        Tilo                  0.094   music_player_v2/note_player_three/frequency_rom/dout<2>
+                                                       music_player_v2/song_reader/notes_to_load<14>1
+    SLICE_X49Y7.A2       net (fanout=35)       1.465   notes<14>
+    SLICE_X49Y7.A        Tilo                  0.094   note_display/N138
+                                                       note_display_note_three_addr<5>1
+    SLICE_X46Y6.C4       net (fanout=12)       0.980   note_display/note_three_addr<3>
+    SLICE_X46Y6.C        Tilo                  0.094   note_display/new_note_data/q<58>
+                                                       note_display/rom_base_addr<4>918
+    SLICE_X46Y9.B6       net (fanout=1)        0.484   note_display/rom_base_addr<4>918
+    SLICE_X46Y9.B        Tilo                  0.094   note_display/new_note_data/q<32>
+                                                       note_display/rom_base_addr<4>969
+    SLICE_X46Y13.A5      net (fanout=1)        0.843   note_display/rom_base_addr<4>969
+    SLICE_X46Y13.CMUX    Topac                 0.684   note_display/Madd_rom_addr_cy<7>
+                                                       note_display/rom_base_addr<4>1006
+                                                       note_display/Madd_rom_addr_cy<7>
+    SLICE_X47Y15.AX      net (fanout=28)       0.932   note_display/rom_addr<6>
+    SLICE_X47Y15.AMUX    Taxa                  0.313   note_display/rom_data<7>
+                                                       note_display_char_rom/Mrom_data18_f7_0
+    SLICE_X46Y15.B3      net (fanout=1)        0.447   note_display_char_rom/Mrom_data18_f71
+    SLICE_X46Y15.B       Tilo                  0.094   next_button_press_unit/debounce/state/q<0>
+                                                       note_display_char_rom/Mrom_data201
+    SLICE_X46Y16.B5      net (fanout=1)        0.537   note_display/rom_data<6>
+    SLICE_X46Y16.BMUX    Topbb                 0.435   note_display/rom_data<0>
+                                                       note_display/AUX_25_and00002
+                                                       note_display/AUX_25_and0000_f7
+                                                       note_display/AUX_25_and0000_f8
+    SLICE_X49Y16.A6      net (fanout=8)        0.756   note_display/AUX_25_and0000
+    SLICE_X49Y16.CLK     Tas                   0.026   ctrl/make_chip_data/pixel<23>
+                                                       r<6>11
+                                                       ctrl/make_chip_data/pixel_22
     -------------------------------------------------  ---------------------------
-    Total                                      9.788ns (6.562ns logic, 3.226ns route)
-                                                       (67.0% logic, 33.0% route)
+    Total                                      9.726ns (2.378ns logic, 7.348ns route)
+                                                       (24.4% logic, 75.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.172ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               music_player_v2/note_player_three/pipe7/q_0 (FF)
-  Destination:          music_player_v2/note_player_three/pipe/q_15 (FF)
+Slack (setup path):     0.074ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               music_player_v2/song_reader/song_doneFF/q_0_1 (FF)
+  Destination:          ctrl/make_chip_data/pixel_22 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      9.769ns (Levels of Logic = 13)
-  Clock Path Skew:      -0.024ns (0.656 - 0.680)
+  Data Path Delay:      9.699ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.192ns (1.328 - 1.520)
   Source Clock:         clk_IBUF rising at 0.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -583,166 +490,154 @@ Slack (setup path):     0.172ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: music_player_v2/note_player_three/pipe7/q_0 to music_player_v2/note_player_three/pipe/q_15
+  Maximum Data Path: music_player_v2/song_reader/song_doneFF/q_0_1 to ctrl/make_chip_data/pixel_22
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y54.DQ      Tcko                  0.450   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q_0
-    SLICE_X13Y54.A5      net (fanout=2)        0.528   music_player_v2/note_player_three/pipe7/q<0>
-    SLICE_X13Y54.COUT    Topcya                0.509   music_player_v2/note_player_three/pipe7/q<0>
-                                                       music_player_v2/note_player_three/pipe7/q<0>_rt
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<3>
-    SLICE_X13Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<7>
-    SLICE_X13Y56.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd__old_sample_help_reg1_9_cy<11>
-    DSP48_X0Y21.A18      net (fanout=1)        1.181   music_player_v2/note_player_three/dynamics/_old_sample_help_reg1_9<11>
-    DSP48_X0Y21.P2       Tdspdo_AP_M           3.646   music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-                                                       music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001
-    SLICE_X19Y50.C4      net (fanout=1)        1.170   music_player_v2/note_player_three/dynamics/sample_help_reg2_mult0001<2>
-    SLICE_X19Y50.COUT    Topcyc                0.423   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_not0000<2>1_INV_0
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>
-    SLICE_X19Y51.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>
-    SLICE_X19Y52.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>
-    SLICE_X19Y53.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>
-    SLICE_X19Y54.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>
-    SLICE_X19Y55.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>
-    SLICE_X19Y56.COUT    Tbyp                  0.104   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X19Y57.CIN     net (fanout=1)        0.000   music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>
-    SLICE_X19Y57.DMUX    Tcind                 0.402   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<31>
-                                                       music_player_v2/note_player_three/dynamics/Madd_decayed_sample_reg_addsub0000_xor<31>
-    SLICE_X18Y58.C6      net (fanout=1)        0.301   music_player_v2/note_player_three/dynamics/decayed_sample_reg_addsub0000<31>
-    SLICE_X18Y58.CLK     Tas                   0.029   music_player_v2/note_player_three/pipe/q<15>
-                                                       music_player_v2/note_player_three/dynamics/sample_out<15>1
-                                                       music_player_v2/note_player_three/pipe/q_15
+    SLICE_X44Y4.AQ       Tcko                  0.471   music_player_v2/song_reader/song_doneFF/q_0_1
+                                                       music_player_v2/song_reader/song_doneFF/q_0_1
+    SLICE_X44Y9.B5       net (fanout=20)       0.665   music_player_v2/song_reader/song_doneFF/q_0_1
+    SLICE_X44Y9.B        Tilo                  0.094   music_player_v2/note_player_three/frequency_rom/dout<8>
+                                                       music_player_v2/song_reader/notes_to_load<15>1
+    SLICE_X47Y7.C1       net (fanout=35)       1.222   notes<15>
+    SLICE_X47Y7.C        Tilo                  0.094   note_display/new_note_data/q<44>
+                                                       note_display_note_address_three/Mrom_note_addr431
+    SLICE_X49Y5.C3       net (fanout=2)        1.963   note_display/note_three_addr<43>
+    SLICE_X49Y5.C        Tilo                  0.094   N446
+                                                       note_display/rom_base_addr<7>244
+    SLICE_X49Y6.D4       net (fanout=1)        0.496   note_display/rom_base_addr<7>244
+    SLICE_X49Y6.D        Tilo                  0.094   note_display/rom_base_addr<7>279
+                                                       note_display/rom_base_addr<7>279
+    SLICE_X46Y13.D6      net (fanout=1)        0.913   note_display/rom_base_addr<7>279
+    SLICE_X46Y13.COUT    Topcyd                0.392   note_display/Madd_rom_addr_cy<7>
+                                                       note_display/rom_base_addr<7>840
+                                                       note_display/Madd_rom_addr_cy<7>
+    SLICE_X46Y14.CIN     net (fanout=1)        0.000   note_display/Madd_rom_addr_cy<7>
+    SLICE_X46Y14.AMUX    Tcina                 0.271   note_display_char_rom/Mrom_data_f7
+                                                       note_display/Madd_rom_addr_xor<8>
+    SLICE_X46Y15.D1      net (fanout=8)        1.096   note_display/rom_addr<8>
+    SLICE_X46Y15.D       Tilo                  0.094   next_button_press_unit/debounce/state/q<0>
+                                                       note_display_char_rom/Mrom_data1411
+    SLICE_X46Y16.B4      net (fanout=1)        0.523   note_display/rom_data<4>
+    SLICE_X46Y16.BMUX    Topbb                 0.435   note_display/rom_data<0>
+                                                       note_display/AUX_25_and00002
+                                                       note_display/AUX_25_and0000_f7
+                                                       note_display/AUX_25_and0000_f8
+    SLICE_X49Y16.A6      net (fanout=8)        0.756   note_display/AUX_25_and0000
+    SLICE_X49Y16.CLK     Tas                   0.026   ctrl/make_chip_data/pixel<23>
+                                                       r<6>11
+                                                       ctrl/make_chip_data/pixel_22
     -------------------------------------------------  ---------------------------
-    Total                                      9.769ns (6.589ns logic, 3.180ns route)
-                                                       (67.4% logic, 32.6% route)
+    Total                                      9.699ns (2.065ns logic, 7.634ns route)
+                                                       (21.3% logic, 78.7% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point fast_forward_button_press_unit/debounce/state/q_1 (SLICE_X63Y39.A6), 1 path
+Paths for end point music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10 (RAMB36_X1Y11.DIADIL0), 2 paths
 --------------------------------------------------------------------------------
-Slack (hold path):      0.353ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               fast_forward_button_press_unit/debounce/counter/q_12 (FF)
-  Destination:          fast_forward_button_press_unit/debounce/state/q_1 (FF)
+Slack (hold path):      0.423ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               music_player_v2/echo/sample_ff/q_9 (FF)
+  Destination:          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10 (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.494ns (Levels of Logic = 1)
-  Clock Path Skew:      0.141ns (1.417 - 1.276)
+  Data Path Delay:      0.741ns (Levels of Logic = 0)
+  Clock Path Skew:      0.318ns (1.639 - 1.321)
   Source Clock:         clk_IBUF rising at 10.000ns
   Destination Clock:    clk_IBUF rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: fast_forward_button_press_unit/debounce/counter/q_12 to fast_forward_button_press_unit/debounce/state/q_1
+  Minimum Data Path: music_player_v2/echo/sample_ff/q_9 to music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X26Y61.BQ         Tcko                  0.414   music_player_v2/echo/sample_ff/q<11>
+                                                          music_player_v2/echo/sample_ff/q_9
+    RAMB36_X1Y11.DIADIL0    net (fanout=4)        0.613   music_player_v2/echo/sample_ff/q<9>
+    RAMB36_X1Y11.CLKARDCLKU Trckd_DIA   (-Th)     0.286   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+                                                          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.741ns (0.128ns logic, 0.613ns route)
+                                                          (17.3% logic, 82.7% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.428ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               music_player_v2/echo/sample_ff/q_9 (FF)
+  Destination:          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.741ns (Levels of Logic = 0)
+  Clock Path Skew:      0.313ns (1.634 - 1.321)
+  Source Clock:         clk_IBUF rising at 10.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: music_player_v2/echo/sample_ff/q_9 to music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X26Y61.BQ         Tcko                  0.414   music_player_v2/echo/sample_ff/q<11>
+                                                          music_player_v2/echo/sample_ff/q_9
+    RAMB36_X1Y11.DIADIL0    net (fanout=4)        0.613   music_player_v2/echo/sample_ff/q<9>
+    RAMB36_X1Y11.CLKARDCLKL Trckd_DIA   (-Th)     0.286   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+                                                          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.741ns (0.128ns logic, 0.613ns route)
+                                                          (17.3% logic, 82.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10 (RAMB36_X1Y11.DIADIU0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.423ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               music_player_v2/echo/sample_ff/q_9 (FF)
+  Destination:          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.741ns (Levels of Logic = 0)
+  Clock Path Skew:      0.318ns (1.639 - 1.321)
+  Source Clock:         clk_IBUF rising at 10.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: music_player_v2/echo/sample_ff/q_9 to music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X26Y61.BQ         Tcko                  0.414   music_player_v2/echo/sample_ff/q<11>
+                                                          music_player_v2/echo/sample_ff/q_9
+    RAMB36_X1Y11.DIADIU0    net (fanout=4)        0.613   music_player_v2/echo/sample_ff/q<9>
+    RAMB36_X1Y11.CLKARDCLKU Trckd_DIA   (-Th)     0.286   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+                                                          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.741ns (0.128ns logic, 0.613ns route)
+                                                          (17.3% logic, 82.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point note_display/store_notes_5/q_41 (SLICE_X58Y12.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.427ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               note_display/store_notes_4/q_41 (FF)
+  Destination:          note_display/store_notes_5/q_41 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.502ns (Levels of Logic = 0)
+  Clock Path Skew:      0.075ns (0.511 - 0.436)
+  Source Clock:         clk_IBUF rising at 10.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: note_display/store_notes_4/q_41 to note_display/store_notes_5/q_41
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X62Y41.AQ      Tcko                  0.414   fast_forward_button_press_unit/debounce/counter/q<15>
-                                                       fast_forward_button_press_unit/debounce/counter/q_12
-    SLICE_X63Y39.A6      net (fanout=3)        0.277   fast_forward_button_press_unit/debounce/counter/q<12>
-    SLICE_X63Y39.CLK     Tah         (-Th)     0.197   fast_forward_button_press_unit/debounce/state/q<1>
-                                                       fast_forward_button_press_unit/debounce/next_state_d<1>258
-                                                       fast_forward_button_press_unit/debounce/state/q_1
+    SLICE_X57Y11.BQ      Tcko                  0.414   note_display/store_notes_4/q<44>
+                                                       note_display/store_notes_4/q_41
+    SLICE_X58Y12.BX      net (fanout=2)        0.319   note_display/store_notes_4/q<41>
+    SLICE_X58Y12.CLK     Tckdi       (-Th)     0.231   note_display/store_notes_5/q<44>
+                                                       note_display/store_notes_5/q_41
     -------------------------------------------------  ---------------------------
-    Total                                      0.494ns (0.217ns logic, 0.277ns route)
-                                                       (43.9% logic, 56.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9 (RAMB36_X1Y15.DIADIL0), 2 paths
---------------------------------------------------------------------------------
-Slack (hold path):      0.433ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               music_player_v2/echo/sample_ff/q_8 (FF)
-  Destination:          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9 (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.624ns (Levels of Logic = 0)
-  Clock Path Skew:      0.191ns (0.802 - 0.611)
-  Source Clock:         clk_IBUF rising at 10.000ns
-  Destination Clock:    clk_IBUF rising at 10.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: music_player_v2/echo/sample_ff/q_8 to music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-    Location                Delay type         Delay(ns)  Physical Resource
-                                                          Logical Resource(s)
-    ----------------------------------------------------  -------------------
-    SLICE_X21Y74.AQ         Tcko                  0.414   music_player_v2/echo/sample_ff/q<11>
-                                                          music_player_v2/echo/sample_ff/q_8
-    RAMB36_X1Y15.DIADIL0    net (fanout=4)        0.496   music_player_v2/echo/sample_ff/q<8>
-    RAMB36_X1Y15.CLKARDCLKU Trckd_DIA   (-Th)     0.286   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-                                                          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-    ----------------------------------------------------  ---------------------------
-    Total                                         0.624ns (0.128ns logic, 0.496ns route)
-                                                          (20.5% logic, 79.5% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      0.438ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               music_player_v2/echo/sample_ff/q_8 (FF)
-  Destination:          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9 (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.624ns (Levels of Logic = 0)
-  Clock Path Skew:      0.186ns (0.797 - 0.611)
-  Source Clock:         clk_IBUF rising at 10.000ns
-  Destination Clock:    clk_IBUF rising at 10.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: music_player_v2/echo/sample_ff/q_8 to music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-    Location                Delay type         Delay(ns)  Physical Resource
-                                                          Logical Resource(s)
-    ----------------------------------------------------  -------------------
-    SLICE_X21Y74.AQ         Tcko                  0.414   music_player_v2/echo/sample_ff/q<11>
-                                                          music_player_v2/echo/sample_ff/q_8
-    RAMB36_X1Y15.DIADIL0    net (fanout=4)        0.496   music_player_v2/echo/sample_ff/q<8>
-    RAMB36_X1Y15.CLKARDCLKL Trckd_DIA   (-Th)     0.286   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-                                                          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-    ----------------------------------------------------  ---------------------------
-    Total                                         0.624ns (0.128ns logic, 0.496ns route)
-                                                          (20.5% logic, 79.5% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9 (RAMB36_X1Y15.DIADIU0), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.433ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               music_player_v2/echo/sample_ff/q_8 (FF)
-  Destination:          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9 (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.624ns (Levels of Logic = 0)
-  Clock Path Skew:      0.191ns (0.802 - 0.611)
-  Source Clock:         clk_IBUF rising at 10.000ns
-  Destination Clock:    clk_IBUF rising at 10.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: music_player_v2/echo/sample_ff/q_8 to music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-    Location                Delay type         Delay(ns)  Physical Resource
-                                                          Logical Resource(s)
-    ----------------------------------------------------  -------------------
-    SLICE_X21Y74.AQ         Tcko                  0.414   music_player_v2/echo/sample_ff/q<11>
-                                                          music_player_v2/echo/sample_ff/q_8
-    RAMB36_X1Y15.DIADIU0    net (fanout=4)        0.496   music_player_v2/echo/sample_ff/q<8>
-    RAMB36_X1Y15.CLKARDCLKU Trckd_DIA   (-Th)     0.286   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-                                                          music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
-    ----------------------------------------------------  ---------------------------
-    Total                                         0.624ns (0.128ns logic, 0.496ns route)
-                                                          (20.5% logic, 79.5% route)
+    Total                                      0.502ns (0.183ns logic, 0.319ns route)
+                                                       (36.5% logic, 63.5% route)
 
 --------------------------------------------------------------------------------
 
@@ -753,7 +648,7 @@ Slack: 7.500ns (period - min period limit)
   Min period limit: 2.500ns (400.000MHz) (Trper_CLKA)
   Physical resource: music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101/CLKAL
   Logical resource: music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101/CLKAL
-  Location pin: RAMB36_X2Y14.CLKARDCLKL
+  Location pin: RAMB36_X1Y10.CLKARDCLKL
   Clock network: clk_IBUF
 --------------------------------------------------------------------------------
 Slack: 7.500ns (period - min period limit)
@@ -761,7 +656,7 @@ Slack: 7.500ns (period - min period limit)
   Min period limit: 2.500ns (400.000MHz) (Trper_CLKA)
   Physical resource: music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101/CLKAU
   Logical resource: music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101/CLKAU
-  Location pin: RAMB36_X2Y14.CLKARDCLKU
+  Location pin: RAMB36_X1Y10.CLKARDCLKU
   Clock network: clk_IBUF
 --------------------------------------------------------------------------------
 Slack: 7.500ns (period - min period limit)
@@ -769,7 +664,7 @@ Slack: 7.500ns (period - min period limit)
   Min period limit: 2.500ns (400.000MHz) (Trper_CLKB)
   Physical resource: music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101/CLKBL
   Logical resource: music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101/CLKBL
-  Location pin: RAMB36_X2Y14.CLKBWRCLKL
+  Location pin: RAMB36_X1Y10.CLKBWRCLKL
   Clock network: clk_IBUF
 --------------------------------------------------------------------------------
 
@@ -786,7 +681,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    9.951|         |         |         |
+clk            |    9.969|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -795,23 +690,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1997516 paths, 0 nets, and 13053 connections
+Constraints cover 7102955 paths, 0 nets, and 17504 connections
 
 Design statistics:
-   Minimum period:   9.951ns{1}   (Maximum frequency: 100.492MHz)
+   Minimum period:   9.969ns{1}   (Maximum frequency: 100.311MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Dec  8 18:39:19 2014 
+Analysis completed Mon Dec  8 22:54:50 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 334 MB
+Peak Memory Usage: 343 MB
 
 
 

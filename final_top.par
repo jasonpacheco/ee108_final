@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (lin)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-ee108-4a.stanford.edu::  Mon Dec 08 18:38:13 2014
+ee108-4a.stanford.edu::  Mon Dec 08 22:53:03 2014
 
 par -w -intstyle ise -ol high -mt off final_top_map.ncd final_top.ncd
 final_top.pcf 
@@ -41,50 +41,50 @@ Device Utilization Summary:
       Number of LOCed IOBs                  40 out of 40    100%
 
    Number of OLOGICs                         1 out of 800     1%
-   Number of RAMB18X2s                       5 out of 148     3%
+   Number of RAMB18X2s                       7 out of 148     4%
    Number of RAMB36_EXPs                    32 out of 148    21%
-   Number of Slices                        879 out of 17280   5%
-   Number of Slice Registers              1112 out of 69120   1%
-      Number used as Flip Flops           1112
+   Number of Slices                       1223 out of 17280   7%
+   Number of Slice Registers              1569 out of 69120   2%
+      Number used as Flip Flops           1569
       Number used as Latches                 0
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                   2829 out of 69120   4%
-   Number of Slice LUT-Flip Flop pairs    2901 out of 69120   4%
+   Number of Slice LUTS                   3560 out of 69120   5%
+   Number of Slice LUT-Flip Flop pairs    3784 out of 69120   5%
 
 
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 15 secs 
-Finished initial Timing Analysis.  REAL time: 15 secs 
+Starting initial Timing Analysis.  REAL time: 21 secs 
+Finished initial Timing Analysis.  REAL time: 21 secs 
 
 Starting Router
 
 
-Phase  1  : 17174 unrouted;      REAL time: 17 secs 
+Phase  1  : 21893 unrouted;      REAL time: 24 secs 
 
-Phase  2  : 13812 unrouted;      REAL time: 18 secs 
+Phase  2  : 18268 unrouted;      REAL time: 25 secs 
 
-Phase  3  : 5236 unrouted;      REAL time: 25 secs 
+Phase  3  : 6817 unrouted;      REAL time: 37 secs 
 
-Phase  4  : 5235 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+Phase  4  : 6760 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 46 secs 
 
 Updating file: final_top.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 39 secs 
-Total REAL time to Router completion: 39 secs 
-Total CPU time to Router completion: 40 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 1 secs 
+Total REAL time to Router completion: 1 mins 2 secs 
+Total CPU time to Router completion: 49 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -102,9 +102,9 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|            clk_IBUF | BUFGCTRL_X0Y1| No   |  505 |  0.462     |  2.067      |
+|            clk_IBUF | BUFGCTRL_X0Y1| No   |  662 |  0.637     |  2.177      |
 +---------------------+--------------+------+------+------------+-------------+
-|       AC97Clk_BUFGP | BUFGCTRL_X0Y0| No   |   36 |  0.081     |  1.708      |
+|       AC97Clk_BUFGP | BUFGCTRL_X0Y0| No   |   36 |  0.071     |  1.702      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -124,8 +124,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clock = PERIOD TIMEGRP "clock" 10 ns H | SETUP       |     0.049ns|     9.951ns|       0|           0
-  IGH 50%                                   | HOLD        |     0.353ns|            |       0|           0
+  TS_clock = PERIOD TIMEGRP "clock" 10 ns H | SETUP       |     0.031ns|     9.969ns|       0|           0
+  IGH 50%                                   | HOLD        |     0.423ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -136,10 +136,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 45 secs 
-Total CPU time to PAR completion: 45 secs 
+Total REAL time to PAR completion: 1 mins 16 secs 
+Total CPU time to PAR completion: 55 secs 
 
-Peak Memory Usage:  383 MB
+Peak Memory Usage:  392 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

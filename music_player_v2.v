@@ -14,7 +14,8 @@ module music_player_v2 (
 	input								echo_switch,
 	output								note_display_play,
 	output		[1:0]					song_out,
-	output 								reset_player_out
+	output 								reset_player_out,
+	output		[17:0]					note_data_out
 );
     // The BEAT_COUNT is parameterized so you can reduce this in simulation.
     // If you reduce this to 100 your simulation will be 10x faster.
@@ -84,7 +85,7 @@ module music_player_v2 (
 		.durs_to_load(durs_to_load),
 		.play_enable(play_enable)
 	);
-		
+	assign note_data_out = notes_to_load;
 //   
 //  ****************************************************************************
 //      Note Player
@@ -186,7 +187,7 @@ module music_player_v2 (
 	);
 
 
-	assign out_notes = {note_sample_one, note_sample_two, note_sample_three}; 
+	assign out_notes = new_sample_generated ? {note_sample_one, note_sample_two, note_sample_three} : 48'b0; 
 //  
 //  ****************************************************************************
 //      Codec Conditioner

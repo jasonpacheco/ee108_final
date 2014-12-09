@@ -11,3 +11,34 @@ map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -regist
 par -w -intstyle ise -ol high -mt off final_top_map.ncd final_top.ncd final_top.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml final_top.twx final_top.ncd -o final_top.twr final_top.pcf -ucf final_top.ucf 
 bitgen -intstyle ise -f final_top.ut final_top.ncd 
+xst -intstyle ise -ifn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.xst" -ofn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.syr" 
+xst -intstyle ise -ifn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.xst" -ofn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc final_top.ucf -p xc5vlx110t-ff1136-1 final_top.ngc final_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o final_top_map.ncd final_top.ngd final_top.pcf 
+par -w -intstyle ise -ol high -mt off final_top_map.ncd final_top.ncd final_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml final_top.twx final_top.ncd -o final_top.twr final_top.pcf -ucf final_top.ucf 
+bitgen -intstyle ise -f final_top.ut final_top.ncd 
+xst -intstyle ise -ifn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.xst" -ofn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc final_top.ucf -p xc5vlx110t-ff1136-1 final_top.ngc final_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o final_top_map.ncd final_top.ngd final_top.pcf 
+par -w -intstyle ise -ol high -mt off final_top_map.ncd final_top.ncd final_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml final_top.twx final_top.ncd -o final_top.twr final_top.pcf -ucf final_top.ucf 
+bitgen -intstyle ise -f final_top.ut final_top.ncd 
+xst -intstyle ise -ifn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.xst" -ofn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc final_top.ucf -p xc5vlx110t-ff1136-1 final_top.ngc final_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o final_top_map.ncd final_top.ngd final_top.pcf 
+par -w -intstyle ise -ol high -mt off final_top_map.ncd final_top.ncd final_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml final_top.twx final_top.ncd -o final_top.twr final_top.pcf -ucf final_top.ucf 
+bitgen -intstyle ise -f final_top.ut final_top.ncd 
+xst -intstyle ise -ifn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.xst" -ofn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc final_top.ucf -p xc5vlx110t-ff1136-1 final_top.ngc final_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o final_top_map.ncd final_top.ngd final_top.pcf 
+par -w -intstyle ise -ol high -mt off final_top_map.ncd final_top.ncd final_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml final_top.twx final_top.ncd -o final_top.twr final_top.pcf -ucf final_top.ucf 
+bitgen -intstyle ise -f final_top.ut final_top.ncd 
+xst -intstyle ise -ifn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.xst" -ofn "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc final_top.ucf -p xc5vlx110t-ff1136-1 final_top.ngc final_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o final_top_map.ncd final_top.ngd final_top.pcf 
+par -w -intstyle ise -ol high -mt off final_top_map.ncd final_top.ncd final_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml final_top.twx final_top.ncd -o final_top.twr final_top.pcf -ucf final_top.ucf 
+bitgen -intstyle ise -f final_top.ut final_top.ncd 

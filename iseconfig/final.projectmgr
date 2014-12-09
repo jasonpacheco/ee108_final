@@ -12,6 +12,7 @@
          <ClosedNode>/fast_forward_beat_gen_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|fast_forward_beat_gen_tb.v</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/ctrl - dvi_controller_top</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/fast_forward_button_press_unit - button_press_unit</ClosedNode>
+         <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2/RED - song_reader_v2</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2/beat_generator - beat_gen_ff_enabled</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2/beat_generator - beat_generator</ClosedNode>
@@ -51,7 +52,9 @@
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2/note_player_two - note_player/sine_reader_1 - sine_reader</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2/note_player_two - note_player/sine_reader_2 - sine_reader</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2/note_player_two - note_player/sine_reader_3 - sine_reader</ClosedNode>
+         <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/music_player_v2 - music_player_v2/song_reader - song_reader_v2</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/next_button_press_unit - button_press_unit</ClosedNode>
+         <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/note_display - note_display</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/play_button_press_unit - button_press_unit</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/stereo_button_press_unit - button_press_unit</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/stereo_mcu - stereo_mcu</ClosedNode>
@@ -73,13 +76,13 @@
          <ClosedNode>/wave_display_2 |afs|ir.stanford.edu|class|ee108|groups|14|final|wave_display_2.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>song_rom - song_rom (/afs/ir.stanford.edu/class/ee108/groups/14/final/song_rom.v)</SelectedItem>
+         <SelectedItem>final_top (/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >15</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000224000000020000000000000000000000000200000064ffffffff000000810000000300000002000002240000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>song_rom - song_rom (/afs/ir.stanford.edu/class/ee108/groups/14/final/song_rom.v)</CurrentItem>
+      <CurrentItem>final_top (/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -98,7 +101,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
@@ -140,13 +143,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Configure Target Device</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Configure Target Device</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -156,6 +159,7 @@
          <ClosedNode>/beat_generator |afs|ir.stanford.edu|class|ee108|groups|14|final|beat_generator.v</ClosedNode>
          <ClosedNode>/dynamics_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|dynamics_tb.v</ClosedNode>
          <ClosedNode>/echo_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|echo_tb.v</ClosedNode>
+         <ClosedNode>/echo_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|echo_tb.v/DUT - echo</ClosedNode>
          <ClosedNode>/fast_forward_beat_gen_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|fast_forward_beat_gen_tb.v</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v</ClosedNode>
          <ClosedNode>/final_top |afs|ir.stanford.edu|class|ee108|groups|14|final|final_top.v/codec - ac97_if</ClosedNode>
@@ -183,9 +187,12 @@
          <ClosedNode>/music_player_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|music_player_tb.v/codec - ac97_if</ClosedNode>
          <ClosedNode>/music_player_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|music_player_tb.v/music_player - music_player_v2</ClosedNode>
          <ClosedNode>/music_player_tb_nosound |afs|ir.stanford.edu|class|ee108|groups|14|final|music_player_tb_nosound.v</ClosedNode>
+         <ClosedNode>/note_address_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|note_address_tb.v</ClosedNode>
          <ClosedNode>/note_display_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|note_display_tb.v</ClosedNode>
+         <ClosedNode>/note_display_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|note_display_tb.v/ctrl - dvi_controller_top</ClosedNode>
          <ClosedNode>/past_notes_flop_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|past_notes_flop_tb.v</ClosedNode>
          <ClosedNode>/play_state_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|play_state_tb.v</ClosedNode>
+         <ClosedNode>/play_state_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|play_state_tb.v/DUT - play_state_mcu</ClosedNode>
          <ClosedNode>/sample_ram_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|sample_ram_tb.v</ClosedNode>
          <ClosedNode>/wave_capture_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|wave_capture_tb.v</ClosedNode>
          <ClosedNode>/wave_capture_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|wave_capture_tb.v/dut - wave_capture</ClosedNode>
@@ -199,13 +206,13 @@
          <ClosedNode>/wave_display_top_tb |afs|ir.stanford.edu|class|ee108|groups|14|final|wave_display_top_tb.v/wd_dut - wave_display</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>music_player_tb_nosound (/afs/ir.stanford.edu/class/ee108/groups/14/final/music_player_tb_nosound.v)</SelectedItem>
+         <SelectedItem>note_address_tb (/afs/ir.stanford.edu/class/ee108/groups/14/final/note_address_tb.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a8000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a80000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>music_player_tb_nosound (/afs/ir.stanford.edu/class/ee108/groups/14/final/music_player_tb_nosound.v)</CurrentItem>
+      <CurrentItem>note_address_tb (/afs/ir.stanford.edu/class/ee108/groups/14/final/note_address_tb.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -217,7 +224,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000174000000010000000100000000000000000000000064ffffffff000000810000000000000001000001740000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
@@ -232,7 +239,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
