@@ -1,0 +1,185 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6
+# Build 269223 by xbuild on Wed Jun  5 11:07:01 MDT 2013
+# Start of session at: Sun Dec  7 19:24:54 2014
+# Process ID: 23294
+# Log file: /afs/ir.stanford.edu/class/ee108/groups/14/final/planAhead_run_1/planAhead.log
+# Journal file: /afs/ir.stanford.edu/class/ee108/groups/14/final/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -736 day(s)
+INFO: [Device 21-36] Loading parts and site information from /opt/xilinx/14.6/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+INFO: [Common 17-81] Feature available: PartialReconfiguration
+source /afs/ir.stanford.edu/class/ee108/groups/14/final/pa.fromNetlist.tcl
+# create_project -name final -dir "/afs/ir.stanford.edu/class/ee108/groups/14/final/planAhead_run_1" -part xc5vlx110tff1136-1
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/afs/ir.stanford.edu/class/ee108/groups/14/final} }
+# set_property target_constrs_file "final_top.ucf" [current_fileset -constrset]
+Adding file '/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.ucf' to fileset 'constrs_1'
+# add_files [list {final_top.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc5vlx110tff1136-1
+Release 14.6 - ngc2edif P.68d (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.6 - ngc2edif P.68d (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design final_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to final_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/Madd_echo_sample_Madd_lut<15 : 0> on block final_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/codec_conditioner/current_sample_latch/q<15 : 0> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/codec_conditioner/next_sample_latch/q<15 : 0> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus music_player_v2/echo_sample<15 : 0> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_display/note_one_addr<43 : 3> on block final_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_display/note_three_addr<43 : 3> on block final_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_display/note_two_addr<43 : 3> on block final_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/Madd_sample_in_next_addsub0001_Madd_lut<15 :
+   0> on block final_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/sine_reader_1/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/sine_reader_2/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/sine_reader_3/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/Madd_sample_in_next_addsub0001_Madd_lut<15
+   : 0> on block final_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/sine_reader_1/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/sine_reader_2/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/sine_reader_3/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_lut<15 :
+   0> on block final_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/sine_reader_1/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/sine_reader_2/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/sine_reader_3/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus music_player_v2/note_sample<15 : 0> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus out_notes<47 : 0> on block final_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_b_reg_addsub0000_lut<6 : 1> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_b_reg_addsub0002_lut<2 : 0> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_g_reg_add0001_cy<7 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_g_reg_add0001_lut<7 : 1> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_g_reg_addsub0002_cy<6 : 2> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_r_reg_addsub0000_lut<6 : 1> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_r_reg_addsub0001_lut<7 : 3> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_r_reg_addsub0002_lut<6 : 2> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/b_reg_addsub0000<4 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/b_reg_addsub0001<7 : 2> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/g_reg_add0001<7 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/g_reg_addsub0002<7 : 2> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/r_reg_addsub0000<7 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file final_top.edif ...
+ngc2edif: Total memory usage is 39056 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/final.data/cache/final_top_ngc_e023ebcd.edif]
+Finished Parsing EDIF File [./planAhead_run_1/final.data/cache/final_top_ngc_e023ebcd.edif]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Release 14.6 - ngc2edif P.68d (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.6 - ngc2edif P.68d (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ac97_if.ngc ...
+WARNING:NetListWriters:298 - No output is written to ac97_if.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus ROM/ROMData<24 : 1> on block ac97_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ac97_core_I/register_data<6 : 0> on
+   block ac97_if is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file ac97_if.edif ...
+ngc2edif: Total memory usage is 30532 kilobytes
+
+Reading core file '/afs/ir.stanford.edu/class/ee108/groups/14/final/ac97_if.ngc' for (cell view 'ac97_if', library 'final_top_lib', file 'final_top.ngc')
+Parsing EDIF File [./planAhead_run_1/final.data/cache/ac97_if_ngc_e023ebcd.edif]
+INFO: [Common 17-344] 'link_design' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See /afs/ir.stanford.edu/class/ee108/groups/14/final/planAhead_pid23294.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sun Dec  7 19:27:40 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6
+# Build 269223 by xbuild on Wed Jun  5 11:07:01 MDT 2013
+# Start of session at: Sun Dec  7 19:24:54 2014
+# Process ID: 23294
+# Log file: /afs/ir.stanford.edu/class/ee108/groups/14/final/planAhead_run_1/planAhead.log
+# Journal file: /afs/ir.stanford.edu/class/ee108/groups/14/final/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /afs/ir.stanford.edu/class/ee108/groups/14/final/pa.fromNetlist.tcl

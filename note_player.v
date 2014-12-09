@@ -1,0 +1,191 @@
+module note_player (
+    input 			clk,
+    input 			reset,
+    input 			play_enable,  			// When high we play, when low we don't.
+    input 	[5:0] 	note_to_load,  			// The note to play
+    input 	[5:0] 	duration_to_load,  		// The duration of the note to play
+    input 			load_new_note,  		// Tells us when we have a new note to load
+    input 	[1:0] 	play_state,
+    output 			done_with_note,  		// When we are done with the note this stays high.
+    input 			beat,  					// This is our 1/48th second beat
+    input 			generate_next_sample,  	// Tells us when the codec wants a new sample
+    output 	[15:0] 	sample_out,  			// Our sample output
+    output 			new_sample_ready  		// Tells the codec when we've got a sample
+);
+	
+	//wire and reg declarations
+	wire 	[19:0] 	freq;
+	wire 	[5:0] 	curr_dur, next_dur;
+	reg 	[5:0] 	next_dur_reg;
+	reg 			done_with_note_reg;
+	wire 			next_sine;
+	wire 	[15:0] 	sample_1, sample_2, sample_3, sample_in;
+	wire 	[2:0] 	new_sample_ready3;
+
+	//rom/flip-flop/submodule instantiations
+	frequency_rom frequency_rom (.clk(clk), .addr(note_to_load), .dout(freq));
+	dffr #(6) dur(.clk(clk), .r(reset),.d(next_dur), .q(curr_dur));
+	
+	sine_reader sine_reader_1 (
+		.clk(clk),
+		.reset(reset),
+		.step_size(freq),
+		.generate_next(next_sine),
+		.sample_ready(new_sample_ready3[0]),
+		.play_state(play_state),
+		.sample(sample_1)
+	);
+	
+	sine_reader sine_reader_2 (
+		.clk(clk),
+		.reset(reset),
+		.step_size(freq + freq),
+		.generate_next(next_sine),
+		.sample_ready(new_sample_ready3[1]),
+		.play_state(play_state),
+		.sample(sample_2)
+	);
+	
+	sine_reader sine_reader_3 (
+		.clk(clk),
+		.reset(reset),
+		.step_size(freq + freq + freq),
+		.generate_next(next_sine),
+		.sample_ready(new_sample_ready3[2]),
+		.play_state(play_state),
+		.sample(sample_3)
+	);
+
+    
+
+	always @(*) begin
+		if(play_enable) begin						//for when playing song.
+			if(curr_dur == 6'b0 && load_new_note == 1'b0) begin	
+				done_with_note_reg = 1'b1;			//tell song_reader note is over.
+				next_dur_reg = curr_dur;			//hold 0 in duration counter until new note/duration is received.
+			end
+			else if (curr_dur != 6'b0)begin
+				if (beat) begin						//decrement duration counter on each beat.
+					next_dur_reg = curr_dur - 6'b1;
+				end else begin							//wait for beat to decrement duration counter. Do nothing.
+					next_dur_reg = curr_dur;
+				end									//note is still playing.
+				done_with_note_reg = 1'b0;
+			end
+			else begin								//load_new_note == 1'b1.
+				next_dur_reg = duration_to_load;	//update duration counter.
+				done_with_note_reg = 1'b0;			//note is now in progress.
+			end
+		end
+		else begin									//for when play is not enabled.
+			if(curr_dur == 6'b0) begin				//Counter for note duration. Note is done, load new duration.
+				if(load_new_note) begin
+					next_dur_reg = duration_to_load;
+					done_with_note_reg = 1'b0;
+				end else begin
+					next_dur_reg = curr_dur;
+					done_with_note_reg = 1'b1;
+				end
+			end
+			else begin								//paused in the middle of note, hold state.
+				next_dur_reg = curr_dur;
+				done_with_note_reg = 1'b0;
+			end
+		end
+	end
+
+	reg [15:0] weighted_sample_1_reg, weighted_sample_2_reg, weighted_sample_3_reg;
+    reg [15:0] weighted_sample_1_help1_reg, weighted_sample_1_help2_reg;
+	reg [15:0] weighted_sample_2_help1_reg, weighted_sample_2_help2_reg;
+	reg [15:0] weighted_sample_3_help1_reg, weighted_sample_3_help2_reg;
+	
+	always @(*) begin
+          if(sample_1[15]) begin
+			weighted_sample_1_help1_reg = (~sample_1[15:0]) + 1;
+			weighted_sample_1_help2_reg = weighted_sample_1_help1_reg / 2;
+			weighted_sample_1_reg 		= (~weighted_sample_1_help2_reg) + 1;
+		end
+		else begin
+			weighted_sample_1_help1_reg = (~sample_1[15:0]) + 1;
+			weighted_sample_1_help2_reg = weighted_sample_1_help1_reg / 2;
+			weighted_sample_1_reg 		= sample_1[15:0] / 2;
+		end
+		if(sample_2[15]) begin
+			weighted_sample_2_help1_reg = (~sample_2[15:0]) + 1;
+			weighted_sample_2_help2_reg = weighted_sample_2_help1_reg;
+			weighted_sample_2_reg 		= (~weighted_sample_2_help2_reg) + 1;
+		end
+		else begin
+			weighted_sample_2_help1_reg = (~sample_2[15:0]) + 1;
+			weighted_sample_2_help2_reg = weighted_sample_2_help1_reg / 2;
+			weighted_sample_2_reg 		= sample_2[15:0];
+		end
+		if(sample_3[15]) begin
+			weighted_sample_3_help1_reg = (~sample_3[15:0]) + 1;
+			weighted_sample_3_help2_reg = weighted_sample_3_help1_reg / 4;
+			weighted_sample_3_reg 		= (~weighted_sample_3_help2_reg) + 1;
+		end
+		else begin
+			weighted_sample_3_help1_reg = (~sample_3[15:0]) + 1;
+			weighted_sample_3_help2_reg = weighted_sample_3_help1_reg / 4;
+			weighted_sample_3_reg 		= sample_3[15:0] / 4;
+		end
+	end
+	
+	//Final assign statements.
+	wire [15:0] weighted_sample_1;
+	wire [15:0] weighted_sample_2;
+	wire [15:0] weighted_sample_3;
+
+	wire [15:0] sample_in_curr, sample_in_next;
+	dffr #(16) pipe2(.clk(clk), .r(reset),.d(sample_in_next), .q(sample_in_curr));
+	assign weighted_sample_1 = weighted_sample_1_reg;
+	//assign weighted_sample_2 [15] = sample_2[15];
+	assign weighted_sample_2 [15:0] = weighted_sample_2_reg;
+	//assign weighted_sample_3 [15] = sample_3[15];
+	assign weighted_sample_3 [15:0] = weighted_sample_3_reg;
+	assign next_sine 		= play_enable ? generate_next_sample : 0;     
+	assign done_with_note 	= reset ? 1'b1 	: done_with_note_reg;
+	assign next_dur 		= reset ? 5'b0 	: next_dur_reg;
+	assign sample_in_next 	= reset ? 15'b0 : (play_enable ? weighted_sample_1 + weighted_sample_2 + weighted_sample_3 : 15'b0);
+
+	wire [15:0] sample_curr, sample_next;
+	dffr #(16) pipe(.clk(clk), .r(reset),.d(sample_next), .q(sample_curr));
+
+	wire [5:0] duration_to_load_delayed;
+	wire [7:0] multiplier;
+	dffr #(6) pipe4(.clk(clk), .r(reset),.d(duration_to_load), .q(duration_to_load_delayed));
+
+	find_multiplier multiply (
+		.clk(clk),
+		.rst(reset),
+		.curr(curr_dur),
+		.start(duration_to_load_delayed),
+		.multiple(multiplier)
+	);
+
+	wire [7:0] piped_multiplier;
+	dffr #(8) pipe6( .clk(clk), .r(reset), .d(multiplier), .q(piped_multiplier));
+
+	wire [15:0] sample_in_curr2;
+	dffr #(16) pipe7(.clk(clk), .r(reset), .d(sample_in_curr), .q(sample_in_curr2));
+
+	dynamics dynamics (
+		.clk(clk),
+		.rst(reset),
+		.sample_in(sample_in_curr2),
+		.curr(curr_dur),
+		.start(duration_to_load_delayed),
+		.multiple(piped_multiplier),
+		.sample_out(sample_next)
+	);
+	
+     wire new_sample_ready_next;
+     assign new_sample_ready_next = |new_sample_ready3;
+     wire new_sample_ready_curr;
+     dffr #(1) pipe3(.clk(clk), .r(reset),.d(new_sample_ready_next), .q(new_sample_ready_curr));
+     wire new_sample_ready_curr2;
+     dffr #(1) pipe5(.clk(clk), .r(reset),.d(new_sample_ready_curr), .q(new_sample_ready_curr2));
+     assign sample_out = reset ? 15'b0 : sample_curr;
+     assign new_sample_ready = reset ? 1'b0 : new_sample_ready_curr2;
+endmodule

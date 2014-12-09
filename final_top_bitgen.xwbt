@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.ncd
+OUTFILE=/afs/ir.stanford.edu/class/ee108/groups/14/final/final_top.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=/afs/ir.stanford.edu/class/ee108/groups/14/final
+LICENSE=ISE
+USER_INFO=174110923_174417255_210543157_707

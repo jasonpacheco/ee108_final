@@ -1,0 +1,33 @@
+module sample_ram_tb();
+	reg clk, rst, write_enable;
+	reg [7:0] addra, addrb, dina;
+	wire [7:0] douta, doutb;
+
+
+
+	ram_1w2r #(8,8) dut (.clka(clk), .wea(write_enable), .addra(addra), .dina(dina), .douta(douta), .clkb(clk), .addrb(addrb), .doutb(doutb));
+
+initial begin
+		//@(negedge chip_vsync);
+		clk = 1; #5 clk = 0;
+		forever begin
+			#5 clk = 1; #5 clk = 0;	
+			$display("douta=%b, doutb=%b, addra=%b, addrb=%b, dina=%b, w_enable=%b", douta, doutb, addra, addrb, dina, write_enable);
+		end
+	end
+	
+	initial begin
+		rst = 1'b0;
+		#10 rst = 1'b1;
+		#10 rst = 1'b0; write_enable = 1'b1; addra = 8'b00000000; addrb = 8'b00000000; dina = 8'b00111100;
+		#10 write_enable = 1'b1; addra = 8'b00000001; addrb = 8'b00000001; dina = 8'b00110000;
+		#10 write_enable = 1'b1; addra = 8'b00000010; addrb = 8'b00000010; dina = 8'b00000111;
+		#10 write_enable = 1'b1; addra = 8'b00000011; addrb = 8'b00000011; dina = 8'b00101010;
+		#10 write_enable = 1'b1; addra = 8'b00000100; addrb = 8'b00000100; dina = 8'b11111110;
+		
+		$stop;
+	end
+
+
+
+endmodule

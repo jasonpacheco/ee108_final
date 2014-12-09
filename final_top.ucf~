@@ -1,0 +1,53 @@
+# Clock
+NET "clk" LOC = "AH15";
+NET "clk" TNM_NET = "clock";
+TIMESPEC "TS_clock" = PERIOD "clock" 10 ns HIGH 50 %;
+
+# AC97 interface
+NET AC97Clk     LOC = "AF18";
+NET Sync        LOC = "AF19";
+NET SData_In    LOC = "AE18";
+NET SData_Out   LOC = "AG16";
+NET AC97Reset_n LOC = "AG17";
+
+# Push button interface
+NET "center_button" LOC = "AJ6";
+NET "left_button"  	LOC = "AJ7";
+NET "right_button" 	LOC = "AK7";
+NET "up_button"    	LOC = "U8";
+NET "down_button" 	LOC = "V8";
+
+# LED interface
+NET "leds_l<0>" LOC = "AD26";
+NET "leds_l<1>" LOC = "G15";
+NET "leds_l<2>" LOC = "L18";
+NET "leds_l<3>" LOC = "H18";
+NET "leds_r<0>" LOC = "AE24";
+NET "leds_r<1>" LOC = "AD24";
+NET "leds_r<2>" LOC = "AD25";
+NET "leds_r<3>" LOC = "G16";
+
+# DVI
+NET "xclk" LOC = "AL11";
+NET "xclk_n" LOC = "AL10";
+NET "chip_data_enable" LOC = "AE8";
+NET "chip_hsync" LOC = "AM12";
+NET "chip_vsync" LOC = "AM11";
+NET "chip_reset" LOC = "AK6";
+
+NET "chip_data<0>" LOC = "AB8";
+NET "chip_data<1>" LOC = "AC8";
+NET "chip_data<2>" LOC = "AN12";
+NET "chip_data<3>" LOC = "AP12";
+NET "chip_data<4>" LOC = "AA9";
+NET "chip_data<5>" LOC = "AA8";
+NET "chip_data<6>" LOC = "AM13";
+NET "chip_data<7>" LOC = "AN13";
+NET "chip_data<8>" LOC = "AA10";
+NET "chip_data<9>" LOC = "AB10";
+NET "chip_data<10>" LOC = "AP14";
+NET "chip_data<11>" LOC = "AN14";
+
+# I2C
+NET "scl" LOC = "U27";
+NET "sda" LOC = "T29";

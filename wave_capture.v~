@@ -1,0 +1,106 @@
+module wave_capture (
+	input 	wire		clk,
+	input 	wire		reset,
+	input 	wire		new_sample_ready,
+	input 	wire [15:0] new_sample_in,
+	output 	wire [8:0] 	write_address,
+	output 	wire		write_enable,
+	output 	wire [7:0] 	write_sample,
+	input 	wire		wave_display_idle,
+	output 	wire		read_index
+);
+	// 3-bit one-hot wires for armed (001), active (010), and wait (100)
+	wire 	[2:0] 	next_state, current_state;
+	reg 	[2:0] 	state_reg;
+	dff #(3) state_control_ff(.clk(clk), .d(next_state), .q(current_state));
+	
+	wire 	[7:0] 	next_address_counter, current_address_counter;
+	reg 	[7:0] 	address_counter_reg;
+	reg 	[7:0]	write_sample_reg;
+	reg 	[8:0] 	write_address_reg;
+	reg 			write_enable_reg;
+	reg 			read_index_reg;
+	wire 			next_read_index, current_read_index;
+	wire 			next_sample_msb, current_sample_msb, positive_zero_seen;
+	dff #(8) address_counter_ff(.clk(clk), .d(next_address_counter), .q(current_address_counter));
+	
+	always @(*) begin
+		// Armed (001) state
+		if (current_state == 3'b001 && positive_zero_seen) begin
+			// Initial active values is assigned here to prevent timing issues
+			write_enable_reg = 1;
+			write_sample_reg = new_sample_in[15:8] + 8'd128; // Output sample to be written into address in write_address
+			write_address_reg = {~read_index, current_address_counter};
+			address_counter_reg = current_address_counter + 1;
+			read_index_reg = current_read_index;
+			state_reg = 3'b010;
+		end
+		// Active (010) state 
+		else if (current_state == 3'b010) begin 
+			if (new_sample_ready) begin
+				write_enable_reg = 1;
+				write_sample_reg = new_sample_in[15:8] + 8'd128;
+				read_index_reg = current_read_index;
+				
+				if (next_address_counter == 8'd0) begin
+					write_address_reg = {~read_index, current_address_counter};
+					state_reg = 3'b100;
+					//trying to fix latch
+					address_counter_reg = current_address_counter + 8'd1;
+				end
+				
+				else begin
+					write_address_reg = {~read_index, current_address_counter};
+					address_counter_reg = current_address_counter + 8'd1;
+					state_reg = current_state;
+				end
+				
+			end
+			else begin
+				write_enable_reg = 0;
+				write_sample_reg = 8'd0;
+				write_address_reg = {~read_index, current_address_counter};
+				address_counter_reg = current_address_counter;
+				state_reg = current_state;
+				//trying to fix latch
+				read_index_reg = current_read_index;
+			end
+		end
+		// Wait (100) state
+		else if (current_state == 3'b100 && wave_display_idle) begin
+			write_enable_reg = 0;
+			write_sample_reg = 8'd0;
+			write_address_reg = {~read_index, current_address_counter};
+			address_counter_reg = 8'd0;
+			read_index_reg = ~current_read_index;
+			state_reg = 3'b001;
+		end
+		// Stay in current state
+		else begin
+			write_enable_reg = 0;
+			write_sample_reg = 8'd0;
+			write_address_reg = {~read_index, current_address_counter};
+			address_counter_reg = current_address_counter;
+			read_index_reg = current_read_index;
+			state_reg = current_state;
+		end
+	end
+	
+	assign write_enable 		= reset ? 0 : write_enable_reg;
+	assign write_sample 		= reset ? 8'd0 : write_sample_reg;
+	assign write_address 		= reset ? 9'd0 : write_address_reg;
+	assign next_address_counter = reset ? 8'd0 : address_counter_reg;
+	assign next_state 			= reset ? 3'b001 : state_reg;
+	
+	// Logic to trigger active (010) state if we encounter a positive zero
+	
+	dff #(1) positive_zero_ff(.clk(clk), .d(next_sample_msb), .q(current_sample_msb));
+	assign next_sample_msb 		= new_sample_ready ? new_sample_in[15] : (reset ? 0 : current_sample_msb);
+	assign positive_zero_seen 	= (~next_sample_msb && current_sample_msb) ? 1 : 0;
+	
+	// Logic to assign the read_index output
+	
+	dff #(1) read_index_ff(.clk(clk), .d(next_read_index), .q(current_read_index));
+	assign next_read_index = reset ? 0 : read_index_reg;
+	assign read_index = next_read_index;
+endmodule

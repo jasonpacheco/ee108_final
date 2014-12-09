@@ -1,0 +1,134 @@
+Release 14.6 - ngc2edif P.68d (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design final_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to final_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/Madd_echo_sample_Madd_lut<15 : 0> on block final_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/codec_conditioner/current_sample_latch/q<15 : 0> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/codec_conditioner/next_sample_latch/q<15 : 0> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus music_player_v2/echo_sample<15 : 0> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_display/note_one_addr<43 : 3> on block final_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_display/note_three_addr<43 : 3> on block final_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_display/note_two_addr<43 : 3> on block final_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/Madd_sample_in_next_addsub0001_Madd_lut<15 :
+   0> on block final_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/sine_reader_1/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/sine_reader_2/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_one/sine_reader_3/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/Madd_sample_in_next_addsub0001_Madd_lut<15
+   : 0> on block final_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/sine_reader_1/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/sine_reader_2/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_three/sine_reader_3/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/Madd_sample_in_next_addsub0001_Madd_lut<15 :
+   0> on block final_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/sine_reader_1/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/sine_reader_2/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   music_player_v2/note_player_two/sine_reader_3/next_state_count<21 : 10> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus music_player_v2/note_sample<15 : 0> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus out_notes<47 : 0> on block final_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_b_reg_addsub0000_lut<6 : 1> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_b_reg_addsub0002_lut<2 : 0> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_g_reg_add0001_cy<7 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_g_reg_add0001_lut<7 : 1> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_g_reg_addsub0002_cy<6 : 2> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_r_reg_addsub0000_lut<6 : 1> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_r_reg_addsub0001_lut<7 : 3> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/Madd_r_reg_addsub0002_lut<6 : 2> on
+   block final_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus wd/b_reg_addsub0000<4 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/b_reg_addsub0001<7 : 2> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/g_reg_add0001<7 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/g_reg_addsub0002<7 : 2> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus wd/r_reg_addsub0000<7 : 1> on block
+   final_top is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file final_top.edif ...
+ngc2edif: Total memory usage is 39056 kilobytes
+
+Release 14.6 - ngc2edif P.68d (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ac97_if.ngc ...
+WARNING:NetListWriters:298 - No output is written to ac97_if.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus ROM/ROMData<24 : 1> on block ac97_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ac97_core_I/register_data<6 : 0> on
+   block ac97_if is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file ac97_if.edif ...
+ngc2edif: Total memory usage is 30532 kilobytes
+

@@ -1,0 +1,23 @@
+-Wimplicit -Wportbind
+-n
+
+This file specifies extra parameters to give to iverilog (the simulation
+compiler), vvp (the simulation engine), and gtkwave (the wave output viewer).
+The first line specifies parameters to iverilog, the second line for vvp, and
+the third line for gtkwave. All lines after the third are ignored.
+Usage tips:
+  iverilog:
+    Use this to specify extra libraries or modify the warnings that appear.
+    Warnings of interest are -Wimplicit for implicit declarations of wires,
+    and -Wportbind for unconnected ports in module instantiations.
+    See the iverilog man page (man iverilog) for more information.
+  vvp:
+    Use this to choose between non-interactive mode (-n), partially-interactive
+    mode ($stop will drop to a command prompt), and fully-interactive mode (-s).
+    See the vvp man page (man vvp) for more information.
+  gtkwave:
+    Use this to specify start (-s) and end (-e) times if your testbench only has
+    a limited interesting range and you want to speed up gtkwave (or make it
+    easier to find the interesting parts). You can also enable the slider
+    stretch zoom feature for the horizontal time slider using -z.
+    See the gtkwave man page (man gtkwave) for more information.

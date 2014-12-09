@@ -1,0 +1,211 @@
+
+module song_reader_v2 (
+    input 			clk,
+    input 			reset,
+    input 			play,
+    input 	[1:0] 	song,
+    input 			beat,
+    input 	[2:0] 	notes_done,
+    output 			song_done,
+    output 	[2:0] 	notes_load,
+    output 	[2:0] 	notes_play,
+    output 	[17:0] 	notes_to_load,
+    output 	[17:0] 	durs_to_load,
+    output 			play_enable
+);
+
+	wire 	[8:0] 	addr;
+	wire 	[6:0] 	addr_next_state, addr_current_state;
+	reg 	[6:0] 	addr_next_state_reg;
+	wire 	[15:0] 	dout;
+
+	wire 	[1:0] 	read_state_curr, read_state_next; 		// playing = 10, reading = 00, waiting = 01
+	reg 	[1:0] 	read_state_next_reg;
+
+	wire 	[5:0] 	curr_dur, next_dur; 					// playing duration
+	reg 	[5:0] 	next_dur_reg;
+
+	wire 	[2:0] 	note_play_curr, note_play_next; 		// tells which players to be active
+	reg 	[2:0] 	note_play_next_reg;
+
+	wire 	[2:0] 	note_load_curr, note_load_next; 		// tells which players to be active
+	reg 	[2:0] 	note_load_next_reg;
+
+	wire 	[17:0] 	notes_to_load_curr, notes_to_load_next; // notes for each of the players to play
+	reg 	[17:0]	notes_to_load_next_reg; 				// note[0] in [5:0], note[1] in [11:6] note[2] in [17:12]
+
+	wire 	[17:0] 	durs_to_load_curr, durs_to_load_next; 	// durations for each of the players to play
+	reg 	[17:0] 	durs_to_load_next_reg; 
+	reg				song_done_reg;
+	
+
+     wire song_done_cur, song_done_next;
+
+     //stores song_done state
+     dff #(1) song_doneFF (.clk(clk), .d(song_done_next), .q(song_done_cur));     
+
+	//stores notes that need to be loaded
+	dff #(18) notes_to_loadFF (.clk(clk), .d(notes_to_load_next), .q(notes_to_load_curr));
+	//stores durations that need to loaded
+	dff #(18) durs_to_loadFF (.clk(clk), .d(durs_to_load_next), .q(durs_to_load_curr));             
+	//stores which note players should be playing
+	dff #(3) note_playFF (.clk(clk), .d(note_play_next), .q(note_play_curr));
+	//stores which note players should be loading a note;
+	dff #(3) note_loadFF (.clk(clk), .d(note_load_next), .q(note_load_curr));
+	//stores addr
+	dff #(7) addrFF (.clk(clk), .d(addr_next_state), .q(addr_current_state));
+	//keeps track of read/play state
+	dff #(2) read_stateFF (.clk(clk), .d(read_state_next), .q(read_state_curr));
+	//counter to advance time
+	dffr #(6) dur (.clk(clk), .r(reset), .d(next_dur), .q(curr_dur));
+
+	//instantiation of song_rom
+	song_rom song_rom (.clk(clk), .addr(addr), .dout(dout));
+
+	always @(*) begin
+		if (play) begin // Logic for when play goes high
+			if (read_state_curr == 2'b11) begin // current state == paused
+				addr_next_state_reg 	= addr_current_state;
+				note_play_next_reg 		= note_play_curr & ~notes_done;  
+				notes_to_load_next_reg 	= notes_to_load_curr;
+				durs_to_load_next_reg 	= durs_to_load_curr;
+				note_load_next_reg 		= 3'b000;
+				next_dur_reg 			= 6'b0;
+				song_done_reg 			= 1'b0;
+				read_state_next_reg 	= 2'b00;
+			end 
+			else if (read_state_curr[1]) begin // current state == play
+				if (curr_dur == 6'b0) begin
+					next_dur_reg = 6'b0;
+					if (addr_current_state == 0) begin 
+						song_done_reg 			= 1'b1;
+						read_state_next_reg 	= 2'b11;
+					end
+					else begin 
+						song_done_reg 			= 1'b0;
+						read_state_next_reg 	= 2'b00;
+					end
+				end else begin
+					if (beat) begin
+						next_dur_reg = curr_dur - 6'b1;
+					end else begin
+						next_dur_reg = curr_dur;
+					end
+					read_state_next_reg = 2'b10;
+					song_done_reg 		= 1'b0;
+				end
+				addr_next_state_reg 	= addr_current_state;
+				note_play_next_reg 		= note_play_curr & ~notes_done;  
+				notes_to_load_next_reg 	= notes_to_load_curr;
+				durs_to_load_next_reg 	= durs_to_load_curr;
+				note_load_next_reg 		= 3'b000;
+				
+			end 
+			
+			else if (read_state_curr[0]) begin // wait
+				read_state_next_reg 	= 2'b10;
+				next_dur_reg 			= dout[8:3];
+				addr_next_state_reg 	= addr_current_state;
+				note_play_next_reg 		= note_play_curr;  
+				notes_to_load_next_reg 	= notes_to_load_curr;
+				durs_to_load_next_reg 	= durs_to_load_curr;
+				note_load_next_reg 		= 3'b000;
+				song_done_reg 			= 1'b0;
+			end 
+			
+			else begin // read
+				if (dout[15]) begin // time to advance time
+					read_state_next_reg 	= 2'b10;
+					next_dur_reg 			= dout[8:3];
+					addr_next_state_reg 	= addr_current_state + 7'b1;
+					note_play_next_reg 		= note_play_curr;  
+					notes_to_load_next_reg 	= notes_to_load_curr;
+					durs_to_load_next_reg 	= durs_to_load_curr;
+					note_load_next_reg 		= 3'b000;
+					song_done_reg 			= 1'b0;
+				end
+				else begin
+					read_state_next_reg = 2'b0;
+					addr_next_state_reg = addr_current_state + 7'b1;
+					next_dur_reg 		= curr_dur;
+					song_done_reg 		= 1'b0;
+					
+					casex (note_play_curr)
+					3'bxx0: 	begin
+									note_play_next_reg 		= {note_play_curr[2:1], 1'b1};  
+									notes_to_load_next_reg 	= {notes_to_load_curr[17:6], dout[14:9]} ;
+									durs_to_load_next_reg 	= {durs_to_load_curr[17:6], dout[8:3]};
+									note_load_next_reg 		= 3'b001;
+								end
+					3'bx01: 	begin
+									note_play_next_reg 		= {note_play_curr[2], 1'b1, note_play_curr[0]};  
+									notes_to_load_next_reg 	= {notes_to_load_curr[17:12], dout[14:9], notes_to_load_curr[5:0]} ;
+									durs_to_load_next_reg 	= {durs_to_load_curr[17:12], dout[8:3], durs_to_load_curr[5:0]} ;
+									note_load_next_reg 		= 3'b010;
+								end
+					3'b011: 	begin
+									note_play_next_reg 		= {1'b1, note_play_curr[1:0]};  
+									notes_to_load_next_reg 	= {dout[14:9], notes_to_load_curr[11:0]};
+									durs_to_load_next_reg 	= {dout[8:3], durs_to_load_curr[11:0]};
+									note_load_next_reg 		= 3'b100;
+								end
+					default: 	begin
+									note_play_next_reg 		= {note_play_curr[2:1], 1'b1};  
+									notes_to_load_next_reg 	= {notes_to_load_curr[17:6], dout[14:9]} ;
+									durs_to_load_next_reg 	= {durs_to_load_curr[17:6], dout[8:3]};
+									note_load_next_reg 		= 3'b001;
+								end
+					endcase
+				end
+			end
+		end
+		
+		else begin // Logic for when play is low (paused)
+			if (read_state_curr[1]) begin // play
+				if (curr_dur == 6'b0) begin
+					next_dur_reg = 6'b0;
+					if (addr_current_state == 0) begin 
+						song_done_reg 		= 1'b1;
+						read_state_next_reg = 2'b10;
+					end else begin 
+						song_done_reg 		= 1'b0;
+						read_state_next_reg = 2'b00;
+					end
+				end else begin
+					read_state_next_reg 	= read_state_curr;
+					next_dur_reg 			= curr_dur;
+					song_done_reg 			= 1'b0;
+				end
+			end else begin
+				read_state_next_reg 	= read_state_curr;
+				next_dur_reg 			= curr_dur;
+				song_done_reg 			= 1'b0;
+			end
+			addr_next_state_reg 	= addr_current_state;
+			note_play_next_reg 		= note_play_curr;  
+			notes_to_load_next_reg 	= notes_to_load_curr;
+			durs_to_load_next_reg 	= durs_to_load_curr;
+			note_load_next_reg 		= note_load_curr;
+		end
+	end
+
+	assign addr_next_state 	= reset ? 7'b0 : addr_next_state_reg;
+	assign addr 			= {song, addr_next_state};
+
+	assign read_state_next 		= reset ? 2'b0 	: read_state_next_reg;
+	assign note_play_next 		= reset ? 3'b0 	: note_play_next_reg;
+	assign note_load_next 		= reset ? 3'b0 	: note_load_next_reg;
+	assign notes_to_load_next 	= reset ? 18'b0 : notes_to_load_next_reg;
+	assign durs_to_load_next 	= reset ? 18'b0 : durs_to_load_next_reg;
+
+	assign next_dur = reset ? 6'b0 : next_dur_reg;
+
+	assign notes_load 		= reset ? 2'b0 	: note_load_curr;
+	assign notes_play 		= reset ? 2'b0 	: note_play_next ; //possibly not quite right
+	assign notes_to_load 	= reset ? 18'b0 : notes_to_load_curr;
+	assign durs_to_load 	= reset ? 18'b0 : durs_to_load_curr;
+	assign song_done_next 	= reset ? 1'b0 	: song_done_reg;
+    assign song_done 		= song_done_cur;
+	assign play_enable 		= reset ? 1'b0 	: play & read_state_curr[1];
+
+endmodule
