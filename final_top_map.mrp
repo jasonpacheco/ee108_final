@@ -10,38 +10,38 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Mon Dec  8 22:50:36 2014
+Mapped Date    : Tue Dec  9 12:35:13 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  128
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,569 out of  69,120    2%
-    Number used as Flip Flops:               1,569
-  Number of Slice LUTs:                      3,560 out of  69,120    5%
-    Number used as logic:                    3,517 out of  69,120    5%
-      Number using O6 output only:           2,478
-      Number using O5 output only:             248
-      Number using O5 and O6:                  791
+  Number of Slice Registers:                 1,586 out of  69,120    2%
+    Number used as Flip Flops:               1,586
+  Number of Slice LUTs:                      3,572 out of  69,120    5%
+    Number used as logic:                    3,527 out of  69,120    5%
+      Number using O6 output only:           2,475
+      Number using O5 output only:             257
+      Number using O5 and O6:                  795
     Number used as Memory:                       5 out of  17,920    1%
       Number used as Shift Register:             5
         Number using O6 output only:             5
-    Number used as exclusive route-thru:        38
-  Number of route-thrus:                       288
-    Number using O6 output only:               282
-    Number using O5 output only:                 3
+    Number used as exclusive route-thru:        40
+  Number of route-thrus:                       302
+    Number using O6 output only:               294
+    Number using O5 output only:                 5
     Number using O5 and O6:                      3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,223 out of  17,280    7%
-  Number of LUT Flip Flop pairs used:        3,784
-    Number with an unused Flip Flop:         2,215 out of   3,784   58%
-    Number with an unused LUT:                 224 out of   3,784    5%
-    Number of fully used LUT-FF pairs:       1,345 out of   3,784   35%
-    Number of unique control sets:              54
+  Number of occupied Slices:                 1,196 out of  17,280    6%
+  Number of LUT Flip Flop pairs used:        3,767
+    Number with an unused Flip Flop:         2,181 out of   3,767   57%
+    Number with an unused LUT:                 195 out of   3,767    5%
+    Number of fully used LUT-FF pairs:       1,391 out of   3,767   36%
+    Number of unique control sets:              56
     Number of slice register sites lost
-      to control set restrictions:              94 out of  69,120    1%
+      to control set restrictions:              97 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -56,8 +56,8 @@ IO Utilization:
     Number of LOCed IOBs:                       40 out of      40  100%
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      39 out of     148   26%
-    Number using BlockRAM only:                 39
+  Number of BlockRAM/FIFO:                      42 out of     148   28%
+    Number using BlockRAM only:                 42
     Total primitives used:
       Number of 36k BlockRAM used:              32
       Number of 18k BlockRAM used:              11
@@ -66,11 +66,11 @@ Specific Feature Utilization:
     Number used as BUFGs:                        2
   Number of DSP48Es:                             6 out of      64    9%
 
-Average Fanout of Non-Clock Nets:                4.05
+Average Fanout of Non-Clock Nets:                4.03
 
-Peak Memory Usage:  471 MB
-Total REAL time to MAP completion:  2 mins 22 secs 
-Total CPU time to MAP completion:   1 mins 53 secs 
+Peak Memory Usage:  468 MB
+Total REAL time to MAP completion:  1 mins 36 secs 
+Total CPU time to MAP completion:   1 mins 35 secs 
 
 Table of Contents
 -----------------

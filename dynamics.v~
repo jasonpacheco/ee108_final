@@ -2,8 +2,8 @@ module dynamics (
 	input 			clk,
 	input 			rst,
 	input 	[15:0] 	sample_in,
-	input 	[5:0]	start,
-	input	[5:0]	curr,
+	input 	[5:0]	curr,
+	input	[5:0]	start,
 	input	[7:0]	multiple,
 	output 	[15:0] 	sample_out
 );
@@ -99,12 +99,12 @@ module dynamics (
 
      always @(*) begin
           sample_help_reg1 = ~sample_in + 16'b1;
-          sample_help_reg2 = {sample_help_reg1,7'b0}*{15'b0,multiple};
+          sample_help_reg2 = {sample_help_reg1,7'b0}*multiple;
           if(sample_in[15]) begin
                decayed_sample_reg = ~sample_help_reg2 + 32'b1;
           end
           else begin
-               decayed_sample_reg = {sample_in,7'b0}*{15'b0,multiple};
+               decayed_sample_reg = {sample_in,7'b0}*multiple;
           end
      end
      //dffr #(32) delayed_decay_ff (.clk(clk), .r(rst), .d(decayed_sample_reg), .q(delayed_decayed_sample));

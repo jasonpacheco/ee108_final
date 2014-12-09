@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Reading design: final_top.prj
@@ -258,6 +258,12 @@ Analyzing hierarchy for module <dffre> in library <work> with parameters.
 Analyzing hierarchy for module <dff> in library <work> with parameters.
 	WIDTH = "00000000000000000000000000000010"
 
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001100"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
 Analyzing hierarchy for module <sync_generators> in library <work>.
 
 Analyzing hierarchy for module <chip_data_parser> in library <work>.
@@ -363,20 +369,20 @@ Analyzing module <debouncer> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000010100
 Module <debouncer> is correct for synthesis.
  
-Analyzing module <dffr.1> in library <work>.
-	WIDTH = 32'sb00000000000000000000000000010100
-Module <dffr.1> is correct for synthesis.
- 
 Analyzing module <dffr.2> in library <work>.
-	WIDTH = 32'sb00000000000000000000000000000010
+	WIDTH = 32'sb00000000000000000000000000010100
 Module <dffr.2> is correct for synthesis.
+ 
+Analyzing module <dffr.3> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <dffr.3> is correct for synthesis.
  
 Analyzing module <one_pulse> in library <work>.
 Module <one_pulse> is correct for synthesis.
  
-Analyzing module <dffr.3> in library <work>.
+Analyzing module <dffr.4> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000000001
-Module <dffr.3> is correct for synthesis.
+Module <dffr.4> is correct for synthesis.
  
 Analyzing module <music_player_v2> in library <work>.
 	BEAT_COUNT = 32'sb00000000000000000000001111101000
@@ -389,9 +395,9 @@ Analyzing module <dffre.2> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000000010
 Module <dffre.2> is correct for synthesis.
  
-Analyzing module <dffr.4> in library <work>.
+Analyzing module <dffr.5> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000000001
-Module <dffr.4> is correct for synthesis.
+Module <dffr.5> is correct for synthesis.
  
 Analyzing module <play_state_mcu> in library <work>.
 Module <play_state_mcu> is correct for synthesis.
@@ -419,9 +425,9 @@ Analyzing module <dff.8> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000000111
 Module <dff.8> is correct for synthesis.
  
-Analyzing module <dffr.5> in library <work>.
+Analyzing module <dffr.6> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000000110
-Module <dffr.5> is correct for synthesis.
+Module <dffr.6> is correct for synthesis.
  
 Analyzing module <song_rom> in library <work>.
 Module <song_rom> is correct for synthesis.
@@ -442,16 +448,16 @@ Analyzing module <dff.10> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000010110
 Module <dff.10> is correct for synthesis.
  
-Analyzing module <dffr.6> in library <work>.
+Analyzing module <dffr.7> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000010000
-Module <dffr.6> is correct for synthesis.
+Module <dffr.7> is correct for synthesis.
  
 Analyzing module <find_multiplier> in library <work>.
 Module <find_multiplier> is correct for synthesis.
  
-Analyzing module <dffr.7> in library <work>.
+Analyzing module <dffr.8> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000001000
-Module <dffr.7> is correct for synthesis.
+Module <dffr.8> is correct for synthesis.
  
 Analyzing module <dynamics> in library <work>.
 Module <dynamics> is correct for synthesis.
@@ -527,6 +533,10 @@ Module <dffre.1> is correct for synthesis.
 Analyzing module <stereo_mcu> in library <work>.
 Module <stereo_mcu> is correct for synthesis.
  
+Analyzing module <dffr.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001100
+Module <dffr.1> is correct for synthesis.
+ 
 Analyzing module <dff.2> in library <work>.
 	WIDTH = 32'sb00000000000000000000000000011011
 Module <dff.2> is correct for synthesis.
@@ -599,28 +609,28 @@ Synthesizing Unit <dff_4>.
 Unit <dff_4> synthesized.
 
 
-Synthesizing Unit <dffr_1>.
+Synthesizing Unit <dffr_2>.
     Related source file is "ff_lib.v".
     Found 20-bit register for signal <q>.
     Summary:
 	inferred  20 D-type flip-flop(s).
-Unit <dffr_1> synthesized.
-
-
-Synthesizing Unit <dffr_2>.
-    Related source file is "ff_lib.v".
-    Found 2-bit register for signal <q>.
-    Summary:
-	inferred   2 D-type flip-flop(s).
 Unit <dffr_2> synthesized.
 
 
 Synthesizing Unit <dffr_3>.
     Related source file is "ff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dffr_3> synthesized.
+
+
+Synthesizing Unit <dffr_4>.
+    Related source file is "ff_lib.v".
     Found 1-bit register for signal <q<0>>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <dffr_3> synthesized.
+Unit <dffr_4> synthesized.
 
 
 Synthesizing Unit <dffre_2>.
@@ -631,12 +641,12 @@ Synthesizing Unit <dffre_2>.
 Unit <dffre_2> synthesized.
 
 
-Synthesizing Unit <dffr_4>.
+Synthesizing Unit <dffr_5>.
     Related source file is "ff_lib.v".
     Found 1-bit register for signal <q<0>>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <dffr_4> synthesized.
+Unit <dffr_5> synthesized.
 
 
 Synthesizing Unit <dff_3>.
@@ -679,12 +689,12 @@ Synthesizing Unit <dff_8>.
 Unit <dff_8> synthesized.
 
 
-Synthesizing Unit <dffr_5>.
+Synthesizing Unit <dffr_6>.
     Related source file is "ff_lib.v".
     Found 6-bit register for signal <q>.
     Summary:
 	inferred   6 D-type flip-flop(s).
-Unit <dffr_5> synthesized.
+Unit <dffr_6> synthesized.
 
 
 Synthesizing Unit <song_rom>.
@@ -707,12 +717,12 @@ Synthesizing Unit <frequency_rom>.
 Unit <frequency_rom> synthesized.
 
 
-Synthesizing Unit <dffr_6>.
+Synthesizing Unit <dffr_7>.
     Related source file is "ff_lib.v".
     Found 16-bit register for signal <q>.
     Summary:
 	inferred  16 D-type flip-flop(s).
-Unit <dffr_6> synthesized.
+Unit <dffr_7> synthesized.
 
 
 Synthesizing Unit <find_multiplier>.
@@ -727,12 +737,12 @@ WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and lef
 Unit <find_multiplier> synthesized.
 
 
-Synthesizing Unit <dffr_7>.
+Synthesizing Unit <dffr_8>.
     Related source file is "ff_lib.v".
     Found 8-bit register for signal <q>.
     Summary:
 	inferred   8 D-type flip-flop(s).
-Unit <dffr_7> synthesized.
+Unit <dffr_8> synthesized.
 
 
 Synthesizing Unit <dynamics>.
@@ -742,12 +752,10 @@ WARNING:Xst:646 - Signal <sample_help_reg2> is assigned but never used. This unc
 WARNING:Xst:646 - Signal <sample_help_reg1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <decayed_sample_reg<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <decayed_sample> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:643 - "dynamics.v" line 102: The result of a 23x23-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "dynamics.v" line 107: The result of a 23x23-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 6-bit subtractor for signal <counter>.
-    Found 32-bit adder for signal <decayed_sample_reg$addsub0000> created at line 104.
-    Found 23x23-bit multiplier for signal <decayed_sample_reg$mult0001> created at line 107.
-    Found 23x23-bit multiplier for signal <sample_help_reg2$mult0001> created at line 102.
+    Found 32-bit adder for signal <decayed_sample_reg$addsub0000> created at line 23.
+    Found 23x8-bit multiplier for signal <decayed_sample_reg$mult0000> created at line 26.
+    Found 23x8-bit multiplier for signal <sample_help_reg2$mult0000> created at line 21.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred   2 Multiplier(s).
@@ -860,6 +868,14 @@ Synthesizing Unit <dffre_1>.
 Unit <dffre_1> synthesized.
 
 
+Synthesizing Unit <dffr_1>.
+    Related source file is "ff_lib.v".
+    Found 12-bit register for signal <q>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <dffr_1> synthesized.
+
+
 Synthesizing Unit <sync_generators>.
     Related source file is "sync_generators.v".
     Found 11-bit up counter for signal <x>.
@@ -927,6 +943,9 @@ Unit <note_display> synthesized.
 
 Synthesizing Unit <stereo_mcu>.
     Related source file is "stereo_mcu.v".
+    Found 12-bit adder for signal <$add0000> created at line 13.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
 Unit <stereo_mcu> synthesized.
 
 
@@ -1118,9 +1137,10 @@ Macro Statistics
  64x45-bit ROM                                         : 3
  64x8-bit ROM                                          : 3
 # Multipliers                                          : 6
- 23x23-bit multiplier                                  : 6
-# Adders/Subtractors                                   : 104
+ 23x8-bit multiplier                                   : 6
+# Adders/Subtractors                                   : 105
  10-bit adder                                          : 1
+ 12-bit adder                                          : 1
  14-bit adder                                          : 1
  16-bit adder                                          : 43
  2-bit adder                                           : 2
@@ -1141,15 +1161,16 @@ Macro Statistics
  14-bit up counter                                     : 1
  3-bit up counter                                      : 1
  5-bit up counter                                      : 1
-# Registers                                            : 158
+# Registers                                            : 160
  1-bit register                                        : 36
  10-bit register                                       : 1
+ 12-bit register                                       : 1
  135-bit register                                      : 6
  14-bit register                                       : 1
  16-bit register                                       : 35
  17-bit register                                       : 4
  18-bit register                                       : 2
- 2-bit register                                        : 17
+ 2-bit register                                        : 18
  20-bit register                                       : 7
  22-bit register                                       : 9
  24-bit register                                       : 1
@@ -1284,17 +1305,17 @@ INFO:Xst:3226 - The RAM <echo/delayed_sample_ram/Mram_RAM_ren> will be implement
 Unit <music_player_v2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <note_player>.
-	Found pipelined multiplier on signal <dynamics/decayed_sample_reg_mult0001>:
+	Found pipelined multiplier on signal <dynamics/sample_help_reg2_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <piped_multiplier>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <dynamics/decayed_sample_reg_mult0000>:
 		- 2 pipeline level(s) found in a register on signal <N0>.
 		Pushing register(s) into the multiplier macro.
 
 		- 1 pipeline level(s) found in a register on signal <piped_multiplier>.
 		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <dynamics/sample_help_reg2_mult0001>:
-		- 1 pipeline level(s) found in a register on signal <piped_multiplier>.
-		Pushing register(s) into the multiplier macro.
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier dynamics/Mmult_decayed_sample_reg_mult0001 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier dynamics/Mmult_sample_help_reg2_mult0001 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier dynamics/Mmult_sample_help_reg2_mult0000 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier dynamics/Mmult_decayed_sample_reg_mult0000 by adding 2 register level(s).
 Unit <note_player> synthesized (advanced).
 
 Synthesizing (advanced) Unit <ram_1w2r_1>.
@@ -1382,9 +1403,10 @@ Macro Statistics
  64x45-bit ROM                                         : 3
  64x8-bit ROM                                          : 3
 # Multipliers                                          : 6
- 23x9-bit registered multiplier                        : 6
-# Adders/Subtractors                                   : 104
+ 23x8-bit registered multiplier                        : 6
+# Adders/Subtractors                                   : 105
  10-bit adder                                          : 1
+ 12-bit adder                                          : 1
  14-bit adder                                          : 1
  16-bit adder                                          : 43
  2-bit adder                                           : 2
@@ -1405,8 +1427,8 @@ Macro Statistics
  14-bit up counter                                     : 1
  3-bit up counter                                      : 1
  5-bit up counter                                      : 1
-# Registers                                            : 1956
- Flip-Flops                                            : 1956
+# Registers                                            : 1970
+ Flip-Flops                                            : 1970
 # Comparators                                          : 51
  10-bit comparator greatequal                          : 10
  10-bit comparator less                                : 10
@@ -1457,6 +1479,8 @@ Optimizing unit <dffre_1> ...
 Optimizing unit <chip_data_parser> ...
 
 Optimizing unit <note_display> ...
+
+Optimizing unit <stereo_mcu> ...
 
 Optimizing unit <debouncer> ...
 
@@ -1840,6 +1864,9 @@ INFO:Xst:2261 - The FF/Latch <wd/wd/address_tracker/q_7> in Unit <final_top> is 
 INFO:Xst:2261 - The FF/Latch <wd/wd/address_tracker/q_0> in Unit <final_top> is equivalent to the following 3 FFs/Latches, which will be removed : <wd_note_one/wd/address_tracker/q_0> <wd_note_two/wd/address_tracker/q_0> <wd_note_three/wd/address_tracker/q_0> 
 INFO:Xst:2261 - The FF/Latch <wd/wd/address_tracker/q_5> in Unit <final_top> is equivalent to the following 2 FFs/Latches, which will be removed : <wd_note_one/wd/address_tracker/q_5> <wd_note_three/wd/address_tracker/q_5> 
 Found area constraint ratio of 100 (+ 5) on block final_top, actual ratio is 6.
+FlipFlop ctrl/gen_sync/x_3 has been replicated 1 time(s)
+FlipFlop ctrl/gen_sync/x_4 has been replicated 1 time(s)
+FlipFlop ctrl/gen_sync/y_4 has been replicated 1 time(s)
 FlipFlop music_player_v2/song_reader/song_doneFF/q_0 has been replicated 1 time(s)
 FlipFlop next_button_press_unit/debounce/state/q_0 has been replicated 2 time(s)
 
@@ -1856,8 +1883,8 @@ Unit <final_top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1474
- Flip-Flops                                            : 1474
+# Registers                                            : 1491
+ Flip-Flops                                            : 1491
 # Shift Registers                                      : 4
  3-bit shift register                                  : 4
 
@@ -1888,30 +1915,30 @@ Design Statistics
 # IOs                              : 40
 
 Cell Usage :
-# BELS                             : 6530
+# BELS                             : 6567
 #      GND                         : 2
-#      INV                         : 562
-#      LUT1                        : 280
-#      LUT2                        : 351
-#      LUT3                        : 220
-#      LUT4                        : 428
-#      LUT5                        : 658
-#      LUT6                        : 1250
-#      MUXCY                       : 1366
-#      MUXF7                       : 59
+#      INV                         : 561
+#      LUT1                        : 291
+#      LUT2                        : 352
+#      LUT3                        : 216
+#      LUT4                        : 434
+#      LUT5                        : 694
+#      LUT6                        : 1215
+#      MUXCY                       : 1377
+#      MUXF7                       : 58
 #      MUXF8                       : 5
 #      VCC                         : 2
-#      XORCY                       : 1347
-# FlipFlops/Latches                : 1606
+#      XORCY                       : 1360
+# FlipFlops/Latches                : 1623
 #      FD                          : 319
 #      FD_1                        : 15
 #      FDC                         : 27
 #      FDCE                        : 16
 #      FDE                         : 48
-#      FDR                         : 524
-#      FDRE                        : 633
+#      FDR                         : 538
+#      FDRE                        : 634
 #      FDRS                        : 6
-#      FDS                         : 16
+#      FDS                         : 18
 #      FDSE                        : 2
 # RAMS                             : 43
 #      RAMB18                      : 11
@@ -1936,18 +1963,18 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1606  out of  69120     2%  
- Number of Slice LUTs:                 3754  out of  69120     5%  
-    Number used as Logic:              3749  out of  69120     5%  
+ Number of Slice Registers:            1623  out of  69120     2%  
+ Number of Slice LUTs:                 3768  out of  69120     5%  
+    Number used as Logic:              3763  out of  69120     5%  
     Number used as Memory:                5  out of  17920     0%  
        Number used as SRL:                5
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4313
-   Number with an unused Flip Flop:    2707  out of   4313    62%  
-   Number with an unused LUT:           559  out of   4313    12%  
-   Number of fully used LUT-FF pairs:  1047  out of   4313    24%  
-   Number of unique control sets:        60
+ Number of LUT Flip Flop pairs used:   4325
+   Number with an unused Flip Flop:    2702  out of   4325    62%  
+   Number with an unused LUT:           557  out of   4325    12%  
+   Number of fully used LUT-FF pairs:  1066  out of   4325    24%  
+   Number of unique control sets:        62
 
 IO Utilization: 
  Number of IOs:                          40
@@ -1980,7 +2007,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | IBUF+BUFG              | 1549  |
+clk                                | IBUF+BUFG              | 1566  |
 AC97Clk                            | BUFGP                  | 111   |
 -----------------------------------+------------------------+-------+
 
@@ -2072,7 +2099,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 9.925ns (frequency: 100.752MHz)
-  Total number of paths / destination ports: 7186642 / 5750
+  Total number of paths / destination ports: 7190391 / 5785
 -------------------------------------------------------------------------
 Delay:               9.925ns (Levels of Logic = 15)
   Source:            music_player_v2/song_reader/song_doneFF/q_0_1 (FF)
@@ -2141,8 +2168,8 @@ Offset:              3.602ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           909   0.818   1.003  up_button_IBUF (up_button_IBUF)
-     LUT6:I2->O            1   0.094   0.789  _and0001<9>1 (_and0001<9>)
+     IBUF:I->O           912   0.818   1.003  up_button_IBUF (up_button_IBUF)
+     LUT5:I1->O            1   0.094   0.789  _and0001<9>1 (_and0001<9>)
      begin scope: 'codec'
      LUT6:I2->O            1   0.094   0.710  ac97_core_I/data_out_mux0001<13>_SW4 (N54)
      LUT6:I3->O            1   0.094   0.000  ac97_core_I/data_out_mux0001<13> (ac97_core_I/data_out_mux0001<13>)
@@ -2153,7 +2180,7 @@ Offset:              3.602ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 561404 / 2683
+  Total number of paths / destination ports: 559085 / 2700
 -------------------------------------------------------------------------
 Offset:              10.632ns (Levels of Logic = 16)
   Source:            up_button (PAD)
@@ -2164,7 +2191,7 @@ Offset:              10.632ns (Levels of Logic = 16)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           909   0.818   1.187  up_button_IBUF (up_button_IBUF)
+     IBUF:I->O           912   0.818   1.187  up_button_IBUF (up_button_IBUF)
      LUT5:I0->O           35   0.094   1.197  music_player_v2/song_reader/notes_to_load<0>1 (notes<0>)
      LUT6:I0->O            3   0.094   0.587  note_display_note_address_one/Mrom_note_addr301 (note_display/note_one_addr<30>)
      LUT6:I4->O            1   0.094   0.576  note_display/rom_base_addr<3>247 (note_display/rom_base_addr<3>247)
@@ -2201,7 +2228,7 @@ Offset:              6.715ns (Levels of Logic = 5)
      FDR:C->Q              6   0.471   1.000  i2c_controller/scl_counter_3 (i2c_controller/scl_counter_3)
      LUT5:I0->O            1   0.094   0.789  i2c_controller/scl_logic_cmp_le00002133 (i2c_controller/scl_logic_cmp_le00002133)
      LUT6:I2->O            1   0.094   0.576  i2c_controller/scl_logic_cmp_le00002166 (i2c_controller/scl_logic_cmp_le00002166)
-     LUT4:I2->O            2   0.094   0.715  i2c_controller/scl_logic_cmp_le000021102 (N19)
+     LUT4:I2->O            2   0.094   0.715  i2c_controller/scl_logic_cmp_le000021102 (N17)
      LUT4:I1->O            1   0.094   0.336  i2c_controller/scl_logic1 (i2c_controller/scl_logic)
      OBUFT:T->O                2.452          scl_OBUFT (scl)
     ----------------------------------------
@@ -2250,15 +2277,15 @@ Delay:               4.481ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 97.00 secs
-Total CPU time to Xst completion: 83.15 secs
+Total REAL time to Xst completion: 83.00 secs
+Total CPU time to Xst completion: 81.47 secs
  
 --> 
 
 
-Total memory usage is 264708 kilobytes
+Total memory usage is 264904 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  441 (   0 filtered)
+Number of warnings :  439 (   0 filtered)
 Number of infos    :   30 (   0 filtered)
 

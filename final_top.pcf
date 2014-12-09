@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Mon Dec 08 22:52:54 2014
+// Written by: Map P.68d on Tue Dec 09 12:36:46 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -104,73 +104,73 @@ PIN
         "music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000"
         PINNAME REGCLKAU;
 PIN
-        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>
+        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<22>
         = BEL
         "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME CLKAL;
 PIN
-        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<33>
+        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<23>
         = BEL
         "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME CLKBL;
 PIN
-        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<110>
+        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<72>
         = BEL
         "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME REGCLKAL;
 PIN
-        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<111>
+        music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<73>
         = BEL
         "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001"
         PINNAME REGCLKBL;
 PIN
-        music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<30>
+        music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<12>
         = BEL
         "music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000"
-        PINNAME CLKAU;
+        PINNAME CLKAL;
 PIN
-        music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<108>
+        music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<48>
         = BEL
         "music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000"
-        PINNAME REGCLKAU;
+        PINNAME REGCLKAL;
 PIN music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<12> = BEL
         "music_player_v2/song_reader/song_rom/Mrom__varindex0000" PINNAME
         CLKAL;
 PIN music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<48> = BEL
         "music_player_v2/song_reader/song_rom/Mrom__varindex0000" PINNAME
         REGCLKAL;
-PIN wd/sample_ram/Mram_RAM_pins<32> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<24> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         CLKAL;
-PIN wd/sample_ram/Mram_RAM_pins<33> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<25> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         CLKBL;
-PIN wd/sample_ram/Mram_RAM_pins<110> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<47> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         REGCLKAL;
-PIN wd/sample_ram/Mram_RAM_pins<111> = BEL "wd/sample_ram/Mram_RAM" PINNAME
+PIN wd/sample_ram/Mram_RAM_pins<48> = BEL "wd/sample_ram/Mram_RAM" PINNAME
         REGCLKBL;
-PIN wd_note_one/sample_ram/Mram_RAM_pins<30> = BEL
-        "wd_note_one/sample_ram/Mram_RAM" PINNAME CLKAU;
-PIN wd_note_one/sample_ram/Mram_RAM_pins<31> = BEL
-        "wd_note_one/sample_ram/Mram_RAM" PINNAME CLKBU;
-PIN wd_note_one/sample_ram/Mram_RAM_pins<108> = BEL
-        "wd_note_one/sample_ram/Mram_RAM" PINNAME REGCLKAU;
-PIN wd_note_one/sample_ram/Mram_RAM_pins<109> = BEL
-        "wd_note_one/sample_ram/Mram_RAM" PINNAME REGCLKBU;
-PIN wd_note_three/sample_ram/Mram_RAM_pins<32> = BEL
+PIN wd_note_one/sample_ram/Mram_RAM_pins<24> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME CLKAL;
+PIN wd_note_one/sample_ram/Mram_RAM_pins<25> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME CLKBL;
+PIN wd_note_one/sample_ram/Mram_RAM_pins<47> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME REGCLKAL;
+PIN wd_note_one/sample_ram/Mram_RAM_pins<48> = BEL
+        "wd_note_one/sample_ram/Mram_RAM" PINNAME REGCLKBL;
+PIN wd_note_three/sample_ram/Mram_RAM_pins<24> = BEL
         "wd_note_three/sample_ram/Mram_RAM" PINNAME CLKAL;
-PIN wd_note_three/sample_ram/Mram_RAM_pins<33> = BEL
+PIN wd_note_three/sample_ram/Mram_RAM_pins<25> = BEL
         "wd_note_three/sample_ram/Mram_RAM" PINNAME CLKBL;
-PIN wd_note_three/sample_ram/Mram_RAM_pins<110> = BEL
+PIN wd_note_three/sample_ram/Mram_RAM_pins<47> = BEL
         "wd_note_three/sample_ram/Mram_RAM" PINNAME REGCLKAL;
-PIN wd_note_three/sample_ram/Mram_RAM_pins<111> = BEL
+PIN wd_note_three/sample_ram/Mram_RAM_pins<48> = BEL
         "wd_note_three/sample_ram/Mram_RAM" PINNAME REGCLKBL;
-PIN wd_note_two/sample_ram/Mram_RAM_pins<30> = BEL
-        "wd_note_two/sample_ram/Mram_RAM" PINNAME CLKAU;
-PIN wd_note_two/sample_ram/Mram_RAM_pins<31> = BEL
-        "wd_note_two/sample_ram/Mram_RAM" PINNAME CLKBU;
-PIN wd_note_two/sample_ram/Mram_RAM_pins<108> = BEL
-        "wd_note_two/sample_ram/Mram_RAM" PINNAME REGCLKAU;
-PIN wd_note_two/sample_ram/Mram_RAM_pins<109> = BEL
-        "wd_note_two/sample_ram/Mram_RAM" PINNAME REGCLKBU;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<24> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME CLKAL;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<25> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME CLKBL;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<47> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME REGCLKAL;
+PIN wd_note_two/sample_ram/Mram_RAM_pins<48> = BEL
+        "wd_note_two/sample_ram/Mram_RAM" PINNAME REGCLKBL;
 PIN music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<66> = BEL
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1" PINNAME CLKAL;
 PIN music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<67> = BEL
@@ -946,7 +946,13 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "note_display/store_notes_5/q_130" BEL
         "note_display/store_notes_5/q_131" BEL
         "note_display/store_notes_5/q_133" BEL
-        "note_display/store_notes_5/q_134" BEL
+        "note_display/store_notes_5/q_134" BEL "stereo_mcu/counter/q_11" BEL
+        "stereo_mcu/counter/q_10" BEL "stereo_mcu/counter/q_9" BEL
+        "stereo_mcu/counter/q_8" BEL "stereo_mcu/counter/q_7" BEL
+        "stereo_mcu/counter/q_6" BEL "stereo_mcu/counter/q_5" BEL
+        "stereo_mcu/counter/q_4" BEL "stereo_mcu/counter/q_3" BEL
+        "stereo_mcu/counter/q_2" BEL "stereo_mcu/counter/q_1" BEL
+        "stereo_mcu/counter/q_0" BEL
         "play_button_press_unit/debounce/state/q_0" BEL
         "play_button_press_unit/debounce/counter/q_19" BEL
         "play_button_press_unit/debounce/counter/q_18" BEL
@@ -1187,9 +1193,9 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "music_player_v2/note_player_one/dur/q_2" BEL
         "music_player_v2/note_player_one/dur/q_1" BEL
         "music_player_v2/note_player_one/dur/q_0" BEL
-        "music_player_v2/note_player_one/dynamics/Mmult_decayed_sample_reg_mult0001"
+        "music_player_v2/note_player_one/dynamics/Mmult_decayed_sample_reg_mult0000"
         BEL
-        "music_player_v2/note_player_one/dynamics/Mmult_sample_help_reg2_mult0001"
+        "music_player_v2/note_player_one/dynamics/Mmult_sample_help_reg2_mult0000"
         BEL "music_player_v2/note_player_one/frequency_rom/dout_18" BEL
         "music_player_v2/note_player_one/frequency_rom/dout_17" BEL
         "music_player_v2/note_player_one/frequency_rom/dout_16" BEL
@@ -1358,9 +1364,9 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "music_player_v2/note_player_two/dur/q_2" BEL
         "music_player_v2/note_player_two/dur/q_1" BEL
         "music_player_v2/note_player_two/dur/q_0" BEL
-        "music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0001"
+        "music_player_v2/note_player_two/dynamics/Mmult_decayed_sample_reg_mult0000"
         BEL
-        "music_player_v2/note_player_two/dynamics/Mmult_sample_help_reg2_mult0001"
+        "music_player_v2/note_player_two/dynamics/Mmult_sample_help_reg2_mult0000"
         BEL "music_player_v2/note_player_two/frequency_rom/dout_18" BEL
         "music_player_v2/note_player_two/frequency_rom/dout_17" BEL
         "music_player_v2/note_player_two/frequency_rom/dout_16" BEL
@@ -1529,9 +1535,9 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "music_player_v2/note_player_three/dur/q_2" BEL
         "music_player_v2/note_player_three/dur/q_1" BEL
         "music_player_v2/note_player_three/dur/q_0" BEL
-        "music_player_v2/note_player_three/dynamics/Mmult_decayed_sample_reg_mult0001"
+        "music_player_v2/note_player_three/dynamics/Mmult_decayed_sample_reg_mult0000"
         BEL
-        "music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0001"
+        "music_player_v2/note_player_three/dynamics/Mmult_sample_help_reg2_mult0000"
         BEL "music_player_v2/note_player_three/frequency_rom/dout_18" BEL
         "music_player_v2/note_player_three/frequency_rom/dout_17" BEL
         "music_player_v2/note_player_three/frequency_rom/dout_16" BEL
@@ -1748,12 +1754,13 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "music_player_v2/echo/sample_ff/q_3" BEL
         "music_player_v2/echo/sample_ff/q_2" BEL
         "music_player_v2/echo/sample_ff/q_1" BEL
-        "music_player_v2/echo/sample_ff/q_0" BEL "stereo_mcu/state_FF/q_0" BEL
-        "stereo_mcu/state_FF/q_1" BEL "ctrl/make_chip_data/pixel_23" BEL
-        "ctrl/make_chip_data/pixel_22" BEL "ctrl/make_chip_data/pixel_20" BEL
-        "ctrl/make_chip_data/pixel_17" BEL "ctrl/make_chip_data/pixel_16" BEL
-        "ctrl/make_chip_data/pixel_11" BEL "ctrl/make_chip_data/pixel_6" BEL
-        "wd/wc_comb/state_control_ff/q_0" BEL
+        "music_player_v2/echo/sample_ff/q_0" BEL
+        "ctrl/make_chip_data/pixel_23" BEL "ctrl/make_chip_data/pixel_22" BEL
+        "ctrl/make_chip_data/pixel_20" BEL "ctrl/make_chip_data/pixel_17" BEL
+        "ctrl/make_chip_data/pixel_16" BEL "ctrl/make_chip_data/pixel_11" BEL
+        "ctrl/make_chip_data/pixel_6" BEL "stereo_mcu/state_FF/q_0" BEL
+        "stereo_mcu/state_FF/q_1" BEL "stereo_mcu/gate_FF/q_0" BEL
+        "stereo_mcu/gate_FF/q_1" BEL "wd/wc_comb/state_control_ff/q_0" BEL
         "wd/wc_comb/state_control_ff/q_1" BEL
         "wd/wc_comb/state_control_ff/q_2" BEL
         "wd_note_one/wc_comb/state_control_ff/q_0" BEL
@@ -1896,8 +1903,10 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         "ctrl/make_chip_data/pixel_13" BEL
         "next_button_press_unit/debounce/state/q_0_1" BEL
         "next_button_press_unit/debounce/state/q_0_2" BEL
-        "music_player_v2/song_reader/song_doneFF/q_0_1" BEL "clk_IBUF_BUFG"
-        BEL "fast_forward_button_press_unit/sync/ff3/Mshreg_q_0" BEL
+        "music_player_v2/song_reader/song_doneFF/q_0_1" BEL
+        "ctrl/gen_sync/y_4_1" BEL "ctrl/gen_sync/x_3_1" BEL
+        "ctrl/gen_sync/x_4_1" BEL "clk_IBUF_BUFG" BEL
+        "fast_forward_button_press_unit/sync/ff3/Mshreg_q_0" BEL
         "fast_forward_button_press_unit/sync/ff3/q_0" BEL
         "stereo_button_press_unit/sync/ff3/Mshreg_q_0" BEL
         "stereo_button_press_unit/sync/ff3/q_0" BEL
@@ -1958,59 +1967,59 @@ TIMEGRP clock = BEL "led_div/q_0" BEL "led_div/q_1" BEL "led_div/q_2" BEL
         PIN
         "music_player_v2/note_player_three/sine_reader_3/sine_rom/Mrom__varindex0000_pins<108>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<22>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<33>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<23>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<110>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<72>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<111>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<73>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<32>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<22>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<33>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<23>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<110>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<72>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<111>"
+        "music_player_v2/note_player_two/sine_reader_1/sine_rom/Mrom__varindex00001_pins<73>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<30>"
+        "music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<12>"
         PIN
-        "music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<108>"
+        "music_player_v2/note_player_two/sine_reader_3/sine_rom/Mrom__varindex0000_pins<48>"
         PIN "music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<12>"
         PIN "music_player_v2/song_reader/song_rom/Mrom__varindex0000_pins<48>"
-        PIN "wd/sample_ram/Mram_RAM_pins<32>" PIN
-        "wd/sample_ram/Mram_RAM_pins<33>" PIN
-        "wd/sample_ram/Mram_RAM_pins<110>" PIN
-        "wd/sample_ram/Mram_RAM_pins<111>" PIN
-        "wd/sample_ram/Mram_RAM_pins<32>" PIN
-        "wd/sample_ram/Mram_RAM_pins<33>" PIN
-        "wd/sample_ram/Mram_RAM_pins<110>" PIN
-        "wd/sample_ram/Mram_RAM_pins<111>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<30>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<31>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<108>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<109>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<30>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<31>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<108>" PIN
-        "wd_note_one/sample_ram/Mram_RAM_pins<109>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<32>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<33>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<110>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<111>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<32>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<33>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<110>" PIN
-        "wd_note_three/sample_ram/Mram_RAM_pins<111>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<30>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<31>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<108>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<109>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<30>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<31>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<108>" PIN
-        "wd_note_two/sample_ram/Mram_RAM_pins<109>" PIN
+        PIN "wd/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd/sample_ram/Mram_RAM_pins<48>" PIN
+        "wd/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd/sample_ram/Mram_RAM_pins<48>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<48>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd_note_one/sample_ram/Mram_RAM_pins<48>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<48>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd_note_three/sample_ram/Mram_RAM_pins<48>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<48>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<24>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<25>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<47>" PIN
+        "wd_note_two/sample_ram/Mram_RAM_pins<48>" PIN
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<66>" PIN
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<67>" PIN
         "music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_pins<68>" PIN

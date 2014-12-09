@@ -1,6 +1,6 @@
 `define COUNT_MAX 14'b10010110000000 //14'b10010110000000	// Equivalent to a delay of 200 ms
 `define MAX_SAT 16'hFFFF //16'hFFFF
-`define WEIGHT 2
+`define WEIGHT 1
 module echo (
 	input 			clk,
 	input			reset,

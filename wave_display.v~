@@ -52,7 +52,7 @@ module wave_display (
 	assign read_address = {read_index, current_address};
 
 	wire valid_x = (x[10:8] == 3'b001 || x[10:8] == 3'b010);
-	wire valid_y = (y[8:1] >= min_value && y[8:1] <= max_value && y[9] == 0);
+	wire valid_y = (y[7:1] >= min_value && y[7:1] <= max_value && y[9:8] == 2'b11); //[8:1
 	
 	reg [23:0] color_reg;
 	always @(*) begin
@@ -65,7 +65,6 @@ module wave_display (
 		endcase
 	end
 	wire valid_pixel;
-	assign {r, g, b} = valid_pixel ? color_reg : 24'b0;
 	assign valid_pixel = (valid && valid_x && valid_y);
-
+	assign {r, g, b} = valid_pixel ? color_reg : 24'b0;
 endmodule
