@@ -1,0 +1,889 @@
+Release 14.6 Map P.68d (lin)
+Xilinx Mapping Report File for Design 'final_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o final_top_map.ncd final_top.ngd final_top.pcf 
+Target Device  : xc5vlx110t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Mon Dec  8 18:36:49 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  128
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,112 out of  69,120    1%
+    Number used as Flip Flops:               1,112
+  Number of Slice LUTs:                      2,829 out of  69,120    4%
+    Number used as logic:                    2,790 out of  69,120    4%
+      Number using O6 output only:           1,790
+      Number using O5 output only:             250
+      Number using O5 and O6:                  750
+    Number used as Memory:                       5 out of  17,920    1%
+      Number used as Shift Register:             5
+        Number using O6 output only:             5
+    Number used as exclusive route-thru:        34
+  Number of route-thrus:                       281
+    Number using O6 output only:               280
+    Number using O5 and O6:                      1
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   879 out of  17,280    5%
+  Number of LUT Flip Flop pairs used:        2,901
+    Number with an unused Flip Flop:         1,789 out of   2,901   61%
+    Number with an unused LUT:                  72 out of   2,901    2%
+    Number of fully used LUT-FF pairs:       1,040 out of   2,901   35%
+    Number of unique control sets:              49
+    Number of slice register sites lost
+      to control set restrictions:              79 out of  69,120    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        40 out of     640    6%
+    Number of LOCed IOBs:                       40 out of      40  100%
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                      37 out of     148   25%
+    Number using BlockRAM only:                 37
+    Total primitives used:
+      Number of 36k BlockRAM used:              32
+      Number of 18k BlockRAM used:               8
+    Total Memory used (KB):                  1,296 out of   5,328   24%
+  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
+    Number used as BUFGs:                        2
+  Number of DSP48Es:                             6 out of      64    9%
+
+Average Fanout of Non-Clock Nets:                3.92
+
+Peak Memory Usage:  460 MB
+Total REAL time to MAP completion:  1 mins 20 secs 
+Total CPU time to MAP completion:   1 mins 18 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91
+   of frag REGCLKAU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91
+   of frag REGCLKAL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91
+   of frag REGCLKBU connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91
+   of frag REGCLKBL connected to power/ground net
+   music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKBL_tiesig
+
+Section 3 - Informational
+-------------------------
+INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'2100@ee-matlab.stanford.edu:1717@cadlic0.stanford.edu:5280@omnipotent:5280@shim
+bala:5280@vlsi:27000@cadlic0:'.
+INFO:Security:56 - Part 'xc5vlx110t' is not a WebPack part.
+INFO:LIT:243 - Logical network codec/pcm_record_valid_ClkIn has no load.
+INFO:LIT:395 - The above info message is repeated 32 more times for the
+   following (max. 5 shown):
+   codec/ac97_core_I/PCM_Record_Right_i<0>,
+   codec/ac97_core_I/PCM_Record_Right_i<1>,
+   codec/ac97_core_I/PCM_Record_Right_i<2>,
+   codec/ac97_core_I/PCM_Record_Right_i<3>,
+   codec/ac97_core_I/PCM_Record_Right_i<4>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  42 block(s) removed
+   4 block(s) optimized away
+  42 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "codec/pcm_record_valid_ClkIn" is sourceless and has been removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<0>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<1>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<2>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<3>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<4>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<5>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<6>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<7>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<8>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<9>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<10>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<11>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<12>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<13>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<14>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i<15>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<0>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<1>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<2>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<3>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<4>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<5>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<6>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<7>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<8>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<9>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<10>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<11>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<12>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<13>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<14>" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i<15>" is sourceless and has been
+removed.
+The signal "codec/pcm_record_valid_ac97clk" is sourceless and has been removed.
+ Sourceless block "codec/pcm_record_valid_ClkIn_0" (FF) removed.
+  The signal "codec/pcm_record_valid_ClkIn_0" is sourceless and has been removed.
+   Sourceless block "codec/pcm_record_valid_ClkIn_1" (FF) removed.
+    The signal "codec/pcm_record_valid_ClkIn_1" is sourceless and has been removed.
+     Sourceless block "codec/pcm_record_valid_ClkIn_and0000_norst1_INV_0" (BUF)
+removed.
+      The signal "codec/pcm_record_valid_ClkIn_and0000_norst" is sourceless and has
+been removed.
+       Sourceless block "codec/pcm_record_valid_ClkIn" (SFF) removed.
+   Sourceless block "codec/pcm_record_valid_ClkIn_0_inv1_INV_0" (BUF) removed.
+    The signal "codec/pcm_record_valid_ClkIn_0_inv" is sourceless and has been
+removed.
+The signal "codec/ac97_core_I/PCM_Record_Right_i_and0000" is sourceless and has
+been removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_0" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_1" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_2" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_3" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_4" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_5" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_6" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_7" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_8" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_9" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_10" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_11" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_12" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_13" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_14" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Right_i_15" (FF) removed.
+The signal "codec/ac97_core_I/data_in<19>" is sourceless and has been removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_0" (FF) removed.
+The signal "codec/ac97_core_I/record_pcm_left_valid" is sourceless and has been
+removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_Valid1" (ROM) removed.
+The signal "codec/ac97_core_I/PCM_Record_Left_i_and0000" is sourceless and has
+been removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_1" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_2" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_3" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_4" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_5" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_6" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_7" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_8" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_9" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_10" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_11" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_12" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_13" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_14" (FF) removed.
+ Sourceless block "codec/ac97_core_I/PCM_Record_Left_i_15" (FF) removed.
+Unused block "codec/ac97_core_I/PCM_Record_Left_i_and00001" (ROM) removed.
+Unused block "codec/ac97_core_I/PCM_Record_Right_i_and00001" (ROM) removed.
+Unused block "codec/ac97_core_I/data_in_19" (FF) removed.
+Unused block "codec/ac97_core_I/record_pcm_left_valid" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		codec/XST_GND
+VCC 		codec/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| AC97Clk                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| AC97Reset_n                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| SData_In                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| SData_Out                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Sync                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| center_button                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| chip_data<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<3>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<4>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<5>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<6>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<7>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<8>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<9>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<10>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data<11>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_data_enable                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_hsync                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_reset                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| chip_vsync                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| down_button                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| echo_switch                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| leds_l<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds_l<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds_l<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds_l<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds_r<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds_r<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds_r<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds_r<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| left_button                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| right_button                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| scl                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sda                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| up_button                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| xclk                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| xclk_n                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

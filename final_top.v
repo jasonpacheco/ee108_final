@@ -95,6 +95,7 @@ module final_top (
     wire [47:0] out_notes;
     wire note_display_enable;
     wire [1:0] song;
+    wire reset_player;
     music_player_v2 #(.BEAT_COUNT(BEAT_COUNT)) music_player_v2 (
         .clk(clk),
         .reset(reset),
@@ -104,11 +105,11 @@ module final_top (
         .new_frame(new_frame),
         .new_sample_generated(new_sample), 
         .sample_out(codec_sample),
-        .r_text(r_text), .g_text(g_text), .b_text(b_text),
         .out_notes(out_notes),
         .echo_switch(echo_switch),
         .note_display_play(note_display_enable),
-        .song_out(song)
+        .song_out(song),
+        .reset_player_out(reset_player)
     );
     
     dff #(.WIDTH(17)) sample_reg (

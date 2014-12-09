@@ -104,11 +104,10 @@ module final_top (
         .new_frame(new_frame),
         .new_sample_generated(new_sample), 
         .sample_out(codec_sample),
-        .r_text(r_text), .g_text(g_text), .b_text(b_text),
         .out_notes(out_notes),
         .echo_switch(echo_switch),
         .note_display_play(note_display_enable),
-        .song(song)
+        .song_out(song)
     );
     
     dff #(.WIDTH(17)) sample_reg (

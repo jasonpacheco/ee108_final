@@ -10,11 +10,11 @@ module music_player_v2 (
     output wire 						new_sample_generated,
     // Our final output sample to the codec. This needs to be synced to new_frame.
     output wire [15:0] 					sample_out,
-    
 	output		[47:0]					out_notes,
 	input								echo_switch,
 	output								note_display_play,
-	output		[1:0]					song_out
+	output		[1:0]					song_out,
+	output 								reset_player_out
 );
     // The BEAT_COUNT is parameterized so you can reduce this in simulation.
     // If you reduce this to 100 your simulation will be 10x faster.
@@ -41,6 +41,7 @@ module music_player_v2 (
 		.song_done(song_done)
 	);
 	assign song_out = song;
+	assign reset_player_out = reset_player;
 //   
 //  ****************************************************************************
 //      FF/Reverse MCU
@@ -49,7 +50,7 @@ module music_player_v2 (
      
      wire [1:0] play_state;     
      
-     play_state_mcu mcu2(
+     play_state_mcu mcu2 (
           .button_press(fast_forward_button),
           .rst(reset),
           .clk(clk),
@@ -192,7 +193,7 @@ module music_player_v2 (
 //  ****************************************************************************
 //  
 	assign new_sample_generated = generate_next_sample;
-	assign note_display_play = new_sample_generated;
+	assign note_display_play = play_enable;
 	codec_conditioner codec_conditioner (
 	    .clk(clk),
 	    // NOTE: The reset input for codec_conditioner should always be the

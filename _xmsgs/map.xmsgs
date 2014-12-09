@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">codec/pcm_record_valid_ClkIn</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">32</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">codec/ac97_core_I/PCM_Record_Right_i&lt;0&gt;,
+codec/ac97_core_I/PCM_Record_Right_i&lt;1&gt;,
+codec/ac97_core_I/PCM_Record_Right_i&lt;2&gt;,
+codec/ac97_core_I/PCM_Record_Right_i&lt;3&gt;,
+codec/ac97_core_I/PCM_Record_Right_i&lt;4&gt;</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91</arg>
+of frag <arg fmt="%s" index="2">REGCLKAU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKAU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91</arg>
+of frag <arg fmt="%s" index="2">REGCLKAL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKAL_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91</arg>
+of frag <arg fmt="%s" index="2">REGCLKBU</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKBU_tiesig</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91</arg>
+of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <arg fmt="%s" index="3">music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91_REGCLKBL_tiesig</arg>
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">0.950</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.950</arg> to <arg fmt="%0.3f" index="3">1.050</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+</messages>
+

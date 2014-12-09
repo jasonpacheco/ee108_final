@@ -1,0 +1,1862 @@
+Release 14.6 - xst P.68d (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: final_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "final_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "final_top"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : final_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "sine_rom.v" in library work
+Compiling verilog file "ff_lib.v" in library work
+Module <sine_rom> compiled
+Module <dff> compiled
+Module <dffr> compiled
+Compiling verilog file "song_rom.v" in library work
+Module <dffre> compiled
+Compiling verilog file "sine_reader.v" in library work
+Module <song_rom> compiled
+Compiling verilog file "ram_1w2r.v" in library work
+Module <sine_reader> compiled
+Compiling verilog file "frequency_rom.v" in library work
+Module <ram_1w2r> compiled
+Compiling verilog file "find_multiplier.v" in library work
+Module <frequency_rom> compiled
+Compiling verilog file "dynamics.v" in library work
+Module <find_multiplier> compiled
+Compiling verilog file "wave_display.v" in library work
+Module <dynamics> compiled
+Compiling verilog file "wave_capture.v" in library work
+Module <wave_display> compiled
+Compiling verilog file "tcgrom.v" in library work
+Module <wave_capture> compiled
+Compiling verilog file "sync_generators.v" in library work
+Compiling verilog include file "dvi_defines.v"
+Module <tcgrom> compiled
+Compiling verilog file "song_reader_v2.v" in library work
+Module <sync_generators> compiled
+Compiling verilog file "play_state_mcu.v" in library work
+Module <song_reader_v2> compiled
+Compiling verilog file "one_pulse.v" in library work
+Module <play_state_mcu> compiled
+Compiling verilog file "note_player.v" in library work
+Module <one_pulse> compiled
+Compiling verilog file "mcu.v" in library work
+Module <note_player> compiled
+Compiling verilog file "echo.v" in library work
+Module <mcu> compiled
+Compiling verilog file "debouncer.v" in library work
+Module <echo> compiled
+Compiling verilog file "codec_conditioner.v" in library work
+Module <debouncer> compiled
+Compiling verilog file "chip_data_parser.v" in library work
+Module <codec_conditioner> compiled
+Compiling verilog file "brute_force_synchronizer.v" in library work
+Module <chip_data_parser> compiled
+Compiling verilog file "beat_gen_ff_enabled.v" in library work
+Module <brute_force_synchronizer> compiled
+Compiling verilog file "wave_display_top.v" in library work
+Module <beat_gen_ff_enabled> compiled
+Compiling verilog file "stereo_mcu.v" in library work
+Module <wave_display_top> compiled
+Compiling verilog file "note_display.v" in library work
+Compiling verilog include file "dvi_defines.v"
+Module <stereo_mcu> compiled
+Compiling verilog file "music_player_v2.v" in library work
+Compiling verilog include file "dvi_defines.v"
+Module <note_display> compiled
+Compiling verilog file "i2c_emulator.v" in library work
+Module <music_player_v2> compiled
+Compiling verilog file "dvi_controller_top.v" in library work
+Compiling verilog include file "dvi_defines.v"
+Module <i2c_emulator> compiled
+Compiling verilog file "button_press_unit.v" in library work
+Module <dvi_controller_top> compiled
+Compiling verilog file "ac97_if.v" in library work
+Module <button_press_unit> compiled
+Compiling verilog file "final_top.v" in library work
+Module <ac97_if> compiled
+Module <final_top> compiled
+No errors in compilation
+Analysis of file <"final_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <final_top> in library <work> with parameters.
+	BEAT_COUNT = "00000000000000000000001111101000"
+	BPU_WIDTH = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <button_press_unit> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <music_player_v2> in library <work> with parameters.
+	BEAT_COUNT = "00000000000000000000001111101000"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010001"
+
+Analyzing hierarchy for module <wave_display_top> in library <work>.
+
+Analyzing hierarchy for module <note_display> in library <work>.
+
+Analyzing hierarchy for module <stereo_mcu> in library <work>.
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000011011"
+
+Analyzing hierarchy for module <dvi_controller_top> in library <work>.
+
+Analyzing hierarchy for module <i2c_emulator> in library <work> with parameters.
+	CLKS_PER_SCL = "00000000000000000010011100010000"
+
+Analyzing hierarchy for module <brute_force_synchronizer> in library <work>.
+
+Analyzing hierarchy for module <debouncer> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <one_pulse> in library <work>.
+
+Analyzing hierarchy for module <mcu> in library <work>.
+
+Analyzing hierarchy for module <play_state_mcu> in library <work>.
+
+Analyzing hierarchy for module <song_reader_v2> in library <work>.
+
+Analyzing hierarchy for module <note_player> in library <work>.
+
+Analyzing hierarchy for module <beat_gen_ff_enabled> in library <work> with parameters.
+	STOP = "00000000000000000000001111101000"
+	WIDTH = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <echo> in library <work>.
+
+Analyzing hierarchy for module <codec_conditioner> in library <work>.
+
+Analyzing hierarchy for module <wave_capture> in library <work>.
+
+Analyzing hierarchy for module <ram_1w2r> in library <work> with parameters.
+	DEPTH = "00000000000000000000000000001001"
+	WIDTH = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <wave_display> in library <work>.
+
+Analyzing hierarchy for module <tcgrom> in library <work>.
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <sync_generators> in library <work>.
+
+Analyzing hierarchy for module <chip_data_parser> in library <work>.
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010010"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000111"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000110"
+
+Analyzing hierarchy for module <song_rom> in library <work>.
+
+Analyzing hierarchy for module <frequency_rom> in library <work>.
+
+Analyzing hierarchy for module <sine_reader> in library <work>.
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010000"
+
+Analyzing hierarchy for module <find_multiplier> in library <work>.
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <dynamics> in library <work>.
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001110"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010000"
+
+Analyzing hierarchy for module <ram_1w2r> in library <work> with parameters.
+	DEPTH = "00000000000000000000000000010000"
+	WIDTH = "00000000000000000000000000010000"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <sine_rom> in library <work>.
+
+Analyzing hierarchy for module <dff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010110"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <final_top>.
+	BEAT_COUNT = 32'sb00000000000000000000001111101000
+	BPU_WIDTH = 32'sb00000000000000000000000000010100
+WARNING:Xst:2211 - "ac97_if.v" line 185: Instantiating black box module <ac97_if>.
+Module <final_top> is correct for synthesis.
+ 
+Analyzing module <button_press_unit> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010100
+Module <button_press_unit> is correct for synthesis.
+ 
+Analyzing module <brute_force_synchronizer> in library <work>.
+Module <brute_force_synchronizer> is correct for synthesis.
+ 
+Analyzing module <dff.4> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dff.4> is correct for synthesis.
+ 
+Analyzing module <debouncer> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010100
+Module <debouncer> is correct for synthesis.
+ 
+Analyzing module <dffr.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010100
+Module <dffr.1> is correct for synthesis.
+ 
+Analyzing module <dffr.2> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <dffr.2> is correct for synthesis.
+ 
+Analyzing module <one_pulse> in library <work>.
+Module <one_pulse> is correct for synthesis.
+ 
+Analyzing module <dffr.3> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dffr.3> is correct for synthesis.
+ 
+Analyzing module <music_player_v2> in library <work>.
+	BEAT_COUNT = 32'sb00000000000000000000001111101000
+Module <music_player_v2> is correct for synthesis.
+ 
+Analyzing module <mcu> in library <work>.
+Module <mcu> is correct for synthesis.
+ 
+Analyzing module <dffre.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <dffre.1> is correct for synthesis.
+ 
+Analyzing module <dffr.4> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dffr.4> is correct for synthesis.
+ 
+Analyzing module <play_state_mcu> in library <work>.
+Module <play_state_mcu> is correct for synthesis.
+ 
+Analyzing module <dff.3> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <dff.3> is correct for synthesis.
+ 
+Analyzing module <song_reader_v2> in library <work>.
+Module <song_reader_v2> is correct for synthesis.
+ 
+Analyzing module <dff.5> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dff.5> is correct for synthesis.
+ 
+Analyzing module <dff.6> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010010
+Module <dff.6> is correct for synthesis.
+ 
+Analyzing module <dff.7> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000011
+Module <dff.7> is correct for synthesis.
+ 
+Analyzing module <dff.8> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000111
+Module <dff.8> is correct for synthesis.
+ 
+Analyzing module <dffr.5> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000110
+Module <dffr.5> is correct for synthesis.
+ 
+Analyzing module <song_rom> in library <work>.
+Module <song_rom> is correct for synthesis.
+ 
+Analyzing module <note_player> in library <work>.
+Module <note_player> is correct for synthesis.
+ 
+Analyzing module <frequency_rom> in library <work>.
+Module <frequency_rom> is correct for synthesis.
+ 
+Analyzing module <sine_reader> in library <work>.
+Module <sine_reader> is correct for synthesis.
+ 
+Analyzing module <sine_rom> in library <work>.
+Module <sine_rom> is correct for synthesis.
+ 
+Analyzing module <dff.10> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010110
+Module <dff.10> is correct for synthesis.
+ 
+Analyzing module <dffr.6> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010000
+Module <dffr.6> is correct for synthesis.
+ 
+Analyzing module <find_multiplier> in library <work>.
+Module <find_multiplier> is correct for synthesis.
+ 
+Analyzing module <dffr.7> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001000
+Module <dffr.7> is correct for synthesis.
+ 
+Analyzing module <dynamics> in library <work>.
+Module <dynamics> is correct for synthesis.
+ 
+Analyzing module <beat_gen_ff_enabled> in library <work>.
+	STOP = 32'sb00000000000000000000001111101000
+	WIDTH = 32'sb00000000000000000000000000001010
+Module <beat_gen_ff_enabled> is correct for synthesis.
+ 
+Analyzing module <dffre.2> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001010
+Module <dffre.2> is correct for synthesis.
+ 
+Analyzing module <echo> in library <work>.
+Module <echo> is correct for synthesis.
+ 
+Analyzing module <dffre.3> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001110
+Module <dffre.3> is correct for synthesis.
+ 
+Analyzing module <dffre.4> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010000
+Module <dffre.4> is correct for synthesis.
+ 
+Analyzing module <ram_1w2r.2> in library <work>.
+	DEPTH = 32'sb00000000000000000000000000010000
+	WIDTH = 32'sb00000000000000000000000000010000
+Module <ram_1w2r.2> is correct for synthesis.
+ 
+Analyzing module <codec_conditioner> in library <work>.
+Module <codec_conditioner> is correct for synthesis.
+ 
+Analyzing module <dffre.5> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dffre.5> is correct for synthesis.
+ 
+Analyzing module <dff.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010001
+Module <dff.1> is correct for synthesis.
+ 
+Analyzing module <wave_display_top> in library <work>.
+Module <wave_display_top> is correct for synthesis.
+ 
+Analyzing module <wave_capture> in library <work>.
+Module <wave_capture> is correct for synthesis.
+ 
+Analyzing module <dff.9> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001000
+Module <dff.9> is correct for synthesis.
+ 
+Analyzing module <ram_1w2r.1> in library <work>.
+	DEPTH = 32'sb00000000000000000000000000001001
+	WIDTH = 32'sb00000000000000000000000000001000
+Module <ram_1w2r.1> is correct for synthesis.
+ 
+Analyzing module <wave_display> in library <work>.
+Module <wave_display> is correct for synthesis.
+ 
+Analyzing module <note_display> in library <work>.
+Module <note_display> is correct for synthesis.
+ 
+Analyzing module <tcgrom> in library <work>.
+Module <tcgrom> is correct for synthesis.
+ 
+Analyzing module <stereo_mcu> in library <work>.
+Module <stereo_mcu> is correct for synthesis.
+ 
+Analyzing module <dff.2> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000011011
+Module <dff.2> is correct for synthesis.
+ 
+Analyzing module <dvi_controller_top> in library <work>.
+Module <dvi_controller_top> is correct for synthesis.
+ 
+Analyzing module <sync_generators> in library <work>.
+Module <sync_generators> is correct for synthesis.
+ 
+Analyzing module <chip_data_parser> in library <work>.
+Module <chip_data_parser> is correct for synthesis.
+ 
+Analyzing module <i2c_emulator> in library <work>.
+	CLKS_PER_SCL = 32'sb00000000000000000010011100010000
+Module <i2c_emulator> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dff_1>.
+    Related source file is "ff_lib.v".
+    Found 17-bit register for signal <q>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <dff_1> synthesized.
+
+
+Synthesizing Unit <dff_2>.
+    Related source file is "ff_lib.v".
+    Found 27-bit register for signal <q>.
+    Summary:
+	inferred  27 D-type flip-flop(s).
+Unit <dff_2> synthesized.
+
+
+Synthesizing Unit <i2c_emulator>.
+    Related source file is "i2c_emulator.v".
+    Found 1-bit tristate buffer for signal <sda>.
+    Found 1-bit tristate buffer for signal <scl>.
+    Found 3-bit up counter for signal <packet_index>.
+    Found 14-bit up counter for signal <scl_counter>.
+    Found 5-bit comparator greater for signal <scl_logic$cmp_gt0000> created at line 41.
+    Found 14-bit comparator lessequal for signal <scl_logic$cmp_le0000> created at line 41.
+    Found 5-bit comparator less for signal <scl_logic$cmp_lt0000> created at line 41.
+    Found 1-bit register for signal <sda_logic>.
+    Found 5-bit comparator greatequal for signal <sda_logic$cmp_ge0000> created at line 99.
+    Found 14-bit comparator greatequal for signal <sda_logic$cmp_ge0001> created at line 112.
+    Found 5-bit comparator lessequal for signal <sda_logic$cmp_le0000> created at line 99.
+    Found 28-bit register for signal <sda_shift>.
+    Found 5-bit up counter for signal <state>.
+    Found 5-bit comparator greatequal for signal <state$cmp_ge0000> created at line 72.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred   2 Tristate(s).
+Unit <i2c_emulator> synthesized.
+
+
+Synthesizing Unit <dff_4>.
+    Related source file is "ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dff_4> synthesized.
+
+
+Synthesizing Unit <dffr_1>.
+    Related source file is "ff_lib.v".
+    Found 20-bit register for signal <q>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+Unit <dffr_1> synthesized.
+
+
+Synthesizing Unit <dffr_2>.
+    Related source file is "ff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dffr_2> synthesized.
+
+
+Synthesizing Unit <dffr_3>.
+    Related source file is "ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dffr_3> synthesized.
+
+
+Synthesizing Unit <dffre_1>.
+    Related source file is "ff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dffre_1> synthesized.
+
+
+Synthesizing Unit <dffr_4>.
+    Related source file is "ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dffr_4> synthesized.
+
+
+Synthesizing Unit <dff_3>.
+    Related source file is "ff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dff_3> synthesized.
+
+
+Synthesizing Unit <dff_5>.
+    Related source file is "ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dff_5> synthesized.
+
+
+Synthesizing Unit <dff_6>.
+    Related source file is "ff_lib.v".
+    Found 18-bit register for signal <q>.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+Unit <dff_6> synthesized.
+
+
+Synthesizing Unit <dff_7>.
+    Related source file is "ff_lib.v".
+    Found 3-bit register for signal <q>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <dff_7> synthesized.
+
+
+Synthesizing Unit <dff_8>.
+    Related source file is "ff_lib.v".
+    Found 7-bit register for signal <q>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <dff_8> synthesized.
+
+
+Synthesizing Unit <dffr_5>.
+    Related source file is "ff_lib.v".
+    Found 6-bit register for signal <q>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <dffr_5> synthesized.
+
+
+Synthesizing Unit <song_rom>.
+    Related source file is "song_rom.v".
+    Found 512x16-bit ROM for signal <$varindex0000> created at line 10.
+    Found 16-bit register for signal <dout>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <song_rom> synthesized.
+
+
+Synthesizing Unit <frequency_rom>.
+    Related source file is "frequency_rom.v".
+    Found 64x20-bit ROM for signal <$varindex0000> created at line 13.
+    Found 20-bit register for signal <dout>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  20 D-type flip-flop(s).
+Unit <frequency_rom> synthesized.
+
+
+Synthesizing Unit <dffr_6>.
+    Related source file is "ff_lib.v".
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <dffr_6> synthesized.
+
+
+Synthesizing Unit <find_multiplier>.
+    Related source file is "find_multiplier.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 64x8-bit ROM for signal <multiplier>.
+    Found 6-bit subtractor for signal <counter>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <find_multiplier> synthesized.
+
+
+Synthesizing Unit <dffr_7>.
+    Related source file is "ff_lib.v".
+    Found 8-bit register for signal <q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <dffr_7> synthesized.
+
+
+Synthesizing Unit <dynamics>.
+    Related source file is "dynamics.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <sample_help_reg2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sample_help_reg1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <decayed_sample_reg<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <decayed_sample> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:643 - "dynamics.v" line 102: The result of a 23x23-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "dynamics.v" line 107: The result of a 23x23-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 6-bit subtractor for signal <counter>.
+    Found 32-bit adder for signal <decayed_sample_reg$addsub0000> created at line 104.
+    Found 23x23-bit multiplier for signal <decayed_sample_reg$mult0001> created at line 107.
+    Found 23x23-bit multiplier for signal <sample_help_reg2$mult0001> created at line 102.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+Unit <dynamics> synthesized.
+
+
+Synthesizing Unit <sine_rom>.
+    Related source file is "sine_rom.v".
+    Found 1024x16-bit ROM for signal <$varindex0000> created at line 10.
+    Found 16-bit register for signal <dout>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <sine_rom> synthesized.
+
+
+Synthesizing Unit <dff_10>.
+    Related source file is "ff_lib.v".
+    Found 22-bit register for signal <q>.
+    Summary:
+	inferred  22 D-type flip-flop(s).
+Unit <dff_10> synthesized.
+
+
+Synthesizing Unit <dffre_2>.
+    Related source file is "ff_lib.v".
+    Found 10-bit register for signal <q>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <dffre_2> synthesized.
+
+
+Synthesizing Unit <dffre_3>.
+    Related source file is "ff_lib.v".
+    Found 14-bit register for signal <q>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+Unit <dffre_3> synthesized.
+
+
+Synthesizing Unit <dffre_4>.
+    Related source file is "ff_lib.v".
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <dffre_4> synthesized.
+
+
+Synthesizing Unit <ram_1w2r_2>.
+    Related source file is "ram_1w2r.v".
+    Found 65536x16-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 65536x16-bit dual-port RAM <Mram_RAM_ren> for signal <RAM>.
+    Found 16-bit register for signal <read_addra>.
+    Found 16-bit register for signal <read_addrb>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <ram_1w2r_2> synthesized.
+
+
+Synthesizing Unit <dffre_5>.
+    Related source file is "ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dffre_5> synthesized.
+
+
+Synthesizing Unit <ram_1w2r_1>.
+    Related source file is "ram_1w2r.v".
+    Found 512x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 512x8-bit dual-port RAM <Mram_RAM_ren> for signal <RAM>.
+    Found 9-bit register for signal <read_addra>.
+    Found 9-bit register for signal <read_addrb>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  18 D-type flip-flop(s).
+Unit <ram_1w2r_1> synthesized.
+
+
+Synthesizing Unit <dff_9>.
+    Related source file is "ff_lib.v".
+    Found 8-bit register for signal <q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <dff_9> synthesized.
+
+
+Synthesizing Unit <tcgrom>.
+    Related source file is "tcgrom.v".
+    Found 512x8-bit ROM for signal <data>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <tcgrom> synthesized.
+
+
+Synthesizing Unit <sync_generators>.
+    Related source file is "sync_generators.v".
+    Found 11-bit up counter for signal <x>.
+    Found 10-bit up counter for signal <y>.
+    Found 11-bit comparator greatequal for signal <hsync>.
+    Found 11-bit up counter for signal <hsync_counter>.
+    Found 11-bit up counter for signal <pixel_counter>.
+    Found 11-bit comparator greatequal for signal <valid_h$cmp_ge0000> created at line 58.
+    Found 11-bit comparator lessequal for signal <valid_h$cmp_le0000> created at line 58.
+    Found 11-bit comparator greatequal for signal <valid_v$cmp_ge0000> created at line 60.
+    Found 11-bit comparator lessequal for signal <valid_v$cmp_le0000> created at line 60.
+    Found 11-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 55.
+    Summary:
+	inferred   4 Counter(s).
+	inferred   6 Comparator(s).
+Unit <sync_generators> synthesized.
+
+
+Synthesizing Unit <chip_data_parser>.
+    Related source file is "chip_data_parser.v".
+    Found 1-bit register for signal <chip_data_enable>.
+    Found 24-bit register for signal <pixel>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <chip_data_parser> synthesized.
+
+
+Synthesizing Unit <note_display>.
+    Related source file is "note_display.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <new_notes> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <note_two_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <note_three_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <note_one_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <current_song_text> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4x54-bit ROM for signal <$old_current_song_text_18>.
+    Found 10-bit comparator greatequal for signal <color_reg$cmp_ge0000> created at line 253.
+    Found 10-bit comparator less for signal <color_reg$cmp_lt0000> created at line 253.
+    Found 9-bit adder for signal <rom_addr>.
+    Found 8-bit shifter logical right for signal <rom_bit_select>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <note_display> synthesized.
+
+
+Synthesizing Unit <stereo_mcu>.
+    Related source file is "stereo_mcu.v".
+Unit <stereo_mcu> synthesized.
+
+
+Synthesizing Unit <dvi_controller_top>.
+    Related source file is "dvi_controller_top.v".
+Unit <dvi_controller_top> synthesized.
+
+
+Synthesizing Unit <brute_force_synchronizer>.
+    Related source file is "brute_force_synchronizer.v".
+Unit <brute_force_synchronizer> synthesized.
+
+
+Synthesizing Unit <debouncer>.
+    Related source file is "debouncer.v".
+    Found 4x1-bit ROM for signal <out>.
+    Found 20-bit adder for signal <$add0000> created at line 22.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <one_pulse>.
+    Related source file is "one_pulse.v".
+Unit <one_pulse> synthesized.
+
+
+Synthesizing Unit <mcu>.
+    Related source file is "mcu.v".
+    Found 2-bit adder for signal <$add0000> created at line 16.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <mcu> synthesized.
+
+
+Synthesizing Unit <play_state_mcu>.
+    Related source file is "play_state_mcu.v".
+Unit <play_state_mcu> synthesized.
+
+
+Synthesizing Unit <song_reader_v2>.
+    Related source file is "song_reader_v2.v".
+WARNING:Xst:646 - Signal <dout<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 7-bit adder for signal <addr_next_state_reg$addsub0000> created at line 120.
+    Found 6-bit subtractor for signal <next_dur_reg$addsub0000> created at line 90.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <song_reader_v2> synthesized.
+
+
+Synthesizing Unit <beat_gen_ff_enabled>.
+    Related source file is "beat_gen_ff_enabled.v".
+WARNING:Xst:647 - Input <play_state<1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit adder for signal <$mux0000> created at line 33.
+    Found 2-bit adder for signal <mux0000$addsub0000> created at line 33.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <beat_gen_ff_enabled> synthesized.
+
+
+Synthesizing Unit <echo>.
+    Related source file is "echo.v".
+WARNING:Xst:646 - Signal <modified_sample_help_reg2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <modified_sample_help_reg1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 14-bit adder for signal <$add0000> created at line 23.
+    Found 16-bit adder for signal <$add0001> created at line 33.
+    Found 16-bit adder for signal <$add0002> created at line 42.
+    Found 16-bit adder for signal <modified_sample$addsub0000> created at line 69.
+    Found 16-bit comparator greatequal for signal <modified_sample$cmp_ge0000> created at line 69.
+    Found 16-bit adder for signal <modified_sample_reg$addsub0000> created at line 61.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <echo> synthesized.
+
+
+Synthesizing Unit <codec_conditioner>.
+    Related source file is "codec_conditioner.v".
+Unit <codec_conditioner> synthesized.
+
+
+Synthesizing Unit <sine_reader>.
+    Related source file is "sine_reader.v".
+WARNING:Xst:646 - Signal <dout<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 22-bit addsub for signal <quad_addr_reg$addsub0000>.
+    Found 22-bit adder for signal <quad_addr_reg$addsub0001> created at line 26.
+    Found 16-bit adder for signal <sample_out_reg$addsub0000>.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <sine_reader> synthesized.
+
+
+Synthesizing Unit <wave_capture>.
+    Related source file is "wave_capture.v".
+WARNING:Xst:647 - Input <new_sample_in<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit adder for signal <address_counter_reg$share0000>.
+    Found 8-bit adder for signal <write_sample_reg$share0000>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <wave_capture> synthesized.
+
+
+Synthesizing Unit <wave_display>.
+    Related source file is "wave_display.v".
+WARNING:Xst:647 - Input <x<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <y<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <current_address_reg<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit comparator greater for signal <AUX_15$cmp_gt0000> created at line 34.
+    Found 7-bit adder carry out for signal <current_address_reg$addsub0001> created at line 42.
+    Found 8-bit adder carry out for signal <current_address_reg$addsub0002> created at line 44.
+    Found 8-bit comparator equal for signal <read_value_reg$cmp_eq0000> created at line 23.
+    Found 8-bit comparator greatequal for signal <valid_y$cmp_ge0000> created at line 55.
+    Found 8-bit comparator lessequal for signal <valid_y$cmp_le0000> created at line 55.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <wave_display> synthesized.
+
+
+Synthesizing Unit <button_press_unit>.
+    Related source file is "button_press_unit.v".
+Unit <button_press_unit> synthesized.
+
+
+Synthesizing Unit <wave_display_top>.
+    Related source file is "wave_display_top.v".
+Unit <wave_display_top> synthesized.
+
+
+Synthesizing Unit <note_player>.
+    Related source file is "note_player.v".
+WARNING:Xst:646 - Signal <weighted_sample_3_help2_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <weighted_sample_3_help1_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <weighted_sample_2_help2_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <weighted_sample_2_help1_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <weighted_sample_1_help2_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <weighted_sample_1_help1_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sample_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 20-bit adder for signal <$add0000> created at line 49.
+    Found 6-bit subtractor for signal <next_dur_reg$addsub0000> created at line 69.
+    Found 16-bit adder for signal <sample_in_next$addsub0000> created at line 150.
+    Found 16-bit adder for signal <sample_in_next$addsub0001> created at line 150.
+    Found 16-bit adder for signal <weighted_sample_1_reg$addsub0000> created at line 106.
+    Found 16-bit adder for signal <weighted_sample_2_reg$addsub0000> created at line 116.
+    Found 16-bit adder for signal <weighted_sample_3_reg$addsub0000> created at line 126.
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+Unit <note_player> synthesized.
+
+
+Synthesizing Unit <music_player_v2>.
+    Related source file is "music_player_v2.v".
+    Found 16-bit adder for signal <echo_sample>.
+    Found 16-bit adder for signal <echo_sample$addsub0000> created at line 177.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <music_player_v2> synthesized.
+
+
+Synthesizing Unit <final_top>.
+    Related source file is "final_top.v".
+WARNING:Xst:1780 - Signal <r_reg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <out_notes> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <g_reg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <b_reg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 27-bit adder for signal <$add0000> created at line 208.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <final_top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 512x8-bit dual-port RAM                               : 2
+ 65536x16-bit dual-port RAM                            : 2
+# ROMs                                                 : 22
+ 1024x16-bit ROM                                       : 9
+ 4x1-bit ROM                                           : 4
+ 4x54-bit ROM                                          : 1
+ 512x16-bit ROM                                        : 1
+ 512x8-bit ROM                                         : 1
+ 64x20-bit ROM                                         : 3
+ 64x8-bit ROM                                          : 3
+# Multipliers                                          : 6
+ 23x23-bit multiplier                                  : 6
+# Adders/Subtractors                                   : 92
+ 10-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 16-bit adder                                          : 43
+ 2-bit adder                                           : 2
+ 20-bit adder                                          : 7
+ 22-bit adder                                          : 9
+ 22-bit addsub                                         : 9
+ 27-bit adder                                          : 1
+ 32-bit adder                                          : 3
+ 6-bit subtractor                                      : 10
+ 7-bit adder                                           : 1
+ 7-bit adder carry out                                 : 1
+ 8-bit adder                                           : 2
+ 8-bit adder carry out                                 : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 7
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 3
+ 14-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 125
+ 1-bit register                                        : 30
+ 10-bit register                                       : 1
+ 14-bit register                                       : 1
+ 16-bit register                                       : 35
+ 17-bit register                                       : 1
+ 18-bit register                                       : 2
+ 2-bit register                                        : 17
+ 20-bit register                                       : 7
+ 22-bit register                                       : 9
+ 24-bit register                                       : 1
+ 27-bit register                                       : 1
+ 28-bit register                                       : 1
+ 3-bit register                                        : 3
+ 6-bit register                                        : 7
+ 7-bit register                                        : 1
+ 8-bit register                                        : 6
+ 9-bit register                                        : 2
+# Comparators                                          : 20
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator less                                : 1
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator lessequal                           : 2
+ 14-bit comparator greatequal                          : 1
+ 14-bit comparator lessequal                           : 1
+ 16-bit comparator greatequal                          : 1
+ 5-bit comparator greatequal                           : 2
+ 5-bit comparator greater                              : 1
+ 5-bit comparator less                                 : 1
+ 5-bit comparator lessequal                            : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Logic shifters                                       : 1
+ 8-bit shifter logical right                           : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ac97_if.ngc>.
+Loading core <ac97_if> for timing and area information for instance <codec>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <song_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <song_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <song_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <sine_rom>.
+WARNING:Xst:2677 - Node <q_0> of sequential type is unconnected in block <sample_reg>.
+WARNING:Xst:2677 - Node <q_1> of sequential type is unconnected in block <sample_reg>.
+WARNING:Xst:2677 - Node <q_2> of sequential type is unconnected in block <sample_reg>.
+WARNING:Xst:2677 - Node <q_3> of sequential type is unconnected in block <sample_reg>.
+WARNING:Xst:2677 - Node <q_4> of sequential type is unconnected in block <sample_reg>.
+WARNING:Xst:2677 - Node <q_5> of sequential type is unconnected in block <sample_reg>.
+WARNING:Xst:2677 - Node <q_6> of sequential type is unconnected in block <sample_reg>.
+WARNING:Xst:2677 - Node <q_7> of sequential type is unconnected in block <sample_reg>.
+
+Synthesizing (advanced) Unit <frequency_rom>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom__varindex0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <frequency_rom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <music_player_v2>.
+INFO:Xst:3226 - The RAM <echo/delayed_sample_ram/Mram_RAM_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <echo/delayed_sample_ram/read_addrb>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 65536-word x 16-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <echo/delayed_sample_ready> | high     |
+    |     addrA          | connected to signal <echo/write_address_state> |          |
+    |     diA            | connected to signal <echo/delayed_sample> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 65536-word x 16-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <echo/read_address_state> |          |
+    |     doB            | connected to signal <echo/echoed_sample_out> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <music_player_v2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <note_player>.
+	Found pipelined multiplier on signal <dynamics/decayed_sample_reg_mult0001>:
+		- 2 pipeline level(s) found in a register on signal <N0>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <piped_multiplier>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <dynamics/sample_help_reg2_mult0001>:
+		- 1 pipeline level(s) found in a register on signal <piped_multiplier>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier dynamics/Mmult_decayed_sample_reg_mult0001 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier dynamics/Mmult_sample_help_reg2_mult0001 by adding 2 register level(s).
+Unit <note_player> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram_1w2r_1>.
+INFO:Xst:3227 - The RAM <Mram_RAM>, combined with <Mram_RAM_ren>, will be implemented as a BLOCK RAM, absorbing the following register(s): <read_addra> <read_addrb>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clka>          | rise     |
+    |     weA            | connected to signal <wea>           | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <dina>          |          |
+    |     doA            | connected to signal <douta>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clkb>          | rise     |
+    |     addrB          | connected to signal <addrb>         |          |
+    |     doB            | connected to signal <doutb>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ram_1w2r_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sine_rom>.
+INFO:Xst:3044 - The ROM <Mrom__varindex0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <dout>.
+INFO:Xst:3225 - The RAM <Mrom__varindex0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <sine_rom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <song_rom>.
+INFO:Xst:3044 - The ROM <Mrom__varindex0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <dout>.
+INFO:Xst:3225 - The RAM <Mrom__varindex0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <song_rom> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 12
+ 1024x16-bit single-port block RAM                     : 9
+ 512x16-bit single-port block RAM                      : 1
+ 512x8-bit dual-port block RAM                         : 1
+ 65536x16-bit dual-port block RAM                      : 1
+# ROMs                                                 : 12
+ 4x1-bit ROM                                           : 4
+ 4x54-bit ROM                                          : 1
+ 512x8-bit ROM                                         : 1
+ 64x20-bit ROM                                         : 3
+ 64x8-bit ROM                                          : 3
+# Multipliers                                          : 6
+ 23x9-bit registered multiplier                        : 6
+# Adders/Subtractors                                   : 92
+ 10-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 16-bit adder                                          : 43
+ 2-bit adder                                           : 2
+ 20-bit adder                                          : 7
+ 22-bit adder                                          : 9
+ 22-bit addsub                                         : 9
+ 27-bit adder                                          : 1
+ 32-bit adder                                          : 3
+ 6-bit subtractor                                      : 10
+ 7-bit adder                                           : 1
+ 7-bit adder carry out                                 : 1
+ 8-bit adder                                           : 2
+ 8-bit adder carry out                                 : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 7
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 3
+ 14-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 1008
+ Flip-Flops                                            : 1008
+# Comparators                                          : 20
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator less                                : 1
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator lessequal                           : 2
+ 14-bit comparator greatequal                          : 1
+ 14-bit comparator lessequal                           : 1
+ 16-bit comparator greatequal                          : 1
+ 5-bit comparator greatequal                           : 2
+ 5-bit comparator greater                              : 1
+ 5-bit comparator less                                 : 1
+ 5-bit comparator lessequal                            : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Logic shifters                                       : 1
+ 8-bit shifter logical right                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <state_FF/q_1> (without init value) has a constant value of 0 in block <play_state_mcu>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2697 - Unit <note_player> : the RAMs <sine_reader_1/sine_rom/Mrom__varindex0000>, <sine_reader_2/sine_rom/Mrom__varindex0000> are packed into the single block RAM <sine_reader_1/sine_rom/Mrom__varindex00001>
+WARNING:Xst:1710 - FF/Latch <dout_19> (without init value) has a constant value of 0 in block <frequency_rom>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sine_reader_2/pipe/q_14> in Unit <note_player> is equivalent to the following FF/Latch, which will be removed : <sine_reader_2/pipe/q_15> 
+INFO:Xst:2261 - The FF/Latch <sine_reader_1/pipe/q_14> in Unit <note_player> is equivalent to the following FF/Latch, which will be removed : <sine_reader_1/pipe/q_15> 
+INFO:Xst:2261 - The FF/Latch <sine_reader_3/pipe/q_14> in Unit <note_player> is equivalent to the following FF/Latch, which will be removed : <sine_reader_3/pipe/q_15> 
+
+Optimizing unit <final_top> ...
+
+Optimizing unit <dff_1> ...
+
+Optimizing unit <dff_6> ...
+
+Optimizing unit <frequency_rom> ...
+
+Optimizing unit <dff_10> ...
+
+Optimizing unit <dff_9> ...
+
+Optimizing unit <chip_data_parser> ...
+
+Optimizing unit <note_display> ...
+
+Optimizing unit <debouncer> ...
+
+Optimizing unit <song_reader_v2> ...
+
+Optimizing unit <beat_gen_ff_enabled> ...
+
+Optimizing unit <codec_conditioner> ...
+
+Optimizing unit <wave_capture> ...
+
+Optimizing unit <wave_display> ...
+
+Optimizing unit <note_player> ...
+
+Optimizing unit <music_player_v2> ...
+WARNING:Xst:2677 - Node <sample_reg/q_7> of sequential type is unconnected in block <final_top>.
+WARNING:Xst:2677 - Node <sample_reg/q_6> of sequential type is unconnected in block <final_top>.
+WARNING:Xst:2677 - Node <sample_reg/q_5> of sequential type is unconnected in block <final_top>.
+WARNING:Xst:2677 - Node <sample_reg/q_4> of sequential type is unconnected in block <final_top>.
+WARNING:Xst:2677 - Node <sample_reg/q_3> of sequential type is unconnected in block <final_top>.
+WARNING:Xst:2677 - Node <sample_reg/q_2> of sequential type is unconnected in block <final_top>.
+WARNING:Xst:2677 - Node <sample_reg/q_1> of sequential type is unconnected in block <final_top>.
+WARNING:Xst:2677 - Node <sample_reg/q_0> of sequential type is unconnected in block <final_top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <ctrl/make_chip_data/pixel_23> in Unit <final_top> is equivalent to the following 23 FFs/Latches, which will be removed : <ctrl/make_chip_data/pixel_22> <ctrl/make_chip_data/pixel_21> <ctrl/make_chip_data/pixel_20> <ctrl/make_chip_data/pixel_19> <ctrl/make_chip_data/pixel_18> <ctrl/make_chip_data/pixel_17> <ctrl/make_chip_data/pixel_16> <ctrl/make_chip_data/pixel_15> <ctrl/make_chip_data/pixel_14> <ctrl/make_chip_data/pixel_13> <ctrl/make_chip_data/pixel_12> <ctrl/make_chip_data/pixel_11> <ctrl/make_chip_data/pixel_10> <ctrl/make_chip_data/pixel_9> <ctrl/make_chip_data/pixel_8> <ctrl/make_chip_data/pixel_7> <ctrl/make_chip_data/pixel_6> <ctrl/make_chip_data/pixel_5> <ctrl/make_chip_data/pixel_4> <ctrl/make_chip_data/pixel_3> <ctrl/make_chip_data/pixel_2> <ctrl/make_chip_data/pixel_1> <ctrl/make_chip_data/pixel_0> 
+Found area constraint ratio of 100 (+ 5) on block final_top, actual ratio is 5.
+
+Final Macro Processing ...
+
+Processing Unit <final_top> :
+	Found 3-bit shift register for signal <fast_forward_button_press_unit/sync/ff3/q_0>.
+	Found 3-bit shift register for signal <stereo_button_press_unit/sync/ff3/q_0>.
+	Found 3-bit shift register for signal <next_button_press_unit/sync/ff3/q_0>.
+	Found 3-bit shift register for signal <play_button_press_unit/sync/ff3/q_0>.
+Unit <final_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1017
+ Flip-Flops                                            : 1017
+# Shift Registers                                      : 4
+ 3-bit shift register                                  : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : final_top.ngr
+Top Level Output File Name         : final_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 40
+
+Cell Usage :
+# BELS                             : 5720
+#      GND                         : 2
+#      INV                         : 562
+#      LUT1                        : 277
+#      LUT2                        : 312
+#      LUT3                        : 230
+#      LUT4                        : 333
+#      LUT5                        : 456
+#      LUT6                        : 847
+#      MUXCY                       : 1314
+#      MUXF7                       : 46
+#      MUXF8                       : 1
+#      VCC                         : 2
+#      XORCY                       : 1338
+# FlipFlops/Latches                : 1149
+#      FD                          : 265
+#      FD_1                        : 15
+#      FDC                         : 27
+#      FDCE                        : 16
+#      FDE                         : 48
+#      FDR                         : 515
+#      FDRE                        : 249
+#      FDRS                        : 6
+#      FDS                         : 6
+#      FDSE                        : 2
+# RAMS                             : 40
+#      RAMB18                      : 8
+#      RAMB36_EXP                  : 32
+# Shift Registers                  : 5
+#      SRLC16E                     : 5
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 39
+#      IBUF                        : 8
+#      OBUF                        : 29
+#      OBUFT                       : 2
+# DSPs                             : 6
+#      DSP48E                      : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1149  out of  69120     1%  
+ Number of Slice LUTs:                 3022  out of  69120     4%  
+    Number used as Logic:              3017  out of  69120     4%  
+    Number used as Memory:                5  out of  17920     0%  
+       Number used as SRL:                5
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3208
+   Number with an unused Flip Flop:    2059  out of   3208    64%  
+   Number with an unused LUT:           186  out of   3208     5%  
+   Number of fully used LUT-FF pairs:   963  out of   3208    30%  
+   Number of unique control sets:        55
+
+IO Utilization: 
+ Number of IOs:                          40
+ Number of bonded IOBs:                  40  out of    640     6%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               36  out of    148    24%  
+    Number using Block RAM only:         36
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of DSP48Es:                       6  out of     64     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUF+BUFG              | 1089  |
+AC97Clk                            | BUFGP                  | 111   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+Control Signal                                                                             | Buffer(FF name)                                             | Load  |
+-------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+N0(XST_GND:G)                                                                              | NONE(codec/AC97Reset_n_i)                                   | 43    |
+music_player_v2/N10(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31:CASCADEOUTLATA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3) | 1     |
+music_player_v2/N11(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31:CASCADEOUTREGA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3) | 1     |
+music_player_v2/N12(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31:CASCADEOUTLATB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3) | 1     |
+music_player_v2/N13(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren31:CASCADEOUTREGB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren3) | 1     |
+music_player_v2/N14(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41:CASCADEOUTLATA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4) | 1     |
+music_player_v2/N15(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41:CASCADEOUTREGA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4) | 1     |
+music_player_v2/N16(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41:CASCADEOUTLATB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4) | 1     |
+music_player_v2/N17(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren41:CASCADEOUTREGB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren4) | 1     |
+music_player_v2/N18(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51:CASCADEOUTLATA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5) | 1     |
+music_player_v2/N19(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51:CASCADEOUTREGA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5) | 1     |
+music_player_v2/N2(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17:CASCADEOUTLATA)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1) | 1     |
+music_player_v2/N20(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51:CASCADEOUTLATB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5) | 1     |
+music_player_v2/N21(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren51:CASCADEOUTREGB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren5) | 1     |
+music_player_v2/N22(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61:CASCADEOUTLATA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6) | 1     |
+music_player_v2/N23(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61:CASCADEOUTREGA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6) | 1     |
+music_player_v2/N24(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61:CASCADEOUTLATB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6) | 1     |
+music_player_v2/N25(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren61:CASCADEOUTREGB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren6) | 1     |
+music_player_v2/N26(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71:CASCADEOUTLATA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7) | 1     |
+music_player_v2/N27(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71:CASCADEOUTREGA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7) | 1     |
+music_player_v2/N28(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71:CASCADEOUTLATB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7) | 1     |
+music_player_v2/N29(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren71:CASCADEOUTREGB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren7) | 1     |
+music_player_v2/N3(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17:CASCADEOUTREGA)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1) | 1     |
+music_player_v2/N30(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81:CASCADEOUTLATA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8) | 1     |
+music_player_v2/N31(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81:CASCADEOUTREGA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8) | 1     |
+music_player_v2/N32(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81:CASCADEOUTLATB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8) | 1     |
+music_player_v2/N33(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren81:CASCADEOUTREGB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren8) | 1     |
+music_player_v2/N34(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91:CASCADEOUTLATA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9) | 1     |
+music_player_v2/N35(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91:CASCADEOUTREGA) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9) | 1     |
+music_player_v2/N36(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91:CASCADEOUTLATB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9) | 1     |
+music_player_v2/N37(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren91:CASCADEOUTREGB) | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren9) | 1     |
+music_player_v2/N38(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101:CASCADEOUTLATA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10)| 1     |
+music_player_v2/N39(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101:CASCADEOUTREGA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10)| 1     |
+music_player_v2/N4(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17:CASCADEOUTLATB)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1) | 1     |
+music_player_v2/N40(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101:CASCADEOUTLATB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10)| 1     |
+music_player_v2/N41(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren101:CASCADEOUTREGB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren10)| 1     |
+music_player_v2/N42(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111:CASCADEOUTLATA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11)| 1     |
+music_player_v2/N43(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111:CASCADEOUTREGA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11)| 1     |
+music_player_v2/N44(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111:CASCADEOUTLATB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11)| 1     |
+music_player_v2/N45(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren111:CASCADEOUTREGB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren11)| 1     |
+music_player_v2/N46(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121:CASCADEOUTLATA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12)| 1     |
+music_player_v2/N47(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121:CASCADEOUTREGA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12)| 1     |
+music_player_v2/N48(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121:CASCADEOUTLATB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12)| 1     |
+music_player_v2/N49(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren121:CASCADEOUTREGB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren12)| 1     |
+music_player_v2/N5(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren17:CASCADEOUTREGB)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren1) | 1     |
+music_player_v2/N50(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131:CASCADEOUTLATA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13)| 1     |
+music_player_v2/N51(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131:CASCADEOUTREGA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13)| 1     |
+music_player_v2/N52(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131:CASCADEOUTLATB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13)| 1     |
+music_player_v2/N53(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren131:CASCADEOUTREGB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren13)| 1     |
+music_player_v2/N54(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141:CASCADEOUTLATA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14)| 1     |
+music_player_v2/N55(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141:CASCADEOUTREGA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14)| 1     |
+music_player_v2/N56(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141:CASCADEOUTLATB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14)| 1     |
+music_player_v2/N57(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren141:CASCADEOUTREGB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren14)| 1     |
+music_player_v2/N58(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151:CASCADEOUTLATA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15)| 1     |
+music_player_v2/N59(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151:CASCADEOUTREGA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15)| 1     |
+music_player_v2/N6(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21:CASCADEOUTLATA)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2) | 1     |
+music_player_v2/N60(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151:CASCADEOUTLATB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15)| 1     |
+music_player_v2/N61(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren151:CASCADEOUTREGB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren15)| 1     |
+music_player_v2/N62(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161:CASCADEOUTLATA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16)| 1     |
+music_player_v2/N63(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161:CASCADEOUTREGA)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16)| 1     |
+music_player_v2/N64(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161:CASCADEOUTLATB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16)| 1     |
+music_player_v2/N65(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren161:CASCADEOUTREGB)| NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren16)| 1     |
+music_player_v2/N7(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21:CASCADEOUTREGA)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2) | 1     |
+music_player_v2/N8(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21:CASCADEOUTLATB)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2) | 1     |
+music_player_v2/N9(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren21:CASCADEOUTREGB)  | NONE(music_player_v2/echo/delayed_sample_ram/Mram_RAM_ren2) | 1     |
+-------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 8.782ns (Maximum Frequency: 113.869MHz)
+   Minimum input arrival time before clock: 7.761ns
+   Maximum output required time after clock: 6.715ns
+   Maximum combinational path delay: 4.185ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.782ns (frequency: 113.869MHz)
+  Total number of paths / destination ports: 1967779 / 4460
+-------------------------------------------------------------------------
+Delay:               8.782ns (Levels of Logic = 52)
+  Source:            music_player_v2/note_player_one/pipe7/q_0 (FF)
+  Destination:       music_player_v2/note_player_one/pipe/q_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: music_player_v2/note_player_one/pipe7/q_0 to music_player_v2/note_player_one/pipe/q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   0.485  music_player_v2/note_player_one/pipe7/q_0 (music_player_v2/note_player_one/pipe7/q_0)
+     LUT1:I0->O            1   0.094   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<0>_rt (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<0>_rt)
+     MUXCY:S->O            1   0.372   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<0> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<1> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<2> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<3> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<4> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<5> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<6> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<7> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<8> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<9> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<10> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<11> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<12> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<13> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<13>)
+     MUXCY:CI->O           0   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<14> (music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_cy<14>)
+     XORCY:CI->O           1   0.357   0.336  music_player_v2/note_player_one/dynamics/Madd__old_sample_help_reg1_9_xor<15> (music_player_v2/note_player_one/dynamics/_old_sample_help_reg1_9<15>)
+     DSP48E:A22->P0        1   3.646   0.480  music_player_v2/note_player_one/dynamics/Mmult_sample_help_reg2_mult0001 (music_player_v2/note_player_one/dynamics/sample_help_reg2_mult0001<0>)
+     LUT1:I0->O            1   0.094   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<0>_rt (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.372   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<0> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<1> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<2> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<4> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<5> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<6> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<8> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<9> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<10> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<12> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<13> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<14> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<16> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<17> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<18> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<20> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<21> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<22> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<24> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<25> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<26> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<28> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<29> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.026   0.000  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<30> (music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.357   0.480  music_player_v2/note_player_one/dynamics/Madd_decayed_sample_reg_addsub0000_xor<31> (music_player_v2/note_player_one/dynamics/decayed_sample_reg_addsub0000<31>)
+     LUT4:I3->O            1   0.094   0.000  music_player_v2/note_player_one/dynamics/sample_out<15>1 (music_player_v2/note_player_one/sample_next<15>)
+     FDR:D                    -0.018          music_player_v2/note_player_one/pipe/q_15
+    ----------------------------------------
+    Total                      8.782ns (7.001ns logic, 1.781ns route)
+                                       (79.7% logic, 20.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'AC97Clk'
+  Clock period: 4.462ns (frequency: 224.115MHz)
+  Total number of paths / destination ports: 1257 / 173
+-------------------------------------------------------------------------
+Delay:               2.231ns (Levels of Logic = 2)
+  Source:            codec/ac97_core_I/data_in_13 (FF)
+  Destination:       codec/ac97_core_I/reg_if_state_FSM_FFd2 (FF)
+  Source Clock:      AC97Clk falling
+  Destination Clock: AC97Clk rising
+
+  Data Path: codec/ac97_core_I/data_in_13 to codec/ac97_core_I/reg_if_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             6   0.467   0.603  ac97_core_I/data_in_13 (ac97_core_I/data_in<13>)
+     LUT6:I4->O            1   0.094   0.973  ac97_core_I/reg_if_state_FSM_FFd2-In92 (ac97_core_I/reg_if_state_FSM_FFd2-In92)
+     LUT6:I1->O            1   0.094   0.000  ac97_core_I/reg_if_state_FSM_FFd2-In122 (ac97_core_I/reg_if_state_FSM_FFd2-In)
+     FDC:D                    -0.018          ac97_core_I/reg_if_state_FSM_FFd2
+    ----------------------------------------
+    Total                      2.231ns (0.655ns logic, 1.576ns route)
+                                       (29.4% logic, 70.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'AC97Clk'
+  Total number of paths / destination ports: 33 / 17
+-------------------------------------------------------------------------
+Offset:              3.602ns (Levels of Logic = 5)
+  Source:            up_button (PAD)
+  Destination:       codec/ac97_core_I/data_out_19 (FF)
+  Destination Clock: AC97Clk rising
+
+  Data Path: up_button to codec/ac97_core_I/data_out_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           768   0.818   1.003  up_button_IBUF (up_button_IBUF)
+     LUT6:I2->O            1   0.094   0.789  _and0001<9>1 (_and0001<9>)
+     begin scope: 'codec'
+     LUT6:I2->O            1   0.094   0.710  ac97_core_I/data_out_mux0001<13>_SW4 (N54)
+     LUT6:I3->O            1   0.094   0.000  ac97_core_I/data_out_mux0001<13> (ac97_core_I/data_out_mux0001<13>)
+     FDC:D                    -0.018          ac97_core_I/data_out_13
+    ----------------------------------------
+    Total                      3.602ns (1.100ns logic, 2.502ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 43845 / 1737
+-------------------------------------------------------------------------
+Offset:              7.761ns (Levels of Logic = 10)
+  Source:            up_button (PAD)
+  Destination:       ctrl/make_chip_data/pixel_23 (FF)
+  Destination Clock: clk rising
+
+  Data Path: up_button to ctrl/make_chip_data/pixel_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           768   0.818   1.283  up_button_IBUF (up_button_IBUF)
+     LUT6:I0->O           68   0.094   0.614  music_player_v2/song_reader/next_dur<1>311 (note_display_enable)
+     LUT4:I3->O            1   0.094   0.480  note_display/rom_base_addr<4>245 (note_display/rom_base_addr<4>245)
+     LUT6:I5->O           54   0.094   1.104  note_display/rom_base_addr<4>291 (note_display/rom_base_addr<4>)
+     LUT6:I1->O            1   0.094   0.000  note_display_char_rom/Mrom_data12_f7_0_F (note_display_N142)
+     MUXF7:I0->O           1   0.251   0.789  note_display_char_rom/Mrom_data12_f7_0 (note_display_char_rom/Mrom_data12_f71)
+     LUT6:I2->O            1   0.094   0.710  note_display_char_rom/Mrom_data1411 (note_display/rom_data<4>)
+     LUT6:I3->O            1   0.094   0.480  note_display/g_text<2>39 (note_display/g_text<2>39)
+     LUT6:I5->O            1   0.094   0.480  note_display/g_text<2>127 (b_text<0>)
+     LUT6:I5->O            1   0.094   0.000  ctrl/make_chip_data/pixel_23_rstpot (ctrl/make_chip_data/pixel_23_rstpot)
+     FD:D                     -0.018          ctrl/make_chip_data/pixel_23
+    ----------------------------------------
+    Total                      7.761ns (1.821ns logic, 5.940ns route)
+                                       (23.5% logic, 76.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 77 / 26
+-------------------------------------------------------------------------
+Offset:              6.715ns (Levels of Logic = 5)
+  Source:            i2c_controller/scl_counter_3 (FF)
+  Destination:       scl (PAD)
+  Source Clock:      clk rising
+
+  Data Path: i2c_controller/scl_counter_3 to scl
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.471   1.000  i2c_controller/scl_counter_3 (i2c_controller/scl_counter_3)
+     LUT5:I0->O            1   0.094   0.789  i2c_controller/scl_logic_cmp_le00002133 (i2c_controller/scl_logic_cmp_le00002133)
+     LUT6:I2->O            1   0.094   0.576  i2c_controller/scl_logic_cmp_le00002166 (i2c_controller/scl_logic_cmp_le00002166)
+     LUT4:I2->O            2   0.094   0.715  i2c_controller/scl_logic_cmp_le000021102 (N19)
+     LUT4:I1->O            1   0.094   0.336  i2c_controller/scl_logic1 (i2c_controller/scl_logic)
+     OBUFT:T->O                2.452          scl_OBUFT (scl)
+    ----------------------------------------
+    Total                      6.715ns (3.299ns logic, 3.416ns route)
+                                       (49.1% logic, 50.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'AC97Clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.270ns (Levels of Logic = 2)
+  Source:            codec/ac97_core_I/ac97_timing_I_1/sync_i (FF)
+  Destination:       Sync (PAD)
+  Source Clock:      AC97Clk rising
+
+  Data Path: codec/ac97_core_I/ac97_timing_I_1/sync_i to Sync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.471   0.347  ac97_core_I/ac97_timing_I_1/sync_i (Sync)
+     end scope: 'codec'
+     OBUF:I->O                 2.452          Sync_OBUF (Sync)
+    ----------------------------------------
+    Total                      3.270ns (2.923ns logic, 0.347ns route)
+                                       (89.4% logic, 10.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               4.185ns (Levels of Logic = 3)
+  Source:            clk (PAD)
+  Destination:       xclk (PAD)
+
+  Data Path: clk to xclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.818   0.341  clk_IBUF (clk_IBUF1)
+     INV:I->O              1   0.238   0.336  ctrl/xclk1_INV_0 (xclk_OBUF)
+     OBUF:I->O                 2.452          xclk_OBUF (xclk)
+    ----------------------------------------
+    Total                      4.185ns (3.508ns logic, 0.677ns route)
+                                       (83.8% logic, 16.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 67.00 secs
+Total CPU time to Xst completion: 64.46 secs
+ 
+--> 
+
+
+Total memory usage is 255420 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   85 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+
