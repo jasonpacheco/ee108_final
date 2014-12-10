@@ -94,6 +94,7 @@ module final_top (
     wire [1:0] 	song;
     wire 		new_sample, flopped_new_sample, new_frame, note_display_enable, reset_player;
     wire [17:0]	notes;
+    wire beat_out;
     music_player_v2 #(.BEAT_COUNT(BEAT_COUNT)) music_player_v2 (
         .clk(clk),
         .reset(reset),
@@ -109,7 +110,8 @@ module final_top (
         .note_display_play(note_display_enable),
         .song_out(song),
         .reset_player_out(reset_player),
-        .note_data_out(notes)
+        .note_data_out(notes),
+        .beat_out(beat_out)
     );
     
     dff #(.WIDTH(17)) sample_reg (
@@ -215,7 +217,8 @@ module final_top (
 		.note_three(notes[17:12]),
 		.r_text(r_text),
 		.g_text(g_text),
-		.b_text(b_text)
+		.b_text(b_text),
+		.beat_high(beat_out)
 	);
    	
 	assign r = r_text | r_wave | r_n1 | r_n2 | r_n3;

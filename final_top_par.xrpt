@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Tue Dec  9 14:23:13 2014">
+  <application stringID="par" timeStamp="Tue Dec  9 19:39:25 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/xilinx/14.6/ISE_DS/ISE//bin/lin:/afs/ir/class/ee108/sw/bin:/opt/ee108/iverilog-default/bin:/opt/ee108/gtkwave-default/bin:/usr/local/bin:/usr/sweet/bin:/usr/pubsw/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/proc/bin:/usr/local/X/bin:/usr/sweet/X/bin:/usr/pubsw/X/bin:/usr/bin/X11:/opt/SUNWspro/bin:/opt/langtools/bin:/usr/lang:/usr/ccs/bin:/usr/ucb:/usr/bsd:/usr/etc:/usr/dt/bin:/usr/openwin/bin:/usr/demos/bin:/usr/audio/bin:/usr/games:/afs/ir/users/p/a/padelson/bin:/afs/ir/users/p/a/padelson"/>
+          <item stringID="value" value="/opt/xilinx/14.6/ISE_DS/ISE//bin/lin:/afs/ir/class/ee108/sw/bin:/opt/ee108/iverilog-default/bin:/opt/ee108/gtkwave-default/bin:/usr/local/bin:/usr/sweet/bin:/usr/pubsw/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/proc/bin:/usr/local/X/bin:/usr/sweet/X/bin:/usr/pubsw/X/bin:/usr/bin/X11:/opt/SUNWspro/bin:/opt/langtools/bin:/usr/lang:/usr/ccs/bin:/usr/ucb:/usr/bsd:/usr/etc:/usr/dt/bin:/usr/openwin/bin:/usr/demos/bin:/usr/audio/bin:/usr/games:/afs/ir/users/j/a/jasonp93/bin:/afs/ir/users/j/a/jasonp93"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="XIL_IMPACT_ENV_LPT1_BASE_ADDRESS"/>
@@ -67,13 +67,13 @@
         <item stringID="User_EnvOsname" value="CentOS"/>
         <item stringID="User_EnvOsrelease" value="CentOS release 5.9 (Final)"/>
       </item>
-      <item stringID="User_EnvHost" value="ee108-8a.stanford.edu"/>
+      <item stringID="User_EnvHost" value="ee108-6a.stanford.edu"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM)2 Duo CPU     E6850  @ 3.00GHz"/>
-          <item stringID="speed" value="2992.752 MHz"/>
+          <item stringID="speed" value="2992.657 MHz"/>
         </row>
       </table>
     </section>
@@ -93,24 +93,24 @@
         </item>
         <item AVAILABLE="800" dataType="int" label="Number of OLOGICs" stringID="PAR_OLOGIC" value="1"/>
         <item AVAILABLE="148" dataType="int" label="Number of RAMB18X2s" stringID="PAR_RAMB18X2" value="8"/>
-        <item AVAILABLE="17280" dataType="int" stringID="PAR_SLICES" value="1188"/>
-        <item AVAILABLE="69120" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="1584">
-          <item dataType="int" label="Number used as Flip Flops" stringID="PAR_FLIP_FLOPS" value="1584"/>
+        <item AVAILABLE="17280" dataType="int" stringID="PAR_SLICES" value="1292"/>
+        <item AVAILABLE="69120" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="1656">
+          <item dataType="int" label="Number used as Flip Flops" stringID="PAR_FLIP_FLOPS" value="1656"/>
           <item dataType="int" label="Number used as Latches" stringID="PAR_LATCHES" value="0"/>
           <item dataType="int" label="Number used as LatchThrus" stringID="PAR_LATCH_THRUS" value="0"/>
         </item>
-        <item AVAILABLE="69120" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="3585"/>
-        <item AVAILABLE="69120" dataType="int" label="Number of Slice LUT-Flip Flop pairs" stringID="PAR_SLICE_LUT_FLIPFLOP_PAIRS" value="3798"/>
+        <item AVAILABLE="69120" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="3623"/>
+        <item AVAILABLE="69120" dataType="int" label="Number of Slice LUT-Flip Flop pairs" stringID="PAR_SLICE_LUT_FLIPFLOP_PAIRS" value="3930"/>
       </section>
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="1 mins 12 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="1 mins 14 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="56 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="58 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="1 mins 18 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="1 mins 20 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="1 mins 2 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="1 mins 4 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -129,8 +129,8 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGCTRL_X0Y1"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="665.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.512000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="677.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.505000"/>
             <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="2.136000"/>
           </row>
           <row stringID="row" value="2">
@@ -138,9 +138,9 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGCTRL_X0Y0"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="35.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.190000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.727000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="36.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.102000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.652000"/>
           </row>
         </table>
       </section>

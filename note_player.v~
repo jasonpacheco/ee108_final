@@ -165,10 +165,16 @@ module note_player (
 	);
 
 	wire [7:0] piped_multiplier;
-	dffr #(9) pipe6( .clk(clk), .r(reset), .d(multiplier), .q(piped_multiplier));
+	dffr #(8) pipe6( .clk(clk), .r(reset), .d(multiplier), .q(piped_multiplier));
+	
+	wire [15:0] sample_in_curr, sample_in_next;
+	dffr #(16) pipe2(.clk(clk), .r(reset),.d(sample_in_next), .q(sample_in_curr));
+	
+	wire [15:0] sample_in_curr_2_7;
+	dffr #(16) pipe_2_7_critical(.clk(clk), .r(reset),.d(sample_in_curr), .q(sample_in_curr_2_7));
 
 	wire [15:0] sample_in_curr2;
-	dffr #(15) pipe7(.clk(clk), .r(reset), .d(sample_in_curr), .q(sample_in_curr2));
+	dffr #(16) pipe7(.clk(clk), .r(reset), .d(sample_in_curr_2_7), .q(sample_in_curr2));
 
 	dynamics dynamics (
 		.clk(clk),

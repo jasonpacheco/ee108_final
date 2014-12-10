@@ -12,7 +12,8 @@ module note_display (
 	input	[5:0] 					note_three,
 	output 	[7:0] 					r_text,
 	output 	[7:0] 					g_text,
-	output 	[7:0] 					b_text
+	output 	[7:0] 					b_text,
+	input							beat_high
 );
 	wire new_notes = select[0];
 	wire play_enable = select[1];
@@ -38,7 +39,7 @@ module note_display (
 	dffre #(135) store_notes_4 (.clk(clk), .r(reset), .en(note_data != last_data), .d(out3), .q(out4));
 	dffre #(135) store_notes_5 (.clk(clk), .r(reset), .en(note_data != last_data), .d(out4), .q(out5));
 	
-	
+
 	reg [53:0] current_song_text;
 	reg [23:0] color_reg;
 	// Text display:
@@ -540,7 +541,10 @@ module note_display (
 										color_reg = 24'b0;
 									end
 						endcase
-					end else begin
+					end 
+					
+					
+					else begin
 						color_reg = 24'b0;
 						rom_base_addr = 9'h100;
 					end
@@ -588,7 +592,108 @@ module note_display (
 				rom_base_addr = 9'h100;
 			end
 		end // end main if/else
+		
 	end // end always
 	
-	assign {r_text, g_text, b_text} = (char_px && valid) ? color_reg : 24'h000000;
+	
+	// Logic for Progress Bar down here 
+	wire [10:0] song00_dur, song01_dur, song10_dur, song11_dur;
+	assign song00_dur = 11'd2016;
+	assign song01_dur = 11'd336;
+	assign song10_dur = 11'd385;	
+	assign song11_dur = 11'd432;	
+	reg [23:0] progress_reg;
+	reg [10:0] incrementer_reg;
+	wire [10:0] incrementer;
+	reg [10:0] current_duration_reg;
+	wire [10:0] current_duration;
+	wire [10:0] prog_bit;
+	
+	
+	wire [1:0] current_song;
+	wire song_reset;
+	dffr #(2) song_ff (
+		.clk(clk),
+		.r(reset),
+		.d(song),
+		.q(current_song)
+	);
+	assign song_reset = (current_song != song);
+	
+	wire [10:0] count, initial_count;
+	reg [10:0] initial_count_reg;
+	dff #(11) count_down (
+		.clk(clk),
+		.d(initial_count),
+		.q(count)
+	);
+	
+	wire [10:0] initial_stored, stored;
+	reg [10:0] initial_stored_reg;
+	dff #(11) storage_ff (
+		.clk(clk),
+		.d(initial_stored),
+		.q(stored)
+	);
+	
+	dffre #(11) prog_bit_ff (
+		.clk(clk),
+		.r(reset | song_reset),
+		.en((stored - initial_count) == incrementer),
+		.d(prog_bit + 11'b1),
+		.q(prog_bit)
+	);
+	
+	always @(*) begin
+		if (song == 2'b00) begin
+			incrementer_reg = 11'd9;
+			current_duration_reg = song00_dur;
+		end else begin
+			incrementer_reg = 11'd2;
+			if (song == 2'b01) begin
+				current_duration_reg = song01_dur;
+			end else if (song == 2'b10) begin
+				current_duration_reg = song10_dur;
+			end else begin
+				current_duration_reg = song11_dur;
+			end
+		end
+		
+		if (beat_high && play_enable) begin
+			initial_count_reg = count - 11'b1;
+		end else begin
+			initial_count_reg = count;
+		end
+		
+		if ((stored - count) == incrementer) begin
+			initial_stored_reg = stored - incrementer;
+		end else begin
+			initial_stored_reg = stored;
+		end
+	
+		if (y[9:4] == 6'b011001 && (x[10:8] == 3'b001 && x > 11'd16)) begin
+			if (y[3:0] == 4'b0 || y[3:0] == 4'b1111) begin
+				progress_reg = 24'hFFFFFF;
+			end else if (x == 11'd17 || x[7:0] == 8'b11111111) begin
+				progress_reg = 24'hFFFFFF;
+			end else begin
+				if (!(reset || song_reset)) begin
+					if (x > 11'd17 && x < (11'd18 + prog_bit) && x[7:0] < 8'b11111111 && y[3:0] > 4'b0 && y[3:0] < 4'b1111) begin
+						progress_reg = 24'hEA4040;
+					end else begin
+						progress_reg = 24'b0;
+					end
+				end else begin
+					progress_reg = 24'b0;
+				end
+			end
+		end else begin
+			progress_reg = 24'b0;
+		end
+	end
+	assign incrementer = incrementer_reg;
+	assign current_duration = current_duration_reg;
+	assign initial_count 	= (reset | song_reset) ? current_duration : initial_count_reg;
+	assign initial_stored 	= (reset | song_reset) ? current_duration : initial_stored_reg;
+	assign {r_text, g_text, b_text} = (char_px && valid) ? color_reg : progress_reg;
 endmodule

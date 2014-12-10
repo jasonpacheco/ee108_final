@@ -171,6 +171,7 @@ module music_player_v2 (
         .play_state(play_state),
         .beat(beat)
      );
+     assign beat_out = beat;
 //**********************************************
 // Echo like ya mean it
 //**********************************************
@@ -182,7 +183,7 @@ module music_player_v2 (
 		.reset(reset | reset_player),
 		.sample_in(echo_sample),
 		.new_sample_ready(note_sample_ready),
-		.echo_enable(/*echo_switch & */play),
+		.echo_enable(echo_switch & play),
 		.sample_to_codec(note_sample)
 	);
 

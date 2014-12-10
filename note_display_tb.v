@@ -8,7 +8,7 @@ module note_display_tb ();
 	wire [`log2NUM_ROWS - 1:0] true_y;
 	wire chip_data_enable, chip_hsync, chip_vsync, chip_reset, xclk, xclk_n;
 	wire [11:0] chip_data;
-	
+	reg beat;
 	dvi_controller_top ctrl (
 		.clk(clk),
 		.enable(1'b1),
@@ -39,7 +39,8 @@ module note_display_tb ();
 		.r_text(r),
 		.g_text(g),
 		.b_text(b),
-		.song(2'b00)
+		.song(2'b00),
+		.beat_high(beat)
 	);
 	
 	initial begin
@@ -52,18 +53,42 @@ module note_display_tb ();
 	
 	initial begin
 	
-		#10 reset = 0;
+		#10 reset = 0; beat = 0;
 		#10 reset = 1;
 		#10 reset = 0; note_one = 6'd2; note_two = 6'd4; note_three = 6'd0;
 		#10 note_one = 6'd9; note_two = 6'd0; note_three = 6'd0;
-		#10 note_one = 6'd9; note_two = 6'd0; note_three = 6'd34;
-		//@(negedge chip_vsync) #10 note_one = 6'd19; note_two = 6'd3; note_three = 6'd18;
+		#10 note_one = 6'd9; note_two = 6'd0; note_three = 6'd34; beat = 1;
+		/*@(negedge chip_vsync)*/ #10 note_one = 6'd19; note_two = 6'd3; note_three = 6'd18;
 		#10 note_one = 6'd19; note_two = 6'd3; note_three = 6'd18;
 		#10 note_one = 6'd46; note_two = 6'd27; note_three = 6'd33;
-		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22;
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
 		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
 		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
-		#10	
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
+		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
+		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
+		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
+		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
+		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
+		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10 note_one = 6'd14; note_two = 6'd33; note_three = 6'd22; 
+		#10 note_one = 6'd4; note_two = 6'd3; note_three = 6'd2;
+		#10 note_one = 6'd49; note_two = 6'd13; note_three = 6'd20;	
+		#10
 		$stop;
 	end
 endmodule

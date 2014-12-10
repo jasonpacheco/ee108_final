@@ -15,7 +15,8 @@ module music_player_v2 (
 	output								note_display_play,
 	output		[1:0]					song_out,
 	output 								reset_player_out,
-	output		[17:0]					note_data_out
+	output		[17:0]					note_data_out,
+	output								beat_out
 );
     // The BEAT_COUNT is parameterized so you can reduce this in simulation.
     // If you reduce this to 100 your simulation will be 10x faster.
@@ -171,6 +172,7 @@ module music_player_v2 (
         .play_state(play_state),
         .beat(beat)
      );
+     assign beat_out = beat;
 //**********************************************
 // Echo like ya mean it
 //**********************************************

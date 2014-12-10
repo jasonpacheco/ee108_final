@@ -23,7 +23,7 @@ module past_notes_flop_tb ();
     initial begin
 		clk = 1; #5 clk = 0;
 		forever begin
-			$display("reset=%b, myin=%d, out1=%d, out2=%d, out3=%d, out4=%d, out5=%d", reset, myin, out1, out2, out3, out4, out5);
+			$display("reset=%b, myin=%d, out1=%d, out2=%d, out3=%d, out4=%d, out5=%d, count=%d", reset, myin, out1, out2, out3, out4, out5, current_count);
 			#5 clk = 1; #5 clk = 0;	
 		end
 	end
@@ -35,10 +35,18 @@ module past_notes_flop_tb ();
 	dffre #(4) store_notes_3 (.clk(clk), .r(reset), .en(new_notes && play_enable), .d(out2), .q(out3));
 	dffre #(4) store_notes_4 (.clk(clk), .r(reset), .en(new_notes && play_enable), .d(out3), .q(out4));
 	dffre #(4) store_notes_5 (.clk(clk), .r(reset), .en(new_notes && play_enable), .d(out4), .q(out5));
+	wire [10:0] current_count;
+	dff #(11) count_down (
+		.clk(clk),
+		.r(reset),
+		.en(1'b1),
+		.d(current_count - 11'b1),
+		.q(current_count)
+	);
 	
 	initial begin
 		#10 reset = 0; myin = 4'd4; new_notes = 1; play_enable = 1;
-		#10 reset = 1;
+		#10 reset = 1; current_count = reset ? 11'd10 : current_count;
 		#10 reset = 0;
 		#20 myin = 4'd5;
 		#10 myin = 4'd9;
@@ -47,7 +55,12 @@ module past_notes_flop_tb ();
 		#10 myin= 4'd8;
 		#10 myin= 4'd11;
 		#10 myin = 4'd0;
-		#10
+		#10 myin = 4'd3;
+		#10 myin = 4'd1;
+		#10 myin = 4'd4;
+		#10 myin= 4'd6;
+		#10 myin= 4'd15;
+		#10 myin = 4'd2;
 		$stop;
 	end
 	
